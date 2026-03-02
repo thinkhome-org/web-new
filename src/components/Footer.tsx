@@ -9,8 +9,8 @@ export function Footer() {
           &lt;thinkhome&gt;
         </div>
         <div className="flex flex-col md:flex-row gap-[8px] mt-[16px] md:mt-0">
-          <span className="text-white opacity-80 font-normal text-[14px] md:text-[16px]">info@thinkhome.org</span>
-          <span className="text-white opacity-80 font-normal text-[14px] md:text-[16px]">+420 222 160 782</span>
+          <a href="mailto:info@thinkhome.org" className="text-white opacity-80 font-normal text-[14px] md:text-[16px]">info@thinkhome.org</a>
+          <a href="tel:+420222160782" className="text-white opacity-80 font-normal text-[14px] md:text-[16px]">+420 222 160 782</a>
         </div>
       </div>
 

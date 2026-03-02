@@ -74,9 +74,9 @@ export function Navbar() {
               Kontaktujte nás
             </button>
             <div className="flex items-center justify-center gap-[16px]">
-              <span className="text-[#FFFFFF80] text-[13px] font-normal">info@thinkhome.org</span>
+              <a href="mailto:info@thinkhome.org" className="text-[#FFFFFF80] text-[13px] font-normal">info@thinkhome.org</a>
               <span className="text-[#FFFFFF4D] text-[13px] font-bold">·</span>
-              <span className="text-[#FFFFFF80] text-[13px] font-normal">+420 222 160 782</span>
+              <a href="tel:+420222160782" className="text-[#FFFFFF80] text-[13px] font-normal">+420 222 160 782</a>
             </div>
           </div>
         </div>
