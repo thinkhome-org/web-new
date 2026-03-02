@@ -17,9 +17,9 @@ export function Navbar() {
         {/* Desktop Links */}
         <div className="hidden md:flex items-center gap-[40px]">
           <Link href="/" className="text-[#ffffff] font-[600] text-[16px]">Domů</Link>
-          <Link href="/o-nas" className="text-[#ffffff] opacity-70 font-[500] text-[16px]">O nás</Link>
-          <Link href="/sluzby" className="text-[#ffffff] opacity-70 font-[500] text-[16px]">Služby</Link>
-          <Link href="/kontakt" className="text-[#ffffff] opacity-70 font-[500] text-[16px]">Kontakt</Link>
+          <Link href="/o-nas" className="text-[#ffffff] opacity-70 hover:opacity-100 transition-opacity font-[500] text-[16px]">O nás</Link>
+          <Link href="/sluzby" className="text-[#ffffff] opacity-70 hover:opacity-100 transition-opacity font-[500] text-[16px]">Služby</Link>
+          <Link href="/kontakt" className="text-[#ffffff] opacity-70 hover:opacity-100 transition-opacity font-[500] text-[16px]">Kontakt</Link>
         </div>
 
         {/* Mobile Hamburger */}
@@ -74,9 +74,9 @@ export function Navbar() {
               Kontaktujte nás
             </button>
             <div className="flex items-center justify-center gap-[16px]">
-              <span className="text-[#FFFFFF80] text-[13px] font-normal">info@thinkhome.org</span>
+              <a href="mailto:info@thinkhome.org" className="text-white opacity-80 hover:opacity-100 transition-opacity text-[13px] font-normal">info@thinkhome.org</a>
               <span className="text-[#FFFFFF4D] text-[13px] font-bold">·</span>
-              <span className="text-[#FFFFFF80] text-[13px] font-normal">+420 222 160 782</span>
+              <a href="tel:+420222160782" className="text-white opacity-80 hover:opacity-100 transition-opacity text-[13px] font-normal">+420 222 160 782</a>
             </div>
           </div>
         </div>
