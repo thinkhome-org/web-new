@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export function Footer() {
   return (
-    <footer className="relative z-20 w-full bg-[#0f172a] flex flex-col p-[24px] gap-[16px] md:px-[64px] md:py-[64px] md:gap-[32px]">
+    <footer className="relative z-20 w-full bg-[#0f172a] shadow-[0_-10px_15px_-3px_rgba(0,0,0,0.1),0_-4px_6px_-4px_rgba(0,0,0,0.1)] flex flex-col p-[24px] gap-[16px] md:px-[64px] md:py-[64px] md:gap-[32px]">
       {/* Top section */}
       <div className="flex flex-col md:flex-row justify-between items-start md:items-center w-full">
         <div className="font-[800] text-[20px] md:text-[24px] text-white">
