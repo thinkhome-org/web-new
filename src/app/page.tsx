@@ -10,9 +10,6 @@ export default function Home() {
         {/* Top Nav (now fixed) */}
         <Navbar />
 
-        {/* Spacer for layout */}
-        <div className="hidden" />
-
         {/* Main Content Wrapper */}
         <div className="flex flex-col items-center justify-center gap-[24px] md:gap-[32px] w-full flex-grow">
           
