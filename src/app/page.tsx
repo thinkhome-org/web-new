@@ -4,7 +4,7 @@ export default function Home() {
   return (
     <>
       {/* Hero Section */}
-      <section className="bg-primary relative z-10 flex min-h-screen w-full flex-col items-center justify-between overflow-hidden p-6 pt-[100px] text-white md:p-12 md:pt-[150px]">
+      <section className="bg-primary relative z-10 flex min-h-screen w-full flex-col items-center justify-between overflow-hidden p-6 pt-[var(--navbar-height)] text-white md:p-12 md:pt-[var(--navbar-height)]">
         {/* Main Content Wrapper */}
         <div className="flex w-full flex-grow flex-col items-center justify-center gap-6 md:gap-8">
           {/* Badge */}

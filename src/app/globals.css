@@ -1,5 +1,15 @@
 @import "tailwindcss";
 
+:root {
+  --navbar-height: 100px;
+}
+
+@media (min-width: 768px) {
+  :root {
+    --navbar-height: 150px;
+  }
+}
+
 @theme {
   --color-primary: #002bff;
   --color-dark: #0f172a;

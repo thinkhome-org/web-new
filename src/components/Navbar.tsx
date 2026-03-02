@@ -17,6 +17,11 @@ export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const pathname = usePathname();
   const menuRef = useRef<HTMLDivElement>(null);
+  const isMenuOpenRef = useRef(isMenuOpen);
+
+  useEffect(() => {
+    isMenuOpenRef.current = isMenuOpen;
+  }, [isMenuOpen]);
 
   // Esc klávesa a Focus trap
   useEffect(() => {
@@ -77,20 +82,26 @@ export function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Správa scrollování body a listener na resize okna
+  // Správa scrollování body
   useEffect(() => {
     if (isMenuOpen) {
       document.body.style.overflow = "hidden";
     } else {
       document.body.style.overflow = "";
     }
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [isMenuOpen]);
 
+  // Listener na resize okna
+  useEffect(() => {
     let resizeTimeout: ReturnType<typeof setTimeout>;
     const handleResize = () => {
       clearTimeout(resizeTimeout);
       resizeTimeout = setTimeout(() => {
         // Zavřít mobilní menu, pokud se okno zvětší na desktopovou velikost (md: 768px)
-        if (window.innerWidth >= 768 && isMenuOpen) {
+        if (window.innerWidth >= 768 && isMenuOpenRef.current) {
           setIsMenuOpen(false);
         }
       }, 150);
@@ -100,10 +111,9 @@ export function Navbar() {
 
     return () => {
       clearTimeout(resizeTimeout);
-      document.body.style.overflow = "";
       window.removeEventListener("resize", handleResize);
     };
-  }, [isMenuOpen]);
+  }, []);
 
   return (
     <>
@@ -147,60 +157,66 @@ export function Navbar() {
       {/* Mobile Menu Overlay */}
       {isMenuOpen && (
         <div
-          ref={menuRef}
-          role="dialog"
-          aria-modal="true"
-          aria-label="Mobilní menu"
           className="bg-dark fixed inset-0 z-50 flex flex-col justify-between p-6"
+          onClick={() => setIsMenuOpen(false)}
         >
-          <div className="flex w-full items-center justify-between">
-            <div className="text-xl font-extrabold text-white">&lt;thinkhome&gt;</div>
-            <button onClick={() => setIsMenuOpen(false)} aria-label="Zavřít menu">
-              <X className="h-7 w-7 text-white" />
-            </button>
-          </div>
+          <div
+            ref={menuRef}
+            role="dialog"
+            aria-modal="true"
+            aria-label="Mobilní menu"
+            className="flex h-full w-full flex-col justify-between"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <div className="flex w-full items-center justify-between">
+              <div className="text-xl font-extrabold text-white">&lt;thinkhome&gt;</div>
+              <button onClick={() => setIsMenuOpen(false)} aria-label="Zavřít menu">
+                <X className="h-7 w-7 text-white" />
+              </button>
+            </div>
 
-          <div className="mt-10 flex w-full flex-col gap-2">
-            {NAV_LINKS.map((link, index) => {
-              const isActive = pathname === link.href;
-              return (
-                <div key={link.href} className="w-full">
-                  <Link
-                    href={link.href}
-                    className="flex w-full items-center justify-between py-5"
-                    onClick={() => setIsMenuOpen(false)}
-                  >
-                    <span
-                      className={`text-3xl font-bold ${isActive ? "text-white" : "text-white/80"}`}
+            <div className="mt-10 flex w-full flex-col gap-2">
+              {NAV_LINKS.map((link, index) => {
+                const isActive = pathname === link.href;
+                return (
+                  <div key={link.href} className="w-full">
+                    <Link
+                      href={link.href}
+                      className="flex w-full items-center justify-between py-5"
+                      onClick={() => setIsMenuOpen(false)}
                     >
-                      {link.label}
-                    </span>
-                    <ArrowRight className="h-6 w-6 text-white/30" />
-                  </Link>
-                  {index < NAV_LINKS.length - 1 && <div className="h-px w-full bg-white/10" />}
-                </div>
-              );
-            })}
-          </div>
+                      <span
+                        className={`text-3xl font-bold ${isActive ? "text-white" : "text-white/80"}`}
+                      >
+                        {link.label}
+                      </span>
+                      <ArrowRight className="h-6 w-6 text-white/30" />
+                    </Link>
+                    {index < NAV_LINKS.length - 1 && <div className="h-px w-full bg-white/10" />}
+                  </div>
+                );
+              })}
+            </div>
 
-          <div className="mt-auto mb-2 flex w-full flex-col gap-6">
-            <button className="bg-primary w-full rounded-lg px-8 py-4 text-center text-base font-extrabold text-white">
-              Kontaktujte nás
-            </button>
-            <div className="flex items-center justify-center gap-4">
-              <a
-                href="mailto:info@thinkhome.org"
-                className="text-[13px] font-normal text-white opacity-80 transition-opacity hover:opacity-100"
-              >
-                info@thinkhome.org
-              </a>
-              <span className="text-[13px] font-bold text-white/30">·</span>
-              <a
-                href="tel:+420222160782"
-                className="text-[13px] font-normal text-white opacity-80 transition-opacity hover:opacity-100"
-              >
-                +420 222 160 782
-              </a>
+            <div className="mt-auto mb-2 flex w-full flex-col gap-6">
+              <button className="bg-primary w-full rounded-lg px-8 py-4 text-center text-base font-extrabold text-white">
+                Kontaktujte nás
+              </button>
+              <div className="flex items-center justify-center gap-4">
+                <a
+                  href="mailto:info@thinkhome.org"
+                  className="text-[13px] font-normal text-white opacity-80 transition-opacity hover:opacity-100"
+                >
+                  info@thinkhome.org
+                </a>
+                <span className="text-[13px] font-bold text-white/30">·</span>
+                <a
+                  href="tel:+420222160782"
+                  className="text-[13px] font-normal text-white opacity-80 transition-opacity hover:opacity-100"
+                >
+                  +420 222 160 782
+                </a>
+              </div>
             </div>
           </div>
         </div>
