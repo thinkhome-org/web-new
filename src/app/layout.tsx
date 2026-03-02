@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Manrope } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
+import Script from "next/script";
 import "./globals.css";
 
 const manrope = Manrope({
@@ -21,8 +23,16 @@ export default function RootLayout({
   return (
     <html lang="cs">
       <body className={`${manrope.variable} antialiased`}>
+        {process.env.NODE_ENV === "development" && (
+          <Script
+            src="//unpkg.com/react-grab/dist/index.global.js"
+            crossOrigin="anonymous"
+            strategy="beforeInteractive"
+          />
+        )}
         {children}
         <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );

@@ -2,14 +2,24 @@
 
 import Link from "next/link";
 import { ArrowRight, Menu, X } from "lucide-react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 20);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
     <>
-      <nav className="w-full flex items-center justify-between">
+      <header className={`fixed top-0 left-0 right-0 w-full z-50 transition-all duration-300 ${isScrolled ? "bg-[#002bff] shadow-lg py-[16px] md:py-[24px]" : "bg-transparent py-[24px] md:py-[48px]"} px-[24px] md:px-[48px]`}>
+        <nav className="w-full flex items-center justify-between">
         <div className="font-[800] text-[20px] md:text-[24px] text-white">
           &lt;thinkhome&gt;
         </div>
@@ -31,6 +41,7 @@ export function Navbar() {
           <Menu className="w-7 h-7 text-white" />
         </button>
       </nav>
+      </header>
 
       {/* Mobile Menu Overlay */}
       {isMenuOpen && (
