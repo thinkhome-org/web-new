@@ -23,7 +23,11 @@ export function Navbar() {
         </div>
 
         {/* Mobile Hamburger */}
-        <button className="md:hidden" onClick={() => setIsMenuOpen(true)}>
+        <button 
+          className="md:hidden" 
+          onClick={() => setIsMenuOpen(true)}
+          aria-label="Otevřít menu"
+        >
           <Menu className="w-7 h-7 text-white" />
         </button>
       </nav>
