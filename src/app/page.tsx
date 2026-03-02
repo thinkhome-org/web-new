@@ -14,7 +14,7 @@ export default function Home() {
           
           {/* Badge */}
           <div className="flex items-center opacity-40">
-            <span className="font-[600] text-[12px] md:text-[14px]">Vše okolo it bez starostí</span>
+            <span className="font-[600] text-[12px] md:text-[14px]">Vše okolo IT bez starostí</span>
           </div>
 
           {/* Heading */}
