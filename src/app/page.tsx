@@ -1,5 +1,6 @@
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
+import { ArrowDown } from "lucide-react";
 
 export default function Home() {
   return (
@@ -43,7 +44,7 @@ export default function Home() {
         <div className="flex flex-col items-center gap-[12px] pb-[16px]">
           <span className="font-[600] text-[12px] tracking-[1px] text-white opacity-60">Posuňte dolů</span>
           <div className="flex items-center justify-center w-[40px] h-[40px] rounded-[20px] bg-transparent opacity-50 animate-bounce">
-            <span className="text-[18px] font-bold text-white">↓</span>
+            <ArrowDown className="w-[18px] h-[18px] text-white" strokeWidth={3} />
           </div>
         </div>
       </section>
