@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { ArrowRight, Menu, X } from "lucide-react";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 
 const NAV_LINKS = [
   { href: "/", label: "Domů" },
@@ -16,6 +16,47 @@ export function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const pathname = usePathname();
+  const menuRef = useRef<HTMLDivElement>(null);
+
+  // Esc klávesa a Focus trap
+  useEffect(() => {
+    if (!isMenuOpen) return;
+
+    const menuNode = menuRef.current;
+    if (!menuNode) return;
+
+    const focusableElements = menuNode.querySelectorAll<HTMLElement>(
+      'a[href], button, textarea, input[type="text"], input[type="radio"], input[type="checkbox"], select, [tabindex]:not([tabindex="-1"])',
+    );
+    if (focusableElements.length === 0) return;
+
+    const firstElement = focusableElements[0];
+    const lastElement = focusableElements[focusableElements.length - 1];
+
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape") {
+        setIsMenuOpen(false);
+        return;
+      }
+      if (e.key === "Tab") {
+        if (e.shiftKey) {
+          if (document.activeElement === firstElement) {
+            lastElement.focus();
+            e.preventDefault();
+          }
+        } else {
+          if (document.activeElement === lastElement) {
+            firstElement.focus();
+            e.preventDefault();
+          }
+        }
+      }
+    };
+
+    firstElement.focus();
+    document.addEventListener("keydown", handleKeyDown);
+    return () => document.removeEventListener("keydown", handleKeyDown);
+  }, [isMenuOpen]);
 
   // Optimalizovaný scroll listener pomocí requestAnimationFrame
   useEffect(() => {
@@ -44,16 +85,21 @@ export function Navbar() {
       document.body.style.overflow = "";
     }
 
+    let resizeTimeout: ReturnType<typeof setTimeout>;
     const handleResize = () => {
-      // Zavřít mobilní menu, pokud se okno zvětší na desktopovou velikost (md: 768px)
-      if (window.innerWidth >= 768 && isMenuOpen) {
-        setIsMenuOpen(false);
-      }
+      clearTimeout(resizeTimeout);
+      resizeTimeout = setTimeout(() => {
+        // Zavřít mobilní menu, pokud se okno zvětší na desktopovou velikost (md: 768px)
+        if (window.innerWidth >= 768 && isMenuOpen) {
+          setIsMenuOpen(false);
+        }
+      }, 150);
     };
 
     window.addEventListener("resize", handleResize);
 
     return () => {
+      clearTimeout(resizeTimeout);
       document.body.style.overflow = "";
       window.removeEventListener("resize", handleResize);
     };
@@ -100,7 +146,13 @@ export function Navbar() {
 
       {/* Mobile Menu Overlay */}
       {isMenuOpen && (
-        <div className="bg-dark fixed inset-0 z-50 flex flex-col justify-between p-6">
+        <div
+          ref={menuRef}
+          role="dialog"
+          aria-modal="true"
+          aria-label="Mobilní menu"
+          className="bg-dark fixed inset-0 z-50 flex flex-col justify-between p-6"
+        >
           <div className="flex w-full items-center justify-between">
             <div className="text-xl font-extrabold text-white">&lt;thinkhome&gt;</div>
             <button onClick={() => setIsMenuOpen(false)} aria-label="Zavřít menu">

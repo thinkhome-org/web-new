@@ -28,7 +28,7 @@ export default function RootLayout({
       <body className={`${manrope.variable} antialiased`}>
         {process.env.NODE_ENV === "development" && (
           <Script
-            src="https://unpkg.com/react-grab/dist/index.global.js"
+            src="https://unpkg.com/react-grab@1.0.4/dist/index.global.js"
             crossOrigin="anonymous"
             strategy="afterInteractive"
           />
