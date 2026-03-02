@@ -1,0 +1,8 @@
+.next
+dist
+build
+node_modules
+bun.lock
+public
+pencil.pen
+AGENTS.md

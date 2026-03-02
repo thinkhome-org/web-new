@@ -4,6 +4,8 @@ import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import Script from "next/script";
 import "./globals.css";
+import { Navbar } from "@/components/Navbar";
+import { Footer } from "@/components/Footer";
 
 const manrope = Manrope({
   variable: "--font-manrope",
@@ -12,7 +14,8 @@ const manrope = Manrope({
 
 export const metadata: Metadata = {
   title: "ThinkHome | Kompletní IT pod jednou střechou",
-  description: "Zjednodušujeme IT tak, aby se firmy nenechaly nachytat a nemusely řešit několik dodavatelů zároveň.",
+  description:
+    "Zjednodušujeme IT tak, aby se firmy nenechaly nachytat a nemusely řešit několik dodavatelů zároveň.",
 };
 
 export default function RootLayout({
@@ -30,7 +33,11 @@ export default function RootLayout({
             strategy="afterInteractive"
           />
         )}
-        {children}
+        <div className="flex min-h-screen flex-col">
+          <Navbar />
+          <main className="flex-grow">{children}</main>
+          <Footer />
+        </div>
         <Analytics />
         <SpeedInsights />
       </body>

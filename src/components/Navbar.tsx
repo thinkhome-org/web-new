@@ -61,24 +61,24 @@ export function Navbar() {
 
   return (
     <>
-      <header className={`fixed top-0 left-0 right-0 w-full z-50 transition-all duration-300 ${isScrolled ? "bg-[#002bff] shadow-lg py-[16px] md:py-[24px]" : "bg-transparent py-[24px] md:py-[48px]"} px-[24px] md:px-[48px]`}>
-        <nav className="w-full flex items-center justify-between">
-          <div className="font-[800] text-[20px] md:text-[24px] text-white">
-            &lt;thinkhome&gt;
-          </div>
-          
+      <header
+        className={`fixed top-0 right-0 left-0 z-50 w-full transition-all duration-300 ${isScrolled ? "bg-primary py-4 shadow-lg md:py-6" : "bg-transparent py-6 md:py-12"} px-6 md:px-12`}
+      >
+        <nav className="flex w-full items-center justify-between">
+          <div className="text-xl font-extrabold text-white md:text-2xl">&lt;thinkhome&gt;</div>
+
           {/* Desktop Links */}
-          <div className="hidden md:flex items-center gap-[40px]">
+          <div className="hidden items-center gap-10 md:flex">
             {NAV_LINKS.map((link) => {
               const isActive = pathname === link.href;
               return (
-                <Link 
-                  key={link.href} 
-                  href={link.href} 
-                  className={`text-[#ffffff] text-[16px] transition-opacity ${
-                    isActive 
-                      ? "font-[600] opacity-100" 
-                      : "font-[500] opacity-70 hover:opacity-100"
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className={`text-base text-white transition-opacity ${
+                    isActive
+                      ? "font-semibold opacity-100"
+                      : "font-medium opacity-70 hover:opacity-100"
                   }`}
                 >
                   {link.label}
@@ -88,62 +88,67 @@ export function Navbar() {
           </div>
 
           {/* Mobile Hamburger */}
-          <button 
-            className="md:hidden" 
+          <button
+            className="md:hidden"
             onClick={() => setIsMenuOpen(true)}
             aria-label="Otevřít menu"
           >
-            <Menu className="w-7 h-7 text-white" />
+            <Menu className="h-7 w-7 text-white" />
           </button>
         </nav>
       </header>
 
       {/* Mobile Menu Overlay */}
       {isMenuOpen && (
-        <div className="fixed inset-0 z-50 bg-[#0f172a] flex flex-col justify-between p-6">
-          <div className="w-full flex items-center justify-between">
-            <div className="font-[800] text-[20px] text-white">
-              &lt;thinkhome&gt;
-            </div>
-            <button 
-              onClick={() => setIsMenuOpen(false)}
-              aria-label="Zavřít menu"
-            >
-              <X className="w-7 h-7 text-white" />
+        <div className="bg-dark fixed inset-0 z-50 flex flex-col justify-between p-6">
+          <div className="flex w-full items-center justify-between">
+            <div className="text-xl font-extrabold text-white">&lt;thinkhome&gt;</div>
+            <button onClick={() => setIsMenuOpen(false)} aria-label="Zavřít menu">
+              <X className="h-7 w-7 text-white" />
             </button>
           </div>
 
-          <div className="flex flex-col gap-2 w-full mt-[40px]">
+          <div className="mt-10 flex w-full flex-col gap-2">
             {NAV_LINKS.map((link, index) => {
               const isActive = pathname === link.href;
               return (
                 <div key={link.href} className="w-full">
-                  <Link 
-                    href={link.href} 
-                    className="flex items-center justify-between py-[20px] w-full" 
+                  <Link
+                    href={link.href}
+                    className="flex w-full items-center justify-between py-5"
                     onClick={() => setIsMenuOpen(false)}
                   >
-                    <span className={`font-[700] text-[32px] ${isActive ? "text-white" : "text-[#FFFFFFCC]"}`}>
+                    <span
+                      className={`text-3xl font-bold ${isActive ? "text-white" : "text-white/80"}`}
+                    >
                       {link.label}
                     </span>
-                    <ArrowRight className="w-6 h-6 text-[#FFFFFF4D]" />
+                    <ArrowRight className="h-6 w-6 text-white/30" />
                   </Link>
-                  {index < NAV_LINKS.length - 1 && (
-                    <div className="h-[1px] w-full bg-[#FFFFFF1A]" />
-                  )}
+                  {index < NAV_LINKS.length - 1 && <div className="h-px w-full bg-white/10" />}
                 </div>
               );
             })}
           </div>
 
-          <div className="flex flex-col gap-[24px] w-full mt-auto mb-2">
-            <button className="w-full bg-[#002bff] text-white py-[16px] px-[32px] rounded-[8px] font-[800] text-[16px] text-center">
+          <div className="mt-auto mb-2 flex w-full flex-col gap-6">
+            <button className="bg-primary w-full rounded-lg px-8 py-4 text-center text-base font-extrabold text-white">
               Kontaktujte nás
             </button>
-            <div className="flex items-center justify-center gap-[16px]">
-              <a href="mailto:info@thinkhome.org" className="text-white opacity-80 hover:opacity-100 transition-opacity text-[13px] font-normal">info@thinkhome.org</a>
-              <span className="text-[#FFFFFF4D] text-[13px] font-bold">·</span>
-              <a href="tel:+420222160782" className="text-white opacity-80 hover:opacity-100 transition-opacity text-[13px] font-normal">+420 222 160 782</a>
+            <div className="flex items-center justify-center gap-4">
+              <a
+                href="mailto:info@thinkhome.org"
+                className="text-[13px] font-normal text-white opacity-80 transition-opacity hover:opacity-100"
+              >
+                info@thinkhome.org
+              </a>
+              <span className="text-[13px] font-bold text-white/30">·</span>
+              <a
+                href="tel:+420222160782"
+                className="text-[13px] font-normal text-white opacity-80 transition-opacity hover:opacity-100"
+              >
+                +420 222 160 782
+              </a>
             </div>
           </div>
         </div>
