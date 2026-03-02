@@ -39,7 +39,10 @@ export function Navbar() {
             <div className="font-[800] text-[20px] text-white">
               &lt;thinkhome&gt;
             </div>
-            <button onClick={() => setIsMenuOpen(false)}>
+            <button 
+              onClick={() => setIsMenuOpen(false)}
+              aria-label="Zavřít menu"
+            >
               <X className="w-7 h-7 text-white" />
             </button>
           </div>
