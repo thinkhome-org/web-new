@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export function Footer() {
   return (
     <footer className="w-full bg-[#0f172a] flex flex-col p-[24px] gap-[16px] md:px-[64px] md:py-[64px] md:gap-[32px]">
@@ -20,9 +22,9 @@ export function Footer() {
           © 2026 ThinkHome s.r.o. Všechna práva vyhrazena.
         </div>
         <div className="flex flex-col md:flex-row gap-[12px] md:gap-[24px]">
-          <a href="#" className="text-white opacity-50 text-[14px] font-normal">Ceník služeb</a>
-          <a href="#" className="text-white opacity-50 text-[14px] font-normal">Obchodní podmínky</a>
-          <a href="#" className="text-white opacity-50 text-[14px] font-normal">Ochrana osobních údajů</a>
+          <Link href="#" className="text-white opacity-50 text-[14px] font-normal">Ceník služeb</Link>
+          <Link href="#" className="text-white opacity-50 text-[14px] font-normal">Obchodní podmínky</Link>
+          <Link href="#" className="text-white opacity-50 text-[14px] font-normal">Ochrana osobních údajů</Link>
         </div>
       </div>
     </footer>
