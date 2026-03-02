@@ -1,29 +1,61 @@
 "use client";
 
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { ArrowRight, Menu, X } from "lucide-react";
 import { useState, useEffect } from "react";
+
+const NAV_LINKS = [
+  { href: "/", label: "Domů" },
+  { href: "/o-nas", label: "O nás" },
+  { href: "/sluzby", label: "Služby" },
+  { href: "/kontakt", label: "Kontakt" },
+];
 
 export function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const pathname = usePathname();
 
+  // Optimalizovaný scroll listener pomocí requestAnimationFrame
   useEffect(() => {
+    let ticking = false;
+
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          setIsScrolled(window.scrollY > 20);
+          ticking = false;
+        });
+        ticking = true;
+      }
     };
+
     window.addEventListener("scroll", handleScroll, { passive: true });
+    // Dle specifikace není nutné předávat { passive: true } do removeEventListener, ale dodržujeme konvenci
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  // Správa scrollování body a listener na resize okna
   useEffect(() => {
     if (isMenuOpen) {
       document.body.style.overflow = "hidden";
     } else {
       document.body.style.overflow = "";
     }
+
+    const handleResize = () => {
+      // Zavřít mobilní menu, pokud se okno zvětší na desktopovou velikost (md: 768px)
+      if (window.innerWidth >= 768 && isMenuOpen) {
+        setIsMenuOpen(false);
+      }
+    };
+
+    window.addEventListener("resize", handleResize);
+
     return () => {
       document.body.style.overflow = "";
+      window.removeEventListener("resize", handleResize);
     };
   }, [isMenuOpen]);
 
@@ -31,27 +63,39 @@ export function Navbar() {
     <>
       <header className={`fixed top-0 left-0 right-0 w-full z-50 transition-all duration-300 ${isScrolled ? "bg-[#002bff] shadow-lg py-[16px] md:py-[24px]" : "bg-transparent py-[24px] md:py-[48px]"} px-[24px] md:px-[48px]`}>
         <nav className="w-full flex items-center justify-between">
-        <div className="font-[800] text-[20px] md:text-[24px] text-white">
-          &lt;thinkhome&gt;
-        </div>
-        
-        {/* Desktop Links */}
-        <div className="hidden md:flex items-center gap-[40px]">
-          <Link href="/" className="text-[#ffffff] font-[600] text-[16px]">Domů</Link>
-          <Link href="/o-nas" className="text-[#ffffff] opacity-70 hover:opacity-100 transition-opacity font-[500] text-[16px]">O nás</Link>
-          <Link href="/sluzby" className="text-[#ffffff] opacity-70 hover:opacity-100 transition-opacity font-[500] text-[16px]">Služby</Link>
-          <Link href="/kontakt" className="text-[#ffffff] opacity-70 hover:opacity-100 transition-opacity font-[500] text-[16px]">Kontakt</Link>
-        </div>
+          <div className="font-[800] text-[20px] md:text-[24px] text-white">
+            &lt;thinkhome&gt;
+          </div>
+          
+          {/* Desktop Links */}
+          <div className="hidden md:flex items-center gap-[40px]">
+            {NAV_LINKS.map((link) => {
+              const isActive = pathname === link.href;
+              return (
+                <Link 
+                  key={link.href} 
+                  href={link.href} 
+                  className={`text-[#ffffff] text-[16px] transition-opacity ${
+                    isActive 
+                      ? "font-[600] opacity-100" 
+                      : "font-[500] opacity-70 hover:opacity-100"
+                  }`}
+                >
+                  {link.label}
+                </Link>
+              );
+            })}
+          </div>
 
-        {/* Mobile Hamburger */}
-        <button 
-          className="md:hidden" 
-          onClick={() => setIsMenuOpen(true)}
-          aria-label="Otevřít menu"
-        >
-          <Menu className="w-7 h-7 text-white" />
-        </button>
-      </nav>
+          {/* Mobile Hamburger */}
+          <button 
+            className="md:hidden" 
+            onClick={() => setIsMenuOpen(true)}
+            aria-label="Otevřít menu"
+          >
+            <Menu className="w-7 h-7 text-white" />
+          </button>
+        </nav>
       </header>
 
       {/* Mobile Menu Overlay */}
@@ -70,25 +114,26 @@ export function Navbar() {
           </div>
 
           <div className="flex flex-col gap-2 w-full mt-[40px]">
-            <Link href="/" className="flex items-center justify-between py-[20px] w-full" onClick={() => setIsMenuOpen(false)}>
-              <span className="text-white font-[700] text-[32px]">Domů</span>
-              <ArrowRight className="w-6 h-6 text-[#FFFFFF4D]" />
-            </Link>
-            <div className="h-[1px] w-full bg-[#FFFFFF1A]" />
-            <Link href="/o-nas" className="flex items-center justify-between py-[20px] w-full" onClick={() => setIsMenuOpen(false)}>
-              <span className="text-[#FFFFFFCC] font-[700] text-[32px]">O nás</span>
-              <ArrowRight className="w-6 h-6 text-[#FFFFFF4D]" />
-            </Link>
-            <div className="h-[1px] w-full bg-[#FFFFFF1A]" />
-            <Link href="/sluzby" className="flex items-center justify-between py-[20px] w-full" onClick={() => setIsMenuOpen(false)}>
-              <span className="text-[#FFFFFFCC] font-[700] text-[32px]">Služby</span>
-              <ArrowRight className="w-6 h-6 text-[#FFFFFF4D]" />
-            </Link>
-            <div className="h-[1px] w-full bg-[#FFFFFF1A]" />
-            <Link href="/kontakt" className="flex items-center justify-between py-[20px] w-full" onClick={() => setIsMenuOpen(false)}>
-              <span className="text-[#FFFFFFCC] font-[700] text-[32px]">Kontakt</span>
-              <ArrowRight className="w-6 h-6 text-[#FFFFFF4D]" />
-            </Link>
+            {NAV_LINKS.map((link, index) => {
+              const isActive = pathname === link.href;
+              return (
+                <div key={link.href} className="w-full">
+                  <Link 
+                    href={link.href} 
+                    className="flex items-center justify-between py-[20px] w-full" 
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    <span className={`font-[700] text-[32px] ${isActive ? "text-white" : "text-[#FFFFFFCC]"}`}>
+                      {link.label}
+                    </span>
+                    <ArrowRight className="w-6 h-6 text-[#FFFFFF4D]" />
+                  </Link>
+                  {index < NAV_LINKS.length - 1 && (
+                    <div className="h-[1px] w-full bg-[#FFFFFF1A]" />
+                  )}
+                </div>
+              );
+            })}
           </div>
 
           <div className="flex flex-col gap-[24px] w-full mt-auto mb-2">
