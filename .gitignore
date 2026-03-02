@@ -1,0 +1,14 @@
+node_modules/
+.next/
+out/
+build/
+.env*
+.DS_Store
+*.pem
+
+# Vercel
+.vercel
+
+# typescript
+*.tsbuildinfo
+next-env.d.ts
