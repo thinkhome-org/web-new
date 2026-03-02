@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <div className="flex flex-col font-[family-name:var(--font-manrope)]">
       {/* Hero Section */}
-      <section className="w-full bg-[#002bff] text-white flex flex-col justify-between items-center h-screen p-[24px] md:p-[48px] overflow-hidden">
+      <section className="w-full relative z-10 bg-[#002bff] text-white flex flex-col justify-between items-center min-h-screen p-[24px] md:p-[48px] overflow-hidden">
         {/* Top Nav */}
         <Navbar />
 
