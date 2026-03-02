@@ -7,7 +7,7 @@ export default function Home() {
     <div className="flex flex-col font-[family-name:var(--font-manrope)]">
       {/* Hero Section */}
       <section className="w-full relative z-10 bg-[#002bff] text-white flex flex-col justify-between items-center min-h-screen p-[24px] md:p-[48px] overflow-hidden pt-[100px] md:pt-[150px]">
-        {/* Top Nav (now fixed) */}
+        {/* Sticky Header */}
         <Navbar />
 
         {/* Main Content Wrapper */}
