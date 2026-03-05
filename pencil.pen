@@ -1195,7 +1195,8 @@
                       "fill": "#ffffff",
                       "content": "/",
                       "fontFamily": "Manrope",
-                      "fontSize": 14
+                      "fontSize": 14,
+                      "fontWeight": "normal"
                     },
                     {
                       "type": "text",
@@ -1230,7 +1231,8 @@
                   "width": "fill_container",
                   "content": "Krátký popis stránky a jejího obsahu pro návštěvníky.",
                   "fontFamily": "Manrope",
-                  "fontSize": 18
+                  "fontSize": 18,
+                  "fontWeight": "normal"
                 }
               ]
             },
@@ -1385,7 +1387,7 @@
       "y": 1227,
       "name": "ThinkHome Mobile Generic Page",
       "width": 390,
-      "height": 844,
+      "height": 900,
       "fill": "#ffffff",
       "layout": "vertical",
       "children": [
@@ -1475,7 +1477,8 @@
                       "fill": "#ffffff",
                       "content": "/",
                       "fontFamily": "Manrope",
-                      "fontSize": 12
+                      "fontSize": 12,
+                      "fontWeight": "normal"
                     },
                     {
                       "type": "text",
@@ -1510,7 +1513,8 @@
                   "width": "fill_container",
                   "content": "Krátký popis stránky a jejího obsahu pro návštěvníky.",
                   "fontFamily": "Manrope",
-                  "fontSize": 15
+                  "fontSize": 15,
+                  "fontWeight": "normal"
                 }
               ]
             },
@@ -1633,6 +1637,2967 @@
             {
               "type": "text",
               "id": "EKU6g",
+              "name": "copy",
+              "fill": "#FFFFFF80",
+              "content": "© 2026 ThinkHome s.r.o. Všechna práva vyhrazena.",
+              "fontFamily": "Manrope",
+              "fontSize": 12,
+              "fontWeight": "normal"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "NJtmQ",
+      "x": 0,
+      "y": 2308,
+      "name": "ThinkHome PC MDX Page",
+      "width": 1440,
+      "fill": "#ffffff",
+      "layout": "vertical",
+      "children": [
+        {
+          "type": "frame",
+          "id": "pfTrr",
+          "name": "header",
+          "width": "fill_container",
+          "fill": "#002bffff",
+          "padding": [
+            24,
+            48
+          ],
+          "justifyContent": "space_between",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "u7cX6",
+              "name": "pcLogo",
+              "fill": "#ffffff",
+              "content": "<thinkhome>",
+              "fontFamily": "Manrope",
+              "fontSize": 24,
+              "fontWeight": "800"
+            },
+            {
+              "type": "frame",
+              "id": "fJTpD",
+              "name": "navLinks",
+              "gap": 40,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "JLyUp",
+                  "name": "pcL1",
+                  "fill": "#ffffff",
+                  "content": "Domů",
+                  "fontFamily": "Manrope",
+                  "fontSize": 16,
+                  "fontWeight": "600"
+                },
+                {
+                  "type": "text",
+                  "id": "rQ96o",
+                  "name": "pcL2",
+                  "opacity": 0.7,
+                  "fill": "#ffffff",
+                  "content": "O nás",
+                  "fontFamily": "Manrope",
+                  "fontSize": 16,
+                  "fontWeight": "500"
+                },
+                {
+                  "type": "text",
+                  "id": "BGnSZ",
+                  "name": "pcL3",
+                  "opacity": 0.7,
+                  "fill": "#ffffff",
+                  "content": "Služby",
+                  "fontFamily": "Manrope",
+                  "fontSize": 16,
+                  "fontWeight": "500"
+                },
+                {
+                  "type": "text",
+                  "id": "0AF5S",
+                  "name": "pcL4",
+                  "opacity": 0.7,
+                  "fill": "#ffffff",
+                  "content": "Kontakt",
+                  "fontFamily": "Manrope",
+                  "fontSize": 16,
+                  "fontWeight": "500"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "zG9aG",
+          "name": "titleHero",
+          "width": "fill_container",
+          "fill": "#002bff",
+          "layout": "vertical",
+          "gap": 16,
+          "padding": [
+            48,
+            0,
+            0,
+            0
+          ],
+          "justifyContent": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "jAjUv",
+              "name": "heroInner",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 16,
+              "padding": [
+                0,
+                48
+              ],
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "cklph",
+                  "name": "breadcrumb",
+                  "gap": 8,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "NncVX",
+                      "name": "bcHome",
+                      "opacity": 0.6,
+                      "fill": "#ffffff",
+                      "content": "Domů",
+                      "fontFamily": "Manrope",
+                      "fontSize": 14,
+                      "fontWeight": "500"
+                    },
+                    {
+                      "type": "text",
+                      "id": "mOaPZ",
+                      "name": "bcSep",
+                      "opacity": 0.4,
+                      "fill": "#ffffff",
+                      "content": "/",
+                      "fontFamily": "Manrope",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "IWGbc",
+                      "name": "bcCurrent",
+                      "opacity": 0.6,
+                      "fill": "#ffffff",
+                      "content": "Název stránky",
+                      "fontFamily": "Manrope",
+                      "fontSize": 14,
+                      "fontWeight": "500"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "id": "BQanT",
+                  "name": "pageTitle",
+                  "fill": "#ffffff",
+                  "content": "Coolemark: Kompletní katalog GFM",
+                  "fontFamily": "Manrope",
+                  "fontSize": 48,
+                  "fontWeight": "800"
+                },
+                {
+                  "type": "text",
+                  "id": "UyiSH",
+                  "name": "pageSubtitle",
+                  "opacity": 0.72,
+                  "fill": "#ffffff",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "Tento dokument je praktická „testovací plocha“ pro všechny elementy Markdownu. Obsahuje nadpisy, tabulky, kódové bloky i GitHub-specifické vychytávky.",
+                  "fontFamily": "Manrope",
+                  "fontSize": 18,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "D9367",
+                  "name": "heroUpdated",
+                  "opacity": 0.72,
+                  "fill": "#ffffff",
+                  "content": "Aktualizováno: 5. března 2026",
+                  "fontFamily": "Manrope",
+                  "fontSize": 14,
+                  "fontWeight": "600"
+                }
+              ]
+            },
+            {
+              "type": "path",
+              "id": "M3g6d",
+              "name": "heroDiagonalCut",
+              "geometry": "M0 40l1440-40 0 96-1440 0z",
+              "fill": "#ffffff",
+              "width": "fill_container",
+              "height": 96
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "fcrl4",
+          "name": "contentWrapper",
+          "width": "fill_container",
+          "fill": "#ffffff",
+          "layout": "vertical",
+          "padding": [
+            0,
+            48
+          ],
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "zUizp",
+              "name": "article",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 40,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "d9jmh",
+                  "name": "inlines",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 16,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "6jMW8",
+                      "fill": "#0f172a",
+                      "content": "Inline formátování",
+                      "fontFamily": "Manrope",
+                      "fontSize": 24,
+                      "fontWeight": "800"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "HOcBU",
+                      "name": "inlineRow",
+                      "width": "fill_container",
+                      "gap": 24,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "AVyNr",
+                          "fill": "#0f172a",
+                          "content": "Tučný text",
+                          "fontFamily": "Manrope",
+                          "fontSize": 18,
+                          "fontWeight": "800"
+                        },
+                        {
+                          "type": "text",
+                          "id": "olZah",
+                          "fill": "#0f172a",
+                          "content": "Kurzíva",
+                          "fontFamily": "Manrope",
+                          "fontSize": 18,
+                          "fontStyle": "italic"
+                        },
+                        {
+                          "type": "text",
+                          "id": "12N8q",
+                          "fill": "#64748b",
+                          "content": "Přeškrtnutý",
+                          "fontFamily": "Manrope",
+                          "fontSize": 18
+                        },
+                        {
+                          "type": "frame",
+                          "id": "mCv4I",
+                          "name": "codeTag",
+                          "fill": "#f1f5f9",
+                          "cornerRadius": 6,
+                          "padding": [
+                            6,
+                            10
+                          ],
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "CaF6D",
+                              "fill": "#002bff",
+                              "content": "inline_code()",
+                              "fontFamily": "Courier New",
+                              "fontSize": 16,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "QXkfZ",
+                  "name": "lorem",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 12,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "Yh8Ml",
+                      "fill": "#0f172a",
+                      "content": "Ukázkový text (Lorem ipsum)",
+                      "fontFamily": "Manrope",
+                      "fontSize": 24,
+                      "fontWeight": "800"
+                    },
+                    {
+                      "type": "text",
+                      "id": "s0Tv6",
+                      "fill": "#334155",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+                      "lineHeight": 1.6,
+                      "fontFamily": "Manrope",
+                      "fontSize": 16
+                    },
+                    {
+                      "type": "frame",
+                      "id": "5yYqK",
+                      "name": "inlineSample",
+                      "gap": 12,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "7ympu",
+                          "fill": "#334155",
+                          "content": "Normální",
+                          "fontFamily": "Manrope",
+                          "fontSize": 16,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "VOj8i",
+                          "fill": "#0f172a",
+                          "content": "Tučné",
+                          "fontFamily": "Manrope",
+                          "fontSize": 16,
+                          "fontWeight": "800"
+                        },
+                        {
+                          "type": "text",
+                          "id": "57Q3G",
+                          "fill": "#0f172a",
+                          "content": "Kurzíva",
+                          "fontFamily": "Manrope",
+                          "fontSize": 16,
+                          "fontWeight": "normal",
+                          "fontStyle": "italic"
+                        },
+                        {
+                          "type": "text",
+                          "id": "baiFP",
+                          "fill": "#64748b",
+                          "content": "Přeškrtnuté",
+                          "fontFamily": "Manrope",
+                          "fontSize": 16,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "frame",
+                          "id": "FL1v1",
+                          "name": "codeSample",
+                          "fill": "#f1f5f9",
+                          "cornerRadius": 6,
+                          "padding": [
+                            4,
+                            8
+                          ],
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "VUDmU",
+                              "fill": "#002bff",
+                              "content": "code",
+                              "fontFamily": "Courier New",
+                              "fontSize": 14,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "CjtOM",
+                  "name": "btnSec",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 16,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "rdWml",
+                      "fill": "#0f172a",
+                      "content": "Tlačítka",
+                      "fontFamily": "Manrope",
+                      "fontSize": 24,
+                      "fontWeight": "800"
+                    },
+                    {
+                      "type": "rectangle",
+                      "id": "vXhAn",
+                      "fill": "#e2e8f0",
+                      "width": "fill_container",
+                      "height": 1
+                    },
+                    {
+                      "type": "frame",
+                      "id": "9ZBA0",
+                      "name": "btnRow",
+                      "gap": 16,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "rF6o2",
+                          "name": "btn",
+                          "fill": "#f1f5f9",
+                          "cornerRadius": 8,
+                          "padding": [
+                            14,
+                            28
+                          ],
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "JmMxc",
+                              "fill": "#94a3b8",
+                              "content": "Neaktivní tlačítko",
+                              "fontFamily": "Manrope",
+                              "fontSize": 16,
+                              "fontWeight": "600"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "JhJw5",
+                          "name": "btnActive",
+                          "fill": "#ffffff",
+                          "cornerRadius": 8,
+                          "padding": [
+                            14,
+                            28
+                          ],
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "rmo9G",
+                              "fill": "#002bff",
+                              "content": "Nevybrané tlačítko",
+                              "fontFamily": "Manrope",
+                              "fontSize": 16,
+                              "fontWeight": "700"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "iMLMu",
+                          "name": "btnSelected",
+                          "fill": "#002bff",
+                          "cornerRadius": 8,
+                          "padding": [
+                            14,
+                            28
+                          ],
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "loNhP",
+                              "fill": "#ffffff",
+                              "content": "Vybrané tlačítko",
+                              "fontFamily": "Manrope",
+                              "fontSize": 16,
+                              "fontWeight": "700"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "JMO7t",
+                  "name": "bq",
+                  "width": "fill_container",
+                  "gap": 20,
+                  "padding": [
+                    8,
+                    0
+                  ],
+                  "children": [
+                    {
+                      "type": "rectangle",
+                      "cornerRadius": 2,
+                      "id": "XC4v2",
+                      "fill": "#002bff",
+                      "width": 4,
+                      "height": "fill_container"
+                    },
+                    {
+                      "type": "text",
+                      "id": "kLdeS",
+                      "fill": "#334155",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Cíl souboru: jeden .md soubor, který v praxi demonstruje všechny elementy a hlavní varianty syntaxe dostupné v kombinaci CommonMark 0.31.2 + GitHub Flavored Markdown (GFM).",
+                      "lineHeight": 1.6,
+                      "fontFamily": "Manrope",
+                      "fontSize": 18,
+                      "fontStyle": "italic"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "k60uW",
+                  "name": "sec1",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 16,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "avjCi",
+                      "fill": "#0f172a",
+                      "content": "Seznamy a úkoly",
+                      "fontFamily": "Manrope",
+                      "fontSize": 32,
+                      "fontWeight": "800"
+                    },
+                    {
+                      "type": "rectangle",
+                      "id": "RmJ5m",
+                      "fill": "#e2e8f0",
+                      "width": "fill_container",
+                      "height": 1
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "u17PI",
+                  "name": "lists",
+                  "width": "fill_container",
+                  "gap": 40,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "arzwU",
+                      "name": "ul",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 12,
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "tEsGO",
+                          "name": "li1",
+                          "gap": 12,
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "ellipse",
+                              "id": "8iGkL",
+                              "fill": "#002bff",
+                              "width": 6,
+                              "height": 6
+                            },
+                            {
+                              "type": "text",
+                              "id": "stVEE",
+                              "fill": "#334155",
+                              "content": "První položka seznamu",
+                              "fontFamily": "Manrope",
+                              "fontSize": 16,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "U7RBX",
+                          "name": "li2",
+                          "gap": 12,
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "ellipse",
+                              "id": "1ZoXQ",
+                              "fill": "#002bff",
+                              "width": 6,
+                              "height": 6
+                            },
+                            {
+                              "type": "text",
+                              "id": "py3Sd",
+                              "fill": "#334155",
+                              "content": "Druhá položka seznamu s vnořením",
+                              "fontFamily": "Manrope",
+                              "fontSize": 16,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "gMEzw",
+                          "name": "ul_nest",
+                          "layout": "vertical",
+                          "gap": 12,
+                          "padding": [
+                            0,
+                            0,
+                            0,
+                            24
+                          ],
+                          "children": [
+                            {
+                              "type": "frame",
+                              "id": "4snFM",
+                              "name": "li_nest",
+                              "gap": 12,
+                              "alignItems": "center",
+                              "children": [
+                                {
+                                  "type": "ellipse",
+                                  "id": "sznci",
+                                  "fill": "#64748b",
+                                  "width": 4,
+                                  "height": 4
+                                },
+                                {
+                                  "type": "text",
+                                  "id": "Wl2Cg",
+                                  "fill": "#64748b",
+                                  "content": "Vnořená položka",
+                                  "fontFamily": "Manrope",
+                                  "fontSize": 14,
+                                  "fontWeight": "normal"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "CAVkb",
+                      "name": "tasks",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 12,
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "xZRd7",
+                          "name": "t1",
+                          "gap": 12,
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "rectangle",
+                              "cornerRadius": 6,
+                              "id": "wW6Xa",
+                              "fill": "#ffffff",
+                              "width": 20,
+                              "height": 20
+                            },
+                            {
+                              "type": "text",
+                              "id": "bVdQq",
+                              "fill": "#334155",
+                              "content": "Naplánovat architekturu",
+                              "fontFamily": "Manrope",
+                              "fontSize": 16,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "feIqn",
+                          "name": "t2",
+                          "gap": 12,
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "frame",
+                              "id": "D2LfV",
+                              "name": "t2box",
+                              "width": 20,
+                              "height": 20,
+                              "fill": "#002bff",
+                              "cornerRadius": 6,
+                              "justifyContent": "center",
+                              "alignItems": "center",
+                              "children": [
+                                {
+                                  "type": "icon_font",
+                                  "id": "mBNJ2",
+                                  "width": 14,
+                                  "height": 14,
+                                  "iconFontName": "check",
+                                  "iconFontFamily": "lucide",
+                                  "fill": "#ffffff"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "text",
+                              "id": "y2se5",
+                              "fill": "#0f172a",
+                              "content": "Implementovat design",
+                              "fontFamily": "Manrope",
+                              "fontSize": 16,
+                              "fontWeight": "600"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "5YcAk",
+                      "name": "ol",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 16,
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "9Ln8k",
+                          "name": "ol1",
+                          "gap": 12,
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "BRyBp",
+                              "fill": "#002bff",
+                              "content": "1.",
+                              "fontFamily": "Manrope",
+                              "fontSize": 16,
+                              "fontWeight": "800"
+                            },
+                            {
+                              "type": "text",
+                              "id": "eYmRj",
+                              "fill": "#334155",
+                              "content": "První číslovaná položka",
+                              "fontFamily": "Manrope",
+                              "fontSize": 16,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "rh6Tt",
+                          "name": "ol2",
+                          "gap": 12,
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "yt0Vt",
+                              "fill": "#002bff",
+                              "content": "2.",
+                              "fontFamily": "Manrope",
+                              "fontSize": 16,
+                              "fontWeight": "800"
+                            },
+                            {
+                              "type": "text",
+                              "id": "LJbq0",
+                              "fill": "#334155",
+                              "content": "Druhá číslovaná položka",
+                              "fontFamily": "Manrope",
+                              "fontSize": 16,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "RuffE",
+                  "name": "alerts",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 16,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "yxL9E",
+                      "name": "note",
+                      "width": "fill_container",
+                      "fill": "#eff6ff",
+                      "cornerRadius": 12,
+                      "layout": "vertical",
+                      "gap": 8,
+                      "padding": 20,
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "pOoHH",
+                          "name": "nHead",
+                          "gap": 8,
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "icon_font",
+                              "id": "skRwI",
+                              "width": 20,
+                              "height": 20,
+                              "iconFontName": "info",
+                              "iconFontFamily": "lucide",
+                              "fill": "#002bff"
+                            },
+                            {
+                              "type": "text",
+                              "id": "biQSi",
+                              "fill": "#002bff",
+                              "content": "Note",
+                              "fontFamily": "Manrope",
+                              "fontSize": 16,
+                              "fontWeight": "800"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "id": "LU4fV",
+                          "fill": "#1e3a8a",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "Alerts jsou na GitHubu vykreslené s ikonami a barvami. Syntaxe je založená na blockquote řádcích.",
+                          "lineHeight": 1.5,
+                          "fontFamily": "Manrope",
+                          "fontSize": 16,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "ihCu8",
+                      "name": "warning",
+                      "width": "fill_container",
+                      "fill": "#fefce8",
+                      "cornerRadius": 12,
+                      "layout": "vertical",
+                      "gap": 8,
+                      "padding": 20,
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "XmmTt",
+                          "name": "wHead",
+                          "gap": 8,
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "icon_font",
+                              "id": "7WDby",
+                              "width": 20,
+                              "height": 20,
+                              "iconFontName": "triangle-alert",
+                              "iconFontFamily": "lucide",
+                              "fill": "#eab308"
+                            },
+                            {
+                              "type": "text",
+                              "id": "mtKuZ",
+                              "fill": "#ca8a04",
+                              "content": "Warning",
+                              "fontFamily": "Manrope",
+                              "fontSize": 16,
+                              "fontWeight": "800"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "id": "2iKz7",
+                          "fill": "#854d0e",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "Toto je důrazné varování pro uživatele.",
+                          "lineHeight": 1.5,
+                          "fontFamily": "Manrope",
+                          "fontSize": 16,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "eUb6a",
+                  "name": "sec2",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 16,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "IqNvk",
+                      "fill": "#0f172a",
+                      "content": "Kódové bloky a Tabulky",
+                      "fontFamily": "Manrope",
+                      "fontSize": 32,
+                      "fontWeight": "800"
+                    },
+                    {
+                      "type": "rectangle",
+                      "id": "yh1Fr",
+                      "fill": "#e2e8f0",
+                      "width": "fill_container",
+                      "height": 1
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "sp5ub",
+                  "name": "cb",
+                  "width": "fill_container",
+                  "fill": "#0f172a",
+                  "cornerRadius": 12,
+                  "layout": "vertical",
+                  "gap": 16,
+                  "padding": [
+                    16,
+                    24
+                  ],
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "xVFgi",
+                      "name": "cbTop",
+                      "width": "fill_container",
+                      "justifyContent": "space_between",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "oasny",
+                          "fill": "#94a3b8",
+                          "content": "typescript",
+                          "fontFamily": "Courier New",
+                          "fontSize": 14,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "icon_font",
+                          "id": "a2QOo",
+                          "width": 16,
+                          "height": 16,
+                          "iconFontName": "copy",
+                          "iconFontFamily": "lucide",
+                          "fill": "#94a3b8"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "CKHsY",
+                      "fill": "#f8fafc",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "function createBlock(type: string) {\n  return { type, id: crypto.randomUUID() };\n}",
+                      "lineHeight": 1.5,
+                      "fontFamily": "Courier New",
+                      "fontSize": 16,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "W8Ip8",
+                  "name": "table",
+                  "clip": true,
+                  "width": "fill_container",
+                  "cornerRadius": 12,
+                  "layout": "vertical",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "FWsOa",
+                      "name": "trH",
+                      "width": "fill_container",
+                      "fill": "#f8fafc",
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "S9PR3",
+                          "name": "tcH1",
+                          "width": 200,
+                          "padding": [
+                            16,
+                            24
+                          ],
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "V3i2V",
+                              "fill": "#0f172a",
+                              "content": "Element",
+                              "fontFamily": "Manrope",
+                              "fontSize": 14,
+                              "fontWeight": "800"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "aciQ7",
+                          "name": "tcH2",
+                          "width": "fill_container",
+                          "padding": [
+                            16,
+                            24
+                          ],
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "cK1Kr",
+                              "fill": "#0f172a",
+                              "content": "Syntaxe",
+                              "fontFamily": "Manrope",
+                              "fontSize": 14,
+                              "fontWeight": "800"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "hXb26",
+                          "name": "tcH3",
+                          "width": 150,
+                          "padding": [
+                            16,
+                            24
+                          ],
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "0jOP2",
+                              "fill": "#0f172a",
+                              "content": "Podpora",
+                              "fontFamily": "Manrope",
+                              "fontSize": 14,
+                              "fontWeight": "800"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "cPzno",
+                      "name": "tr1",
+                      "width": "fill_container",
+                      "fill": "#ffffff",
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "Oq0hE",
+                          "name": "tc1_1",
+                          "width": 200,
+                          "padding": [
+                            16,
+                            24
+                          ],
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "JbyM0",
+                              "fill": "#334155",
+                              "content": "Tučný text",
+                              "fontFamily": "Manrope",
+                              "fontSize": 14,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "Plxp5",
+                          "name": "tc1_2",
+                          "width": "fill_container",
+                          "padding": [
+                            16,
+                            24
+                          ],
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "rETPb",
+                              "fill": "#002bff",
+                              "content": "**text**",
+                              "fontFamily": "Courier New",
+                              "fontSize": 14,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "BPeRD",
+                          "name": "tc1_3",
+                          "width": 150,
+                          "padding": [
+                            16,
+                            24
+                          ],
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "1VUoL",
+                              "fill": "#64748b",
+                              "content": "GFM",
+                              "fontFamily": "Manrope",
+                              "fontSize": 14,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "8M4Lq",
+                      "name": "tr2",
+                      "width": "fill_container",
+                      "fill": "#ffffff",
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "v2oBf",
+                          "name": "tc2_1",
+                          "width": 200,
+                          "padding": [
+                            16,
+                            24
+                          ],
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "IOGkR",
+                              "fill": "#334155",
+                              "content": "Odstavec",
+                              "fontFamily": "Manrope",
+                              "fontSize": 14,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "AEZLl",
+                          "name": "tc2_2",
+                          "width": "fill_container",
+                          "padding": [
+                            16,
+                            24
+                          ],
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "Akx1R",
+                              "fill": "#002bff",
+                              "content": "První řádek\\n\\nDruhý řádek",
+                              "fontFamily": "Courier New",
+                              "fontSize": 14,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "lqYPU",
+                          "name": "tc2_3",
+                          "width": 150,
+                          "padding": [
+                            16,
+                            24
+                          ],
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "woxyM",
+                              "fill": "#64748b",
+                              "content": "CommonMark",
+                              "fontFamily": "Manrope",
+                              "fontSize": 14,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "iSFtF",
+                  "name": "sec3",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 16,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "lfUcT",
+                      "fill": "#0f172a",
+                      "content": "Obrázky a Matematika",
+                      "fontFamily": "Manrope",
+                      "fontSize": 32,
+                      "fontWeight": "800"
+                    },
+                    {
+                      "type": "rectangle",
+                      "id": "5T6JO",
+                      "fill": "#e2e8f0",
+                      "width": "fill_container",
+                      "height": 1
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "i50tU",
+                  "name": "imgBox",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 12,
+                  "padding": [
+                    0,
+                    0,
+                    16,
+                    0
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "rectangle",
+                      "cornerRadius": 12,
+                      "id": "LyVU9",
+                      "name": "imgNode",
+                      "fill": {
+                        "type": "image",
+                        "enabled": true,
+                        "url": "./images/generated-1772739237511.png",
+                        "mode": "fill"
+                      },
+                      "width": "fill_container",
+                      "height": 400
+                    },
+                    {
+                      "type": "text",
+                      "id": "sj20u",
+                      "fill": "#64748b",
+                      "content": "Obrázek 1: Základní Octocat",
+                      "fontFamily": "Manrope",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "NQT2I",
+                  "name": "mathBox",
+                  "width": "fill_container",
+                  "fill": "#f8fafc",
+                  "cornerRadius": 12,
+                  "layout": "vertical",
+                  "padding": [
+                    32,
+                    24
+                  ],
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "chdqg",
+                      "fill": "#0f172a",
+                      "content": "∑ (a_k b_k)² ≤ (∑ a_k²) (∑ b_k²)",
+                      "fontFamily": "Times New Roman",
+                      "fontSize": 24,
+                      "fontWeight": "italic"
+                    },
+                    {
+                      "type": "text",
+                      "id": "Qv3hN",
+                      "fill": "#64748b",
+                      "content": "Cauchy–Schwarzova nerovnost (Block math)",
+                      "fontFamily": "Manrope",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "r6PLy",
+                  "name": "merBox",
+                  "width": "fill_container",
+                  "fill": "#ffffff",
+                  "cornerRadius": 12,
+                  "layout": "vertical",
+                  "gap": 16,
+                  "padding": 32,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "ADGL6",
+                      "name": "box1",
+                      "fill": "#eff6ff",
+                      "cornerRadius": 6,
+                      "padding": [
+                        10,
+                        20
+                      ],
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "vX94h",
+                          "fill": "#002bff",
+                          "content": "Markdown zdroj",
+                          "fontFamily": "Manrope",
+                          "fontSize": 16,
+                          "fontWeight": "800"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "icon_font",
+                      "id": "5Ibbm",
+                      "width": 24,
+                      "height": 24,
+                      "iconFontName": "arrow-down",
+                      "iconFontFamily": "lucide",
+                      "fill": "#cbd5e1"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "WvK1c",
+                      "name": "box2",
+                      "fill": "#eff6ff",
+                      "cornerRadius": 6,
+                      "padding": [
+                        10,
+                        20
+                      ],
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "fUuSZ",
+                          "fill": "#002bff",
+                          "content": "Parser (CommonMark/GFM)",
+                          "fontFamily": "Manrope",
+                          "fontSize": 16,
+                          "fontWeight": "800"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "icon_font",
+                      "id": "abbvU",
+                      "width": 24,
+                      "height": 24,
+                      "iconFontName": "arrow-down",
+                      "iconFontFamily": "lucide",
+                      "fill": "#cbd5e1"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "hmc5s",
+                      "name": "box3",
+                      "fill": "#eff6ff",
+                      "cornerRadius": 6,
+                      "padding": [
+                        10,
+                        20
+                      ],
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "jIfmx",
+                          "fill": "#002bff",
+                          "content": "HTML Renderer",
+                          "fontFamily": "Manrope",
+                          "fontSize": 16,
+                          "fontWeight": "800"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "7fi38",
+          "name": "pcFooter",
+          "width": "fill_container",
+          "fill": "#0f172a",
+          "layout": "vertical",
+          "gap": 20,
+          "padding": 48,
+          "children": [
+            {
+              "type": "frame",
+              "id": "TqLaz",
+              "name": "fTop",
+              "width": "fill_container",
+              "justifyContent": "space_between",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "Od1om",
+                  "fill": "#ffffff",
+                  "content": "<thinkhome>",
+                  "fontFamily": "Manrope",
+                  "fontSize": 24,
+                  "fontWeight": "800"
+                },
+                {
+                  "type": "frame",
+                  "id": "cR5nE",
+                  "name": "contacts",
+                  "gap": 8,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "kDIzJ",
+                      "fill": "#FFFFFFCC",
+                      "content": "info@thinkhome.org",
+                      "fontFamily": "Manrope",
+                      "fontSize": 16,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "S43Uz",
+                      "fill": "#FFFFFFCC",
+                      "content": "+420 222 160 782",
+                      "fontFamily": "Manrope",
+                      "fontSize": 16,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "rectangle",
+              "id": "AZUo8",
+              "name": "footerDivider",
+              "fill": "#FFFFFF12",
+              "width": "fill_container",
+              "height": 1
+            },
+            {
+              "type": "frame",
+              "id": "ODCwS",
+              "name": "fBot",
+              "width": "fill_container",
+              "justifyContent": "space_between",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "TTaCH",
+                  "fill": "#FFFFFF80",
+                  "content": "© 2026 ThinkHome s.r.o. Všechna práva vyhrazena.",
+                  "fontFamily": "Manrope",
+                  "fontSize": 12,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "frame",
+                  "id": "P2V7U",
+                  "name": "links",
+                  "gap": 24,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "YQlRG",
+                      "name": "link1",
+                      "fill": "#FFFFFF80",
+                      "content": "Ceník služeb",
+                      "fontFamily": "Manrope",
+                      "fontSize": 12,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "7p0Zq",
+                      "name": "link2",
+                      "fill": "#FFFFFF80",
+                      "content": "Obchodní podmínky",
+                      "fontFamily": "Manrope",
+                      "fontSize": 12,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "GynNW",
+                      "name": "link3",
+                      "fill": "#FFFFFF80",
+                      "content": "Ochrana osobních údajů",
+                      "fontFamily": "Manrope",
+                      "fontSize": 12,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "Rxxkk",
+      "x": 1600,
+      "y": 2308,
+      "name": "ThinkHome Mobile MDX Page",
+      "width": 628,
+      "fill": "#ffffff",
+      "layout": "vertical",
+      "children": [
+        {
+          "type": "frame",
+          "id": "YX3sh",
+          "name": "header",
+          "width": "fill_container",
+          "fill": "#002bffff",
+          "padding": 24,
+          "justifyContent": "space_between",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "sD4aB",
+              "name": "mobLogo",
+              "fill": "#ffffff",
+              "content": "<thinkhome>",
+              "fontFamily": "Manrope",
+              "fontSize": 18,
+              "fontWeight": "800"
+            },
+            {
+              "type": "icon_font",
+              "id": "hNFTP",
+              "name": "mobHamburger",
+              "width": 24,
+              "height": 24,
+              "iconFontName": "menu",
+              "iconFontFamily": "lucide",
+              "fill": "#ffffff"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "ZMAQZ",
+          "name": "titleHero",
+          "width": "fill_container",
+          "fill": "#002bff",
+          "layout": "vertical",
+          "gap": 12,
+          "padding": [
+            32,
+            0,
+            0,
+            0
+          ],
+          "justifyContent": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "aonGW",
+              "name": "heroInner",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 12,
+              "padding": [
+                0,
+                24
+              ],
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "dXMKi",
+                  "name": "breadcrumb",
+                  "gap": 6,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "zjaOg",
+                      "name": "mbHome",
+                      "opacity": 0.6,
+                      "fill": "#ffffff",
+                      "content": "Domů",
+                      "fontFamily": "Manrope",
+                      "fontSize": 12,
+                      "fontWeight": "500"
+                    },
+                    {
+                      "type": "text",
+                      "id": "fgKEv",
+                      "name": "mbSep",
+                      "opacity": 0.4,
+                      "fill": "#ffffff",
+                      "content": "/",
+                      "fontFamily": "Manrope",
+                      "fontSize": 12,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "UAGLe",
+                      "name": "mbCurrent",
+                      "opacity": 0.6,
+                      "fill": "#ffffff",
+                      "content": "Název stránky",
+                      "fontFamily": "Manrope",
+                      "fontSize": 12,
+                      "fontWeight": "500"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "id": "I1lRy",
+                  "name": "pageTitle",
+                  "fill": "#ffffff",
+                  "content": "Coolemark: Kompletní katalog GFM",
+                  "fontFamily": "Manrope",
+                  "fontSize": 32,
+                  "fontWeight": "800"
+                },
+                {
+                  "type": "text",
+                  "id": "bXFYv",
+                  "name": "pageSubtitle",
+                  "opacity": 0.72,
+                  "fill": "#ffffff",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "Tento dokument je praktická „testovací plocha“ pro všechny elementy Markdownu. Obsahuje nadpisy, tabulky, kódové bloky i GitHub-specifické vychytávky.",
+                  "fontFamily": "Manrope",
+                  "fontSize": 15,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "tgvq0",
+                  "name": "heroUpdated",
+                  "opacity": 0.72,
+                  "fill": "#ffffff",
+                  "content": "Aktualizováno: 5. března 2026",
+                  "fontFamily": "Manrope",
+                  "fontSize": 12,
+                  "fontWeight": "600"
+                }
+              ]
+            },
+            {
+              "type": "path",
+              "id": "ce6Gq",
+              "name": "heroDiagonalCut",
+              "geometry": "M0 28l390-28 0 72-390 0z",
+              "fill": "#ffffff",
+              "width": "fill_container",
+              "height": 72
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "i4DO9",
+          "name": "contentWrapperMob",
+          "width": "fill_container",
+          "fill": "#ffffff",
+          "layout": "vertical",
+          "padding": [
+            0,
+            24
+          ],
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "MHY4p",
+              "name": "articleMob",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 32,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "kJjAq",
+                  "name": "inlinesM",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 16,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "cGsTd",
+                      "fill": "#0f172a",
+                      "content": "Inline formátování",
+                      "fontFamily": "Manrope",
+                      "fontSize": 20,
+                      "fontWeight": "800"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "fRr0k",
+                      "name": "inlineRowM",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 8,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "YnJHO",
+                          "fill": "#0f172a",
+                          "content": "Tučně",
+                          "fontFamily": "Manrope",
+                          "fontSize": 16,
+                          "fontWeight": "800"
+                        },
+                        {
+                          "type": "text",
+                          "id": "Ar4Np",
+                          "fill": "#0f172a",
+                          "content": "Kurzíva",
+                          "fontFamily": "Manrope",
+                          "fontSize": 16,
+                          "fontStyle": "italic"
+                        },
+                        {
+                          "type": "text",
+                          "id": "57RYm",
+                          "fill": "#64748b",
+                          "content": "Přeškrtlý",
+                          "fontFamily": "Manrope",
+                          "fontSize": 16
+                        },
+                        {
+                          "type": "frame",
+                          "id": "otsWf",
+                          "name": "codeTagM",
+                          "fill": "#f1f5f9",
+                          "cornerRadius": 4,
+                          "padding": [
+                            4,
+                            8
+                          ],
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "PMHxA",
+                              "fill": "#002bff",
+                              "content": "code()",
+                              "fontFamily": "Courier New",
+                              "fontSize": 14,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "xH2oR",
+                  "name": "loremM",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 10,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "FFmnN",
+                      "fill": "#0f172a",
+                      "content": "Ukázkový text (Lorem ipsum)",
+                      "fontFamily": "Manrope",
+                      "fontSize": 20,
+                      "fontWeight": "800"
+                    },
+                    {
+                      "type": "text",
+                      "id": "7O2X5",
+                      "fill": "#334155",
+                      "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                      "lineHeight": 1.5,
+                      "fontFamily": "Manrope",
+                      "fontSize": 14
+                    },
+                    {
+                      "type": "frame",
+                      "id": "jts1t",
+                      "name": "inlineSampleM",
+                      "layout": "vertical",
+                      "gap": 6,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "L2GpH",
+                          "fill": "#334155",
+                          "content": "Normální • Tučné • Kurzíva",
+                          "fontFamily": "Manrope",
+                          "fontSize": 14,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "xU3L9",
+                          "fill": "#64748b",
+                          "content": "Přeškrtnuté",
+                          "fontFamily": "Manrope",
+                          "fontSize": 14,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "frame",
+                          "id": "Iow3r",
+                          "name": "codeSampleM",
+                          "fill": "#f1f5f9",
+                          "cornerRadius": 4,
+                          "padding": [
+                            3,
+                            6
+                          ],
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "wLSZh",
+                              "fill": "#002bff",
+                              "content": "code",
+                              "fontFamily": "Courier New",
+                              "fontSize": 12,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "Qfb25",
+                  "name": "btnSecM",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 12,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "06nPp",
+                      "fill": "#0f172a",
+                      "content": "Tlačítka",
+                      "fontFamily": "Manrope",
+                      "fontSize": 20,
+                      "fontWeight": "800"
+                    },
+                    {
+                      "type": "rectangle",
+                      "id": "6pjgx",
+                      "fill": "#e2e8f0",
+                      "width": "fill_container",
+                      "height": 1
+                    },
+                    {
+                      "type": "frame",
+                      "id": "0U8XL",
+                      "name": "btnRowM",
+                      "gap": 12,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "fRyhV",
+                          "name": "btnM",
+                          "fill": "#f1f5f9",
+                          "cornerRadius": 8,
+                          "padding": [
+                            12,
+                            22
+                          ],
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "i2JTu",
+                              "fill": "#94a3b8",
+                              "content": "Neaktivní tlačítko",
+                              "fontFamily": "Manrope",
+                              "fontSize": 14,
+                              "fontWeight": "600"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "qwrtk",
+                          "name": "btnActiveM",
+                          "fill": "#ffffff",
+                          "cornerRadius": 8,
+                          "padding": [
+                            12,
+                            22
+                          ],
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "BlRJg",
+                              "fill": "#002bff",
+                              "content": "Nevybrané tlačítko",
+                              "fontFamily": "Manrope",
+                              "fontSize": 14,
+                              "fontWeight": "700"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "fHK8u",
+                          "name": "btnSelectedM",
+                          "fill": "#002bff",
+                          "cornerRadius": 8,
+                          "padding": [
+                            12,
+                            22
+                          ],
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "yru5Y",
+                              "fill": "#ffffff",
+                              "content": "Vybrané tlačítko",
+                              "fontFamily": "Manrope",
+                              "fontSize": 14,
+                              "fontWeight": "700"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "G8U3c",
+                  "name": "bq",
+                  "width": "fill_container",
+                  "gap": 12,
+                  "children": [
+                    {
+                      "type": "rectangle",
+                      "cornerRadius": 2,
+                      "id": "BlW96",
+                      "fill": "#002bff",
+                      "width": 4,
+                      "height": "fill_container"
+                    },
+                    {
+                      "type": "text",
+                      "id": "VeeKl",
+                      "fill": "#334155",
+                      "content": "Cíl souboru: jeden .md soubor, který v praxi demonstruje všechny elementy a hlavní varianty syntaxe dostupné v kombinaci CommonMark 0.31.2 + GitHub Flavored Markdown (GFM).",
+                      "lineHeight": 1.5,
+                      "fontFamily": "Manrope",
+                      "fontSize": 14,
+                      "fontStyle": "italic"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "VuCWh",
+                  "name": "msec1",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 12,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "HMx5q",
+                      "fill": "#0f172a",
+                      "content": "Seznamy a úkoly",
+                      "fontFamily": "Manrope",
+                      "fontSize": 24,
+                      "fontWeight": "800"
+                    },
+                    {
+                      "type": "rectangle",
+                      "id": "X5Qe0",
+                      "fill": "#e2e8f0",
+                      "width": "fill_container",
+                      "height": 1
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "w1buo",
+                  "name": "lists",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 24,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "KF48D",
+                      "name": "ul",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 12,
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "d0KY0",
+                          "name": "li1",
+                          "gap": 12,
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "ellipse",
+                              "id": "i6KTs",
+                              "fill": "#002bff",
+                              "width": 6,
+                              "height": 6
+                            },
+                            {
+                              "type": "text",
+                              "id": "Blxi5",
+                              "fill": "#334155",
+                              "content": "První položka seznamu",
+                              "fontFamily": "Manrope",
+                              "fontSize": 14,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "pRf84",
+                          "name": "li2",
+                          "gap": 12,
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "ellipse",
+                              "id": "7Nedq",
+                              "fill": "#002bff",
+                              "width": 6,
+                              "height": 6
+                            },
+                            {
+                              "type": "text",
+                              "id": "3nrbm",
+                              "fill": "#334155",
+                              "content": "Druhá položka s vnořením",
+                              "fontFamily": "Manrope",
+                              "fontSize": 14,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "5i7Jf",
+                          "name": "ul_nest",
+                          "layout": "vertical",
+                          "gap": 12,
+                          "padding": [
+                            0,
+                            0,
+                            0,
+                            24
+                          ],
+                          "children": [
+                            {
+                              "type": "frame",
+                              "id": "9SLeB",
+                              "name": "li_nest",
+                              "gap": 12,
+                              "alignItems": "center",
+                              "children": [
+                                {
+                                  "type": "ellipse",
+                                  "id": "gXgPF",
+                                  "fill": "#64748b",
+                                  "width": 4,
+                                  "height": 4
+                                },
+                                {
+                                  "type": "text",
+                                  "id": "qn9EY",
+                                  "fill": "#64748b",
+                                  "content": "Vnořená položka",
+                                  "fontFamily": "Manrope",
+                                  "fontSize": 12,
+                                  "fontWeight": "normal"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "lyWDC",
+                      "name": "tasks",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 12,
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "UM7ZP",
+                          "name": "t1",
+                          "gap": 12,
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "rectangle",
+                              "cornerRadius": 4,
+                              "id": "pDhZW",
+                              "fill": "#ffffff",
+                              "width": 16,
+                              "height": 16
+                            },
+                            {
+                              "type": "text",
+                              "id": "b9ntN",
+                              "fill": "#334155",
+                              "content": "Naplánovat architekturu",
+                              "fontFamily": "Manrope",
+                              "fontSize": 14,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "XvyiD",
+                          "name": "t2",
+                          "gap": 12,
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "frame",
+                              "id": "JwPd7",
+                              "name": "t2box",
+                              "width": 16,
+                              "height": 16,
+                              "fill": "#002bff",
+                              "cornerRadius": 4,
+                              "justifyContent": "center",
+                              "alignItems": "center",
+                              "children": [
+                                {
+                                  "type": "icon_font",
+                                  "id": "n5alF",
+                                  "width": 12,
+                                  "height": 12,
+                                  "iconFontName": "check",
+                                  "iconFontFamily": "lucide",
+                                  "fill": "#ffffff"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "text",
+                              "id": "tZNfd",
+                              "fill": "#0f172a",
+                              "content": "Implementovat design",
+                              "fontFamily": "Manrope",
+                              "fontSize": 14,
+                              "fontWeight": "600"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "5fSvs",
+                      "name": "olM",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 12,
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "RcfO3",
+                          "name": "olM1",
+                          "gap": 12,
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "mddzh",
+                              "fill": "#002bff",
+                              "content": "1.",
+                              "fontFamily": "Manrope",
+                              "fontSize": 14,
+                              "fontWeight": "800"
+                            },
+                            {
+                              "type": "text",
+                              "id": "ohwKy",
+                              "fill": "#334155",
+                              "content": "První položka",
+                              "fontFamily": "Manrope",
+                              "fontSize": 14,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "nwbVc",
+                          "name": "olM2",
+                          "gap": 12,
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "YhH1t",
+                              "fill": "#002bff",
+                              "content": "2.",
+                              "fontFamily": "Manrope",
+                              "fontSize": 14,
+                              "fontWeight": "800"
+                            },
+                            {
+                              "type": "text",
+                              "id": "3zm4k",
+                              "fill": "#334155",
+                              "content": "Druhá položka",
+                              "fontFamily": "Manrope",
+                              "fontSize": 14,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "Y5DqN",
+                  "name": "alerts",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 16,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "taZrn",
+                      "name": "note",
+                      "width": "fill_container",
+                      "fill": "#eff6ff",
+                      "cornerRadius": 12,
+                      "layout": "vertical",
+                      "gap": 8,
+                      "padding": 16,
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "Om8TU",
+                          "name": "nHead",
+                          "gap": 8,
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "icon_font",
+                              "id": "8wBBO",
+                              "width": 16,
+                              "height": 16,
+                              "iconFontName": "info",
+                              "iconFontFamily": "lucide",
+                              "fill": "#002bff"
+                            },
+                            {
+                              "type": "text",
+                              "id": "Wdn16",
+                              "fill": "#002bff",
+                              "content": "Note",
+                              "fontFamily": "Manrope",
+                              "fontSize": 14,
+                              "fontWeight": "800"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "id": "0cx9q",
+                          "fill": "#1e3a8a",
+                          "content": "Alerts jsou na GitHubu vykreslené s ikonami a barvami.",
+                          "lineHeight": 1.5,
+                          "fontFamily": "Manrope",
+                          "fontSize": 14,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "JH1ru",
+                      "name": "warning",
+                      "width": "fill_container",
+                      "fill": "#fefce8",
+                      "cornerRadius": 12,
+                      "layout": "vertical",
+                      "gap": 8,
+                      "padding": 16,
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "pO5Rh",
+                          "name": "wHead",
+                          "gap": 8,
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "icon_font",
+                              "id": "GMcKU",
+                              "width": 16,
+                              "height": 16,
+                              "iconFontName": "triangle-alert",
+                              "iconFontFamily": "lucide",
+                              "fill": "#eab308"
+                            },
+                            {
+                              "type": "text",
+                              "id": "0A3fN",
+                              "fill": "#ca8a04",
+                              "content": "Warning",
+                              "fontFamily": "Manrope",
+                              "fontSize": 14,
+                              "fontWeight": "800"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "id": "5LHaL",
+                          "fill": "#854d0e",
+                          "content": "Toto je důrazné varování.",
+                          "lineHeight": 1.5,
+                          "fontFamily": "Manrope",
+                          "fontSize": 14,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "PrL5A",
+                  "name": "msec2",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 12,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "0RSNs",
+                      "fill": "#0f172a",
+                      "content": "Kódové bloky a Tabulky",
+                      "fontFamily": "Manrope",
+                      "fontSize": 24,
+                      "fontWeight": "800"
+                    },
+                    {
+                      "type": "rectangle",
+                      "id": "7fBqc",
+                      "fill": "#e2e8f0",
+                      "width": "fill_container",
+                      "height": 1
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "2LJ5e",
+                  "name": "cb",
+                  "width": "fill_container",
+                  "fill": "#0f172a",
+                  "cornerRadius": 12,
+                  "layout": "vertical",
+                  "gap": 16,
+                  "padding": 16,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "lVXto",
+                      "name": "cbTop",
+                      "width": "fill_container",
+                      "justifyContent": "space_between",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "5K5Bf",
+                          "fill": "#94a3b8",
+                          "content": "typescript",
+                          "fontFamily": "Courier New",
+                          "fontSize": 12,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "icon_font",
+                          "id": "yna27",
+                          "width": 14,
+                          "height": 14,
+                          "iconFontName": "copy",
+                          "iconFontFamily": "lucide",
+                          "fill": "#94a3b8"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "xd45D",
+                      "fill": "#f8fafc",
+                      "content": "function create() {\n  return { id: 1 };\n}",
+                      "lineHeight": 1.5,
+                      "fontFamily": "Courier New",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "ci3xp",
+                  "name": "table",
+                  "clip": true,
+                  "width": "fill_container",
+                  "cornerRadius": 12,
+                  "layout": "vertical",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "F3jvh",
+                      "name": "trH",
+                      "width": "fill_container",
+                      "fill": "#f8fafc",
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "IfEyV",
+                          "name": "tcH1",
+                          "width": 120,
+                          "padding": [
+                            12,
+                            16
+                          ],
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "9sRsx",
+                              "fill": "#0f172a",
+                              "content": "Element",
+                              "fontFamily": "Manrope",
+                              "fontSize": 12,
+                              "fontWeight": "800"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "56krL",
+                          "name": "tcH2",
+                          "width": "fill_container",
+                          "padding": [
+                            12,
+                            16
+                          ],
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "eFJaL",
+                              "fill": "#0f172a",
+                              "content": "Syntaxe",
+                              "fontFamily": "Manrope",
+                              "fontSize": 12,
+                              "fontWeight": "800"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "xp6ql",
+                      "name": "tr1",
+                      "width": "fill_container",
+                      "fill": "#ffffff",
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "JOpWP",
+                          "name": "tc1_1",
+                          "width": 120,
+                          "padding": [
+                            12,
+                            16
+                          ],
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "znYpA",
+                              "fill": "#334155",
+                              "content": "Tučný text",
+                              "fontFamily": "Manrope",
+                              "fontSize": 12,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "GjsJ7",
+                          "name": "tc1_2",
+                          "width": "fill_container",
+                          "padding": [
+                            12,
+                            16
+                          ],
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "D0bF7",
+                              "fill": "#002bff",
+                              "content": "**text**",
+                              "fontFamily": "Courier New",
+                              "fontSize": 12,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "hBJn1",
+                      "name": "tr2",
+                      "width": "fill_container",
+                      "fill": "#ffffff",
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "ibxyN",
+                          "name": "tc2_1",
+                          "width": 120,
+                          "padding": [
+                            12,
+                            16
+                          ],
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "qKn9Y",
+                              "fill": "#334155",
+                              "content": "Odstavec",
+                              "fontFamily": "Manrope",
+                              "fontSize": 12,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "e56jp",
+                          "name": "tc2_2",
+                          "width": "fill_container",
+                          "padding": [
+                            12,
+                            16
+                          ],
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "k2H8j",
+                              "fill": "#002bff",
+                              "content": "Řádek 1\\n\\nŘádek 2",
+                              "fontFamily": "Courier New",
+                              "fontSize": 12,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "28EW0",
+                  "name": "msec3",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 12,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "8tCPq",
+                      "fill": "#0f172a",
+                      "content": "Obrázky a Matematika",
+                      "fontFamily": "Manrope",
+                      "fontSize": 24,
+                      "fontWeight": "800"
+                    },
+                    {
+                      "type": "rectangle",
+                      "id": "ojSvV",
+                      "fill": "#e2e8f0",
+                      "width": "fill_container",
+                      "height": 1
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "S59MB",
+                  "name": "imgBox",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 8,
+                  "padding": [
+                    0,
+                    0,
+                    12,
+                    0
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "rectangle",
+                      "cornerRadius": 12,
+                      "id": "8rs7A",
+                      "name": "imgNode",
+                      "fill": {
+                        "type": "image",
+                        "enabled": true,
+                        "url": "./images/generated-1772739322418.png",
+                        "mode": "fill"
+                      },
+                      "width": "fill_container",
+                      "height": 200
+                    },
+                    {
+                      "type": "text",
+                      "id": "0YBNl",
+                      "fill": "#64748b",
+                      "content": "Obrázek 1: Základní Octocat",
+                      "fontFamily": "Manrope",
+                      "fontSize": 12,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "V069n",
+                  "name": "mathBox",
+                  "width": "fill_container",
+                  "fill": "#f8fafc",
+                  "cornerRadius": 12,
+                  "layout": "vertical",
+                  "padding": [
+                    24,
+                    16
+                  ],
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "4zwuK",
+                      "fill": "#0f172a",
+                      "content": "∑ (a_k b_k)² ≤ (∑ a_k²) (∑ b_k²)",
+                      "fontFamily": "Manrope",
+                      "fontSize": 16,
+                      "fontWeight": "italic"
+                    },
+                    {
+                      "type": "text",
+                      "id": "hQ6Ce",
+                      "fill": "#64748b",
+                      "content": "Cauchy–Schwarzova nerovnost",
+                      "fontFamily": "Manrope",
+                      "fontSize": 12,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "HvhVF",
+                  "name": "merBox",
+                  "width": "fill_container",
+                  "fill": "#ffffff",
+                  "cornerRadius": 12,
+                  "layout": "vertical",
+                  "gap": 12,
+                  "padding": 24,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "dNXyL",
+                      "name": "box1",
+                      "fill": "#eff6ff",
+                      "cornerRadius": 6,
+                      "padding": [
+                        8,
+                        16
+                      ],
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "05OZJ",
+                          "fill": "#002bff",
+                          "content": "Markdown zdroj",
+                          "fontFamily": "Manrope",
+                          "fontSize": 14,
+                          "fontWeight": "800"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "icon_font",
+                      "id": "3bBkD",
+                      "width": 20,
+                      "height": 20,
+                      "iconFontName": "arrow-down",
+                      "iconFontFamily": "lucide",
+                      "fill": "#cbd5e1"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "ykrul",
+                      "name": "box2",
+                      "fill": "#eff6ff",
+                      "cornerRadius": 6,
+                      "padding": [
+                        8,
+                        16
+                      ],
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "BOd7T",
+                          "fill": "#002bff",
+                          "content": "Parser",
+                          "fontFamily": "Manrope",
+                          "fontSize": 14,
+                          "fontWeight": "800"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "icon_font",
+                      "id": "IX6FQ",
+                      "width": 20,
+                      "height": 20,
+                      "iconFontName": "arrow-down",
+                      "iconFontFamily": "lucide",
+                      "fill": "#cbd5e1"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "hICAW",
+                      "name": "box3",
+                      "fill": "#eff6ff",
+                      "cornerRadius": 6,
+                      "padding": [
+                        8,
+                        16
+                      ],
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "WFWmQ",
+                          "fill": "#002bff",
+                          "content": "HTML Renderer",
+                          "fontFamily": "Manrope",
+                          "fontSize": 14,
+                          "fontWeight": "800"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "m2Rpb",
+          "name": "mobFooter",
+          "width": "fill_container",
+          "fill": "#0f172a",
+          "layout": "vertical",
+          "gap": 16,
+          "padding": 24,
+          "children": [
+            {
+              "type": "text",
+              "id": "1whSu",
+              "name": "fLogo",
+              "fill": "#ffffff",
+              "content": "<thinkhome>",
+              "fontFamily": "Manrope",
+              "fontSize": 20,
+              "fontWeight": "800"
+            },
+            {
+              "type": "frame",
+              "id": "aA1mG",
+              "name": "contacts",
+              "layout": "vertical",
+              "gap": 8,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "cRura",
+                  "name": "email",
+                  "fill": "#FFFFFFCC",
+                  "content": "info@thinkhome.org",
+                  "fontFamily": "Manrope",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "jRuSK",
+                  "name": "phone",
+                  "fill": "#FFFFFFCC",
+                  "content": "+420 222 160 782",
+                  "fontFamily": "Manrope",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "rectangle",
+              "id": "eAR1P",
+              "name": "divider",
+              "fill": "#FFFFFF1A",
+              "width": "fill_container",
+              "height": 1
+            },
+            {
+              "type": "frame",
+              "id": "izTwB",
+              "name": "links",
+              "layout": "vertical",
+              "gap": 12,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "pF1vv",
+                  "name": "link1",
+                  "fill": "#FFFFFF80",
+                  "content": "Ceník služeb",
+                  "fontFamily": "Manrope",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "KNj8O",
+                  "name": "link2",
+                  "fill": "#FFFFFF80",
+                  "content": "Obchodní podmínky",
+                  "fontFamily": "Manrope",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "nQonh",
+                  "name": "link3",
+                  "fill": "#FFFFFF80",
+                  "content": "Ochrana osobních údajů",
+                  "fontFamily": "Manrope",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "id": "Jmg7o",
               "name": "copy",
               "fill": "#FFFFFF80",
               "content": "© 2026 ThinkHome s.r.o. Všechna práva vyhrazena.",
