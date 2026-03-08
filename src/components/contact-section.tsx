@@ -20,34 +20,27 @@ function ContactField({
   placeholder,
   type = "text",
 }: ContactFieldProps): React.JSX.Element {
-  const sharedClassName =
-    "w-full rounded-lg border border-slate-100 bg-slate-50 px-4 py-3.5 text-sm text-slate-900 outline-none placeholder:text-slate-400 focus:border-primary focus:bg-white md:py-4";
+  const iconClassName = "mt-0.5 h-4 w-4 shrink-0 text-slate-400 md:h-[18px] md:w-[18px]";
+  const fieldClassName =
+    "focus-within:border-primary flex items-start gap-2.5 rounded-lg border border-slate-100 bg-slate-50 px-3.5 py-[14px] focus-within:bg-white md:gap-3 md:px-4 md:py-4";
+  const inputClassName =
+    "w-full border-0 bg-transparent p-0 text-[15px] text-slate-900 outline-none placeholder:text-slate-400 md:text-base";
 
   return (
-    <label className="flex flex-col gap-2 text-sm font-medium text-slate-900">
+    <label className="flex flex-col gap-1.5 text-[13px] font-semibold text-slate-700 md:gap-2 md:text-sm">
       {label}
-      <div className="focus-within:border-primary flex items-start gap-3 rounded-lg border border-slate-100 bg-slate-50 px-4 py-3.5 focus-within:bg-white md:py-4">
-        {label === "Jméno a příjmení" ? (
-          <User className="mt-0.5 h-4 w-4 shrink-0 text-slate-400" />
-        ) : null}
-        {label === "E-mail" ? <Mail className="mt-0.5 h-4 w-4 shrink-0 text-slate-400" /> : null}
-        {label === "Telefon (volitelné)" ? (
-          <Phone className="mt-0.5 h-4 w-4 shrink-0 text-slate-400" />
-        ) : null}
-        {label === "Zpráva" ? (
-          <MessageSquareText className="mt-0.5 h-4 w-4 shrink-0 text-slate-400" />
-        ) : null}
+      <div className={fieldClassName}>
+        {label === "Jméno a příjmení" ? <User className={iconClassName} /> : null}
+        {label === "E-mail" ? <Mail className={iconClassName} /> : null}
+        {label === "Telefon (volitelné)" ? <Phone className={iconClassName} /> : null}
+        {label === "Zpráva" ? <MessageSquareText className={iconClassName} /> : null}
         {multiline ? (
           <textarea
-            className={`${sharedClassName} min-h-24 resize-none border-0 bg-transparent p-0 md:min-h-28`}
+            className={`${inputClassName} min-h-[90px] resize-none md:min-h-[108px]`}
             placeholder={placeholder}
           />
         ) : (
-          <input
-            className={`${sharedClassName} border-0 bg-transparent p-0`}
-            placeholder={placeholder}
-            type={type}
-          />
+          <input className={inputClassName} placeholder={placeholder} type={type} />
         )}
       </div>
     </label>
@@ -56,23 +49,54 @@ function ContactField({
 
 export function ContactSection(): React.JSX.Element {
   return (
-    <div className="grid gap-8 py-8 md:grid-cols-[minmax(0,1fr)_minmax(320px,416px)] md:gap-12 md:py-12">
-      <div className="order-1 flex flex-col gap-5 border-b border-slate-200 pb-8 md:order-2 md:gap-10 md:border-t-0 md:border-b-0 md:pt-10 md:pb-0">
+    <div className="grid gap-8 pt-12 pb-8 md:grid-cols-[minmax(0,1fr)_minmax(320px,416px)] md:gap-12 md:pt-16 md:pb-12">
+      <div className="order-1 flex flex-col gap-8 border-b border-slate-200 pb-8 md:order-2 md:gap-10 md:border-t-0 md:border-b-0 md:pt-10 md:pb-0">
         {CONTACT_DETAILS.map((detail, index) => {
           const Icon = DETAIL_ICONS[index];
 
           return (
-            <div className="flex items-start gap-4" key={detail.title}>
-              <div className="text-primary flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-blue-50 md:h-10 md:w-10">
-                <Icon className="h-4 w-4" />
+            <div className="flex items-start gap-3 md:gap-4" key={detail.title}>
+              <div className="text-primary flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-blue-50 md:h-12 md:w-12">
+                <Icon className="h-5 w-5 md:h-6 md:w-6" />
               </div>
               <div className="flex flex-col gap-0.5">
-                <h2 className="text-sm font-extrabold text-slate-900">{detail.title}</h2>
-                {detail.lines.map((line) => (
-                  <p className="text-sm leading-5 text-slate-600 md:leading-6" key={line}>
-                    {line}
-                  </p>
-                ))}
+                <h2 className="text-base font-bold text-slate-900 md:text-[18px]">
+                  {detail.title}
+                </h2>
+                {detail.lines.map((line) => {
+                  if (detail.title === "E-mail") {
+                    return (
+                      <a
+                        className="hover:text-primary text-[15px] leading-6 text-slate-600 transition-colors md:text-base md:leading-6"
+                        href={`mailto:${line}`}
+                        key={line}
+                      >
+                        {line}
+                      </a>
+                    );
+                  }
+
+                  if (detail.title === "Telefon") {
+                    return (
+                      <a
+                        className="hover:text-primary text-[15px] leading-6 text-slate-600 transition-colors md:text-base md:leading-6"
+                        href="tel:+420222160782"
+                        key={line}
+                      >
+                        {line}
+                      </a>
+                    );
+                  }
+
+                  return (
+                    <p
+                      className="text-[15px] leading-6 text-slate-600 md:text-base md:leading-6"
+                      key={line}
+                    >
+                      {line}
+                    </p>
+                  );
+                })}
               </div>
             </div>
           );
@@ -84,7 +108,7 @@ export function ContactSection(): React.JSX.Element {
           <h2 className="text-[20px] leading-tight font-extrabold text-slate-900 md:text-2xl">
             Napište nám zprávu
           </h2>
-          <p className="text-sm leading-6 text-slate-500">
+          <p className="text-sm leading-6 text-slate-500 md:text-[15px]">
             Vyplňte formulář níže a my se vám co nejdříve ozveme.
           </p>
         </div>

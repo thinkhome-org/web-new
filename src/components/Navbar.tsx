@@ -45,7 +45,7 @@ function DesktopNavItem({
   const isActive = isNavItemActive(item, pathname);
   const className = isActive
     ? "text-base font-semibold text-white"
-    : "text-base font-medium text-white/70 transition-opacity hover:opacity-100";
+    : "text-base font-medium text-white/70 transition-colors hover:text-white";
 
   if (item.href) {
     return (
@@ -119,7 +119,7 @@ export function Navbar({ position }: NavbarProps = {}): React.JSX.Element {
   const effectivePosition = position ?? (pathname === "/" ? "fixed" : "static");
   const navClassName = useMemo(() => {
     if (effectivePosition === "static") {
-      return "bg-primary sticky top-0 z-50 w-full px-6 py-6 transition-colors duration-300 md:px-12 md:py-6";
+      return "bg-primary sticky top-0 z-50 -mb-px w-full px-6 py-6 transition-colors duration-300 md:px-12 md:py-6";
     }
 
     return `fixed inset-x-0 top-0 z-50 w-full px-6 py-6 transition-colors duration-300 md:px-12 md:py-6 ${
@@ -220,7 +220,7 @@ export function Navbar({ position }: NavbarProps = {}): React.JSX.Element {
       <header className={navClassName}>
         <nav className="mx-auto flex w-full max-w-[1440px] items-center justify-between">
           <Link
-            className="text-[20px] font-extrabold text-white transition-opacity hover:opacity-80 md:text-2xl"
+            className="text-[20px] font-extrabold text-white transition-colors hover:text-white/80 md:text-2xl"
             href="/"
           >
             &lt;thinkhome&gt;

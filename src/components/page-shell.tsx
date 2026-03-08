@@ -20,7 +20,7 @@ export function PageShell({
     <>
       <Navbar position="static" />
       <section className="bg-primary relative flex w-full flex-col items-center overflow-hidden">
-        <div className="flex w-full max-w-[1440px] flex-col gap-3 px-6 pt-8 pb-18 md:gap-4 md:px-12 md:pt-12 md:pb-28">
+        <div className="flex w-full max-w-[1440px] flex-col gap-3 px-6 pt-8 pb-24 md:gap-4 md:px-12 md:pt-12 md:pb-32">
           <nav className="flex items-center gap-1.5 text-[12px] font-medium text-white/60 md:gap-2 md:px-12 md:text-sm">
             <Link className="transition-colors hover:text-white" href="/">
               Domů
