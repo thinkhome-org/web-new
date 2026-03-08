@@ -1,0 +1,173 @@
+import { PageHero } from "@/components/PageHero";
+
+<PageHero 
+  title="GFM Example ✨" 
+  subtitle="Absolutní a kompletní ukázka CommonMark & GFM chemické laboratorní pískoviště."
+  updated="Aktualizováno: 5. března 2026"
+  breadcrumbs={["ThinkHome", "GFM Example"]}
+/>
+
+<div className="mx-auto max-w-4xl px-6 py-12 md:px-12 md:py-20 font-manrope prose prose-slate prose-lg lg:prose-xl prose-headings:font-extrabold prose-headings:tracking-tight prose-a:text-[#002bff] prose-blockquote:border-l-[#002bff] prose-blockquote:bg-slate-50 prose-blockquote:py-1 prose-blockquote:px-6 prose-blockquote:rounded-r-xl">
+  <p className="lead text-[#334155]">
+    Tento dokument je vyčerpávající chemické laboratorní pískoviště pro naprosto všechny specifikace a funkce, které přináší CommonMark a moderní GitHub Flavored Markdown (GFM). Pamatujte si: GFM je plně kompatibilní nadstavbou (superset) nad nadací CommonMark (cmark).
+  </p>
+
+  <div className="h-px w-full bg-slate-200 my-10" />
+
+  ## 1. Nadpisy (Headings) - Základní CommonMark
+
+  ### ATX Styl (Znak Křížku)
+
+  # Nadpis H1
+  ## Nadpis H2
+  ### Nadpis H3
+  #### Nadpis H4
+  ##### Nadpis H5
+  ###### Nadpis H6
+
+  ### Setext Styl (Podtržení)
+
+  <div className="not-prose border p-6 rounded-2xl bg-[#f8fafc] my-6">
+    <h1 className="text-3xl font-extrabold mb-2">Alternativní Nadpis H1</h1>
+    <div className="h-1.5 w-full bg-slate-300 mb-6" />
+    <h2 className="text-2xl font-extrabold mb-2">Alternativní Nadpis H2</h2>
+    <div className="h-1 w-full bg-slate-200" />
+  </div>
+
+  ---
+
+  ## 2. Textové Formátování a Typografie
+
+  Standardní CommonMark značky, které můžete libovolně kombinovat:
+
+  - **Tučné písmo** (Strong)
+  - *Kurzíva* (Emphasis)
+  - ***Tučná kurzíva***
+  - ~~Přeškrtnutý text~~ (GFM)
+  - `Inline kód` (Code)
+
+  Běžný text v odstavcích se zalamuje plynule. Nicméně pokud přidáte na konec řádku  
+  dvě mezery jako před chvílí, vytvoříte Hard Line Break a odstavce nesplynou.  
+  To samé platí, pokud řádek zakončíte zpětným lomítkem. \
+  
+  ---
+
+  ## 3. Výstrahy a Blokové Citace (Blockquotes & Alerts)
+
+  > Začněte blokovou citaci pravou svorkou.
+  > Lze citovat přes více řádků.
+  >
+  > > Citace lze i libovolně zanořovat.
+
+  ### GitHub Flavored Markdown Alerts (Callouts):
+
+  <div className="flex flex-col gap-4 not-prose my-8">
+    <div className="p-5 rounded-2xl bg-[#eff6ff] border border-blue-100 flex flex-col gap-2">
+      <p className="text-[#1e3a8a] font-bold uppercase text-xs tracking-widest flex items-center gap-2">
+        <span className="h-2 w-2 rounded-full bg-blue-500" /> NOTE
+      </p>
+      <p className="text-[#1e3a8a] text-sm leading-relaxed">Užitečné informace, které by čtenář měl vědět (modré upozornění).</p>
+    </div>
+
+    <div className="p-5 rounded-2xl bg-[#f0fdf4] border border-green-100 flex flex-col gap-2">
+      <p className="text-[#14532d] font-bold uppercase text-xs tracking-widest flex items-center gap-2">
+        <span className="h-2 w-2 rounded-full bg-green-500" /> TIP
+      </p>
+      <p className="text-[#14532d] text-sm leading-relaxed">Skvělý tip nebo lifehack k lepšímu fungování (zelené upozornění).</p>
+    </div>
+
+    <div className="p-5 rounded-2xl bg-[#faf5ff] border border-purple-100 flex flex-col gap-2">
+      <p className="text-[#581c87] font-bold uppercase text-xs tracking-widest flex items-center gap-2">
+        <span className="h-2 w-2 rounded-full bg-purple-500" /> IMPORTANT
+      </p>
+      <p className="text-[#581c87] text-sm leading-relaxed">Zásadní informace pro uživatele (fialové upozornění).</p>
+    </div>
+
+    <div className="p-5 rounded-2xl bg-[#fefce8] border border-yellow-100 flex flex-col gap-2">
+      <p className="text-[#854d0e] font-bold uppercase text-xs tracking-widest flex items-center gap-2">
+        <span className="h-2 w-2 rounded-full bg-yellow-500" /> WARNING
+      </p>
+      <p className="text-[#854d0e] text-sm leading-relaxed">Nedorozumění, varování před důsledky (žluté upozornění).</p>
+    </div>
+
+    <div className="p-5 rounded-2xl bg-[#fef2f2] border border-red-100 flex flex-col gap-2">
+      <p className="text-[#991b1b] font-bold uppercase text-xs tracking-widest flex items-center gap-2">
+        <span className="h-2 w-2 rounded-full bg-red-500" /> CAUTION
+      </p>
+      <p className="text-[#991b1b] text-sm leading-relaxed">Skutečné nebezpečí, varování před kritickými chybami nebo ztrátou dat.</p>
+    </div>
+  </div>
+
+  ---
+
+  ## 4. Seznamy (Lists)
+
+  ### Neuspořádané (Unordered)
+
+  - Položka 1
+  - Položka 2
+    - Podpoložka A
+    - Podpoložka B
+
+  ### Uspořádané (Ordered)
+
+  1. První krok
+  2. Druhý krok
+  3. Třetí krok
+
+  ### Task Listy (GFM rozšíření)
+
+  - [x] Hotový úkol
+  - [ ] Rozpracovaný úkol
+  - [ ] Budoucí úkol
+
+  ---
+
+  ## 5. Blokový Kód (Code Blocks)
+
+  ```typescript
+  interface User {
+    name: string;
+    id: number;
+  }
+  const user: User = { name: "John", id: 123 };
+  console.log(user);
+  ```
+
+  ---
+
+  ## 6. Odkazy a Obrázky (Links & Images)
+
+  [Odkaz na ThinkHome](https://thinkhome.org)
+
+  ![GitHub Logo](https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png)
+  *Ukázkové logo z GitHubu*
+
+  ---
+
+  ## 7. Tabulky (Tables - GFM Extension)
+
+  | Služba | Popis | Cena |
+  | :--- | :--- | :--- |
+  | Cloud | Migrace dat do Google/MS cloudu | 10 000 Kč |
+  | AI | Implementace LLM chatbotů | 50 000 Kč |
+  | Support | Helpdesk a uživatelská podpora | 1 500 Kč/hod |
+
+  ---
+
+  ## 9. Matematické rovnice
+
+  <div className="not-prose p-10 bg-slate-50 rounded-[32px] border border-slate-100 flex flex-col items-center gap-4 my-10">
+    <p className="text-3xl font-serif italic text-[#0f172a]">∑ (a_k b_k)² ≤ (∑ a_k²) (∑ b_k²)</p>
+    <p className="text-xs font-bold text-slate-400 uppercase tracking-widest">Cauchy-Schwarzova nerovnost</p>
+  </div>
+
+  ---
+
+  ## 10. Poznámky pod čarou
+
+  Ukázka poznámek pod čarou [^1].
+
+  [^1]: Toto je text poznámky pod čarou, který se zobrazí na konci dokumentu.
+
+</div>

@@ -1,41 +1,103 @@
-import { MdxLayout } from "@/components/mdx-layout";
+import { PageHero } from "@/components/PageHero";
 
-export const layoutMetadata = {
-  title: "Ochrana osobních údajů",
-  subtitle: "Jak zpracováváme a chráníme vaše data.",
-  updatedAt: "5. března 2026",
-  breadcrumbs: [{ label: "Ochrana osobních údajů" }],
-};
+<PageHero
+  title="Ochrana osobních údajů"
+  subtitle="Zásady nakládání s vašimi daty a zajištění maximální bezpečnosti."
+  updated="Aktualizováno: 6. března 2026"
+  breadcrumbs={["ThinkHome", "Ochrana osobních údajů"]}
+/>
 
-export default function Layout({ children }) {
-  return <MdxLayout metadata={layoutMetadata}>{children}</MdxLayout>;
-}
+<div className="mx-auto max-w-4xl px-6 py-12 md:px-12 md:py-20 font-manrope">
+  <div className="flex flex-col gap-10">
+    <p className="text-lg text-[#334155] leading-relaxed">
+      Společnost ThinkHome s.r.o., se sídlem Rytířova 777/3, 143 00 Praha - Kamýk, IČO: 23893591 (dále jen „Správce“), chrání vaše osobní údaje v souladu s Nařízením Evropského parlamentu a Rady (EU) 2016/679 (GDPR).
+    </p>
 
-Vaše soukromí je pro nás důležité. Zde se dozvíte, jak shromažďujeme, využíváme a chráníme vaše osobní údaje v souladu s Nařízením Evropského parlamentu a Rady (EU) 2016/679 (GDPR).
+    <div className="h-px w-full bg-slate-200" />
 
-## Jaké údaje zpracováváme
+    <section className="flex flex-col gap-6">
+      <h2 className="text-2xl font-extrabold text-[#0f172a] tracking-tight">1. Jaké osobní údaje zpracováváme?</h2>
+      <p className="text-[#334155] leading-relaxed">
+        Zpracováváme pouze ty osobní údaje, které nám sami poskytnete v souvislosti s využíváním našich služeb, uzavřením smlouvy nebo při komunikaci s námi. Jedná se zejména o:
+      </p>
+      <ul className="flex flex-col gap-3 text-[#334155] list-none pl-1">
+        <li>• Identifikační údaje: jméno a příjmení, IČO, DIČ.</li>
+        <li>• Kontaktní údaje: e-mailová adresa, telefonní číslo, doručovací a fakturační adresa.</li>
+        <li>• Údaje o objednávkách a platbách: historie objednávek, bankovní spojení.</li>
+      </ul>
+    </section>
 
-Zpracováváme pouze osobní údaje, které nám sami dobrovolně poskytnete v souvislosti se zájmem o naše služby (např. jméno, e-mailová adresa, telefonní číslo, IČO/DIČ, fakturační údaje).
+    <div className="h-px w-full bg-slate-200" />
 
-## Účel zpracování
+    <section className="flex flex-col gap-6">
+      <h2 className="text-2xl font-extrabold text-[#0f172a] tracking-tight">2. Za jakým účelem údaje zpracováváme?</h2>
+      <p className="text-[#334155] leading-relaxed">
+        Osobní údaje zpracováváme k následujícím účelům:
+      </p>
+      <ul className="flex flex-col gap-3 text-[#334155] list-none pl-1">
+        <li>• Plnění smlouvy a poskytování služeb: Vyřízení vašich objednávek, fakturace, instalace a podpora. (Právní základ: plnění smlouvy).</li>
+        <li>• Komunikace: Odpovědi na vaše dotazy zaslané přes kontaktní formulář nebo e-mail. (Právní základ: oprávněný zájem nebo příprava smlouvy).</li>
+        <li>• Plnění právních povinností: Vedení účetnictví a daňových záznamů. (Právní základ: plnění právní povinnosti).</li>
+        <li>• Ochrana našich práv: Vymáhání pohledávek a řešení právních sporů. (Právní základ: oprávněný zájem).</li>
+      </ul>
+    </section>
 
-Údaje používáme výhradně pro:
+    <div className="h-px w-full bg-slate-200" />
 
-- Poskytování sjednaných služeb
-- Zpracování fakturace a účetnictví
-- Komunikaci v rámci zákaznické podpory
-- Zasílání důležitých upozornění týkajících se našich služeb
+    <section className="flex flex-col gap-6">
+      <h2 className="text-2xl font-extrabold text-[#0f172a] tracking-tight">3. Komu údaje předáváme?</h2>
+      <p className="text-[#334155] leading-relaxed">
+        Vaše osobní údaje neprodáváme žádným třetím stranám. Mohou k nim mít přístup pouze ověření zpracovatelé, kteří nám pomáhají se zajištěním našich služeb (např. účetní firma, poskytovatelé webhostingu, marketingových a IT nástrojů, přepravní společnosti).
+      </p>
+      <p className="text-[#64748b] leading-relaxed italic bg-slate-50 p-4 rounded-xl border-l-4 border-slate-200">
+        V případě online plateb jsou platební údaje (číslo karty apod.) zpracovávány výhradně poskytovatelem platební brány (GoPay) a k nám nemají přístup.
+      </p>
+    </section>
 
-## Sdílení a ochrana údajů
+    <div className="h-px w-full bg-slate-200" />
 
-Vaše údaje nepředáváme žádným třetím stranám za účelem marketingu. Přístup k údajům mohou mít pouze pověření zpracovatelé (např. externí účetní) vázaní přísnou mlčenlivostí. Dbáme na maximální technické a organizační zabezpečení vašich dat.
+    <section className="flex flex-col gap-6">
+      <h2 className="text-2xl font-extrabold text-[#0f172a] tracking-tight">4. Jak dlouho údaje uchováváme?</h2>
+      <p className="text-[#334155] leading-relaxed">
+        Vaše osobní údaje uchováváme pouze po dobu nezbytně nutnou:
+      </p>
+      <ul className="flex flex-col gap-3 text-[#334155] list-none pl-1">
+        <li>• Údaje nezbytné pro plnění smlouvy po dobu trvání smluvního vztahu a následně po dobu stanovenou účetními a daňovými zákony (zpravidla 10 let).</li>
+        <li>• Údaje zpracovávané na základě oprávněného zájmu uchováváme po dobu trvání tohoto zájmu (např. případné sjednávání smluv nebo obrana práv).</li>
+      </ul>
+    </section>
 
-## Vaše práva
+    <div className="h-px w-full bg-slate-200" />
 
-Máte právo:
+    <section className="flex flex-col gap-6">
+      <h2 className="text-2xl font-extrabold text-[#0f172a] tracking-tight">5. Jaká jsou vaše práva?</h2>
+      <p className="text-[#334155] leading-relaxed">
+        V souvislosti se zpracováním osobních údajů máte právo:
+      </p>
+      <ul className="flex flex-col gap-3 text-[#334155] list-none pl-1">
+        <li>• Na přístup: Zeptat se, jaké údaje o vás zpracováváme.</li>
+        <li>• Na opravu: Požádat o opravu nepřesných nebo neaktuálních údajů.</li>
+        <li>• Na výmaz (právo být zapomenut): Požádat o smazání údajů, pokud již nejsou potřebné pro stanovené účely nebo pokud odvoláte souhlas.</li>
+        <li>• Na omezení zpracování: Požádat o omezení zpracování v určitých případech.</li>
+        <li>• Vznést námitku: Proti zpracování na základě našeho oprávněného zájmu.</li>
+        <li>• Na přenositelnost údajů: Získat své údaje ve strojově čitelném formátu.</li>
+      </ul>
 
-- Požadovat informaci, jaké vaše osobní údaje zpracováváme
-- Vyžádat si přístup k těmto údajům a nechat je aktualizovat nebo opravit
-- Požadovat výmaz těchto osobních údajů
+      <div className="mt-8 p-6 rounded-2xl bg-[#eff6ff] border border-blue-100 flex flex-col gap-2">
+        <p className="text-[#002bff] font-bold">Potřebujete více informací?</p>
+        <p className="text-sm text-[#334155] leading-relaxed">
+          Případné žádosti týkající se vašich práv zasílejte na náš e-mail: <strong>info@thinkhome.org</strong>.
+        </p>
+      </div>
 
-V případě jakýchkoli dotazů ohledně zpracování osobních údajů nás neváhejte kontaktovat.
+      <p className="text-[#64748b] text-xs italic mt-4">
+        Dozorovým úřadem, kam se můžete v případě stížnosti obrátit, je Úřad pro ochranu osobních údajů (www.uoou.cz).
+      </p>
+
+      <p className="mt-6 text-[#0f172a] font-bold">
+        ThinkHome s.r.o.
+      </p>
+    </section>
+
+  </div>
+</div>

@@ -1,29 +1,189 @@
-import { MdxLayout } from "@/components/mdx-layout";
+import { PageHero } from "@/components/PageHero";
+import { PriceTable } from "@/components/PriceTable";
 
-export const layoutMetadata = {
-  title: "Ceník služeb",
-  subtitle: "Přehled našich služeb a úkonů. Transparentnost a žádné skryté poplatky.",
-  updatedAt: "5. března 2026",
-  breadcrumbs: [{ label: "Ceník služeb" }],
-};
+<PageHero
+  title="Ceník služeb"
+  subtitle="Transparentní ceny a balíčky služeb bez skrytých poplatků."
+  updated="Aktualizováno: 6. března 2026"
+  breadcrumbs={["ThinkHome", "Ceník služeb"]}
+/>
 
-export default function Layout({ children }) {
-  return <MdxLayout metadata={layoutMetadata}>{children}</MdxLayout>;
-}
+<div className="mx-auto max-w-7xl px-6 py-12 md:px-12 md:py-20">
+  <p className="text-lg text-[#334155] leading-relaxed mb-16 max-w-4xl font-manrope">
+    ThinkHome nabízí kompletní digitální a technologické služby pro moderní firmy i domácnosti. Níže naleznete orientační ceny jednotlivých služeb na základě mediánů trhu. Uvedené ceny jsou nezávazným odhadem odvozeným z tržních standardů.
+  </p>
 
-Zde naleznete přehled našich služeb a úkonů.
+<PriceTable
+  title="Weby, CMS a online řešení"
+  rows={[
+    {
+      service: "Tvorba webových stránek",
+      description: "Implementace webu na míru dle náročnosti.",
+      price: "od 20 000 Kč",
+    },
+    {
+      service: "Vývoj aplikací na míru",
+      description: "Cenová nabídka po analýze požadavků.",
+      price: "Na míru",
+    },
+    {
+      service: "Správa a aktualizace webu",
+      description: "Správa a pravidelné aktualizace systému.",
+      price: "od 1 500 Kč",
+    },
+  ]}
+/>
 
-## IT Správa a podpora
+<PriceTable
+  title="Servis, podpora a školení"
+  rows={[
+    {
+      service: "IT Audit zdarma",
+      description: "Základní posouzení současného stavu vašeho IT prostředí a návrh řešení.",
+      price: "Zdarma",
+    },
+    {
+      service: "Hodinové sazby",
+      description: "Dle typu a složitosti úkonu.",
+      price: "od 1 200 Kč / hod",
+    },
+    {
+      service: "Měsíční paušály",
+      description: "Individuální ceny na základě SLA a sjednaného rozsahu služeb.",
+      price: "od 5 000 Kč",
+    },
+  ]}
+/>
 
-- **IT Audit zdarma:** Základní posouzení současného stavu vašeho IT prostředí a návrh řešení.
-- **Hodinové sazby:** Od 1 200 Kč / hod bez DPH dle typu a složitosti úkonu.
-- **Měsíční paušály:** Individuální ceny na základě SLA a sjednaného rozsahu služeb (od 5 000 Kč / měsíc).
+<PriceTable
+  title="Cloud, komunikace a infrastruktura"
+  rows={[
+    {
+      service: "Nasazení Google Workspace / Microsoft 365",
+      description: "Kompletní migrace a nastavení firemního cloudu.",
+      price: "8 000 – 20 000 Kč",
+    },
+    {
+      service: "Nastavení PBX/VoIP ústředny",
+      description: "Instalace a konfigurace moderní telefonní ústředny.",
+      price: "15 000 – 40 000 Kč",
+    },
+    {
+      service: "Správa nástrojů Slack / Teams",
+      description: "Audit a nastavení komunikačních platforem pro efektivní spolupráci.",
+      price: "5 000 – 15 000 Kč / rok",
+    },
+  ]}
+/>
 
-## Web a aplikace
+<PriceTable
+  title="Umělá inteligence (AI)"
+  rows={[
+    {
+      service: "AI chatbot – základní (SaaS)",
+      description: "Rychlé nasazení chatbota pro zákaznickou podporu.",
+      price: "500 – 10 000 Kč / měsíc",
+    },
+    {
+      service: "AI chatbot – pokročilý (na míru)",
+      description: "Vývoj vlastního AI asistenta integrovaného s vašimi procesy.",
+      price: "150 000 – 800 000 Kč",
+    },
+    {
+      service: "Interní LLM – trénování vlastní AI",
+      description: "Vytvoření AI modelu na vašich firemních datech.",
+      price: "200 000+ Kč",
+    },
+    {
+      service: "Automatizace procesů pomocí AI",
+      description: "Implementace chytrých agentů a nástrojů.",
+      price: "50 000 – 300 000 Kč",
+    },
+  ]}
+/>
 
-- **Tvorba webových stránek:** Od 20 000 Kč bez DPH dle náročnosti.
-- **Vývoj aplikací na míru:** Cenová nabídka po analýze požadavků.
-- **Správa a aktualizace webu:** Od 1 500 Kč / měsíc.
+<PriceTable
+  title="Kyberbezpečnost a dohled"
+  rows={[
+    {
+      service: "Monitoring 24/7 (ročně)",
+      description: "Nepřetržitý dohled nad firemní sítí a infrastrukturou.",
+      price: "20 000 – 60 000 Kč",
+    },
+    {
+      service: "Zálohování a obnova dat",
+      description: "Pravidelné zálohy a testování obnovy pro kritická data.",
+      price: "5 000 – 20 000 Kč",
+    },
+    {
+      service: "Bezpečnostní audit",
+      description: "Analýza základní bezpečnostní vrstvy vaší firmy.",
+      price: "10 000 – 30 000 Kč",
+    },
+    {
+      service: "Penetrační test – základní",
+      description: "Testování zabezpečení webu nebo konkrétní aplikace.",
+      price: "120 000 – 500 000 Kč",
+    },
+    {
+      service: "Penetrační test – enterprise",
+      description: "Komplexní simulace a testování.",
+      price: "500 000+ Kč",
+    },
+  ]}
+/>
 
-_Všechny ceny jsou uvedeny bez DPH._
-_Pro přesnou cenovou nabídku nás prosím kontaktujte._
+<PriceTable
+  title="Hardware a fyzická infrastruktura"
+  rows={[
+    {
+      service: "Dodání a zprovoznění hardware",
+      description: "Zajištění koncové výbavy a serverů dle potřeby.",
+      price: "dle zařízení",
+    },
+    {
+      service: "Monitoring zařízení",
+      description: "Sledování dostupnosti a stavu fyzických zařízení.",
+      price: "3 000 – 10 000 Kč / rok",
+    },
+    {
+      service: "Opravy a servis HW",
+      description: "Rychlé opravy výpočetní a síťové techniky.",
+      price: "700 – 1 500 Kč / hod",
+    },
+  ]}
+/>
+
+<PriceTable
+  title="Sítě, Wi-Fi a konektivita"
+  rows={[
+    {
+      service: "Návrh sítě (firemní)",
+      description: "Kompletní projektová dokumentace a plán firemní architektury.",
+      price: "10 000 – 40 000 Kč",
+    },
+    {
+      service: "Realizace sítě",
+      description: "Fyzické natažení, konfigurace přepínačů a instalace síťových prvků.",
+      price: "20 000 – 100 000+ Kč",
+    },
+    {
+      service: "Profesionální Wi-Fi",
+      description: "Instalace a nastavení access pointů a bezdrátové infrastruktury.",
+      price: "10 000 – 50 000 Kč",
+    },
+    {
+      service: "Výběr internetové konektivity",
+      description: "Pomoc při výběru poskytovatele a zmapování optimálního řešení.",
+      price: "2 000 – 10 000 Kč",
+    },
+  ]}
+/>
+
+  <div className="mt-20 p-8 rounded-3xl bg-[#fefce8] border border-yellow-200 flex flex-col gap-3">
+    <h3 className="text-lg font-bold text-yellow-900 font-manrope">Upozornění</h3>
+    <p className="text-sm text-yellow-800 leading-relaxed font-manrope">
+      Uvedené ceny jsou pouze orientační a slouží pro základní představu o tržních nákladech. Finální cena závisí na konkrétních požadavcích, rozsahu řešení a individuální analýze. Pro přesnou nabídku nás neváhejte kontaktovat.
+    </p>
+  </div>
+</div>

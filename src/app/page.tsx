@@ -1,52 +1,60 @@
-import { Navbar } from "@/components/Navbar";
-import { ArrowDown } from "lucide-react";
+import Link from "next/link";
+import { ChevronDown, ArrowRight } from "lucide-react";
 
-export default function Home() {
+export default function LandingPage() {
   return (
-    <>
-      <Navbar position="fixed" />
+    <div className="flex flex-col overflow-x-hidden">
       {/* Hero Section */}
-      <section className="bg-primary relative z-10 flex min-h-screen w-full flex-col items-center justify-between overflow-hidden p-6 pt-(--navbar-height) text-white md:p-12 md:pt-(--navbar-height)">
-        {/* Main Content Wrapper */}
-        <div className="flex w-full grow flex-col items-center justify-center gap-6 md:gap-8">
+      <section className="relative flex min-h-[844px] w-full flex-col justify-between bg-[#002bff] p-6 md:min-h-[900px] md:p-12">
+        <div /> {/* Spacer for flex-between since Navbar is fixed/absolute */}
+        <div className="mx-auto flex w-full max-w-5xl flex-col items-center gap-8 text-center md:gap-10">
           {/* Badge */}
-          <div className="flex items-center opacity-40">
-            <span className="text-xs font-semibold md:text-sm">Vše okolo IT bez starostí</span>
+          <div className="inline-flex rounded-full border border-white/40 bg-transparent px-4 py-2 opacity-40 md:px-6">
+            <span className="text-[10px] font-bold tracking-widest text-white uppercase md:text-xs">
+              IT řešení pro firmy a domácnosti
+            </span>
           </div>
 
           {/* Heading */}
-          <h1 className="w-full text-center text-[40px] leading-tight font-extrabold md:text-7xl">
-            Kompletní IT
-            <br className="hidden md:block" /> pod jednou střechou.
+          <h1 className="text-4xl leading-[1.1] font-extrabold text-white md:text-7xl lg:text-[72px]">
+            Kompletní IT <br /> pod jednou střechou.
           </h1>
 
           {/* Description */}
-          <p className="max-w-[800px] text-center text-base leading-relaxed font-normal text-white opacity-80 md:text-xl md:opacity-80">
+          <p className="max-w-3xl text-lg leading-relaxed font-normal text-white/80 md:text-xl lg:text-[20px]">
             Zjednodušujeme IT tak, aby se firmy nenechaly nachytat a nemusely řešit několik
             dodavatelů zároveň. Věnujte se byznysu, IT nechte na nás.
           </p>
 
-          {/* Buttons Row */}
-          <div className="mt-4 flex w-full flex-col items-center justify-center gap-4 md:flex-row md:gap-8">
-            <button className="text-primary rounded-lg bg-white px-8 py-4 text-center text-base font-extrabold transition-all hover:bg-white/90">
-              Kontaktujte nás
-            </button>
-            <button className="bg-transparent px-4 py-4 text-center text-base font-semibold text-white opacity-70 transition-all hover:opacity-100">
-              Zjistit více
-            </button>
+          {/* Button Row */}
+          <div className="mt-4 flex flex-col items-center gap-4 md:flex-row md:gap-6">
+            <Link
+              href="/kontakt"
+              className="group flex items-center gap-2 rounded-full bg-white px-8 py-4 text-base font-bold text-[#002bff] transition-all hover:scale-105 hover:bg-white/95"
+            >
+              Nezávazná konzultace
+              <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
+            </Link>
+            <Link
+              href="/sluzby"
+              className="text-base font-semibold text-white/90 decoration-white/30 underline-offset-8 transition-all hover:decoration-white"
+            >
+              Prohlédnout služby
+            </Link>
           </div>
         </div>
-
         {/* Bottom Indicator */}
-        <div className="flex flex-col items-center gap-3 pb-4">
-          <span className="text-xs font-semibold tracking-wide text-white opacity-60">
+        <div className="flex flex-col items-center gap-4 pb-4 md:pb-8">
+          <span className="text-[10px] font-bold tracking-[0.2em] text-white/60 uppercase">
             Posuňte dolů
           </span>
-          <div className="flex h-10 w-10 animate-bounce items-center justify-center rounded-full bg-transparent opacity-50">
-            <ArrowDown className="h-[18px] w-[18px] text-white" strokeWidth={3} />
+          <div className="flex h-10 w-10 items-center justify-center rounded-full border border-white/30 bg-transparent">
+            <ChevronDown className="h-5 w-5 animate-bounce text-white" />
           </div>
         </div>
       </section>
-    </>
+
+      {/* Hero section ends here as per initial pencil design view. Other sections would follow. */}
+    </div>
   );
 }

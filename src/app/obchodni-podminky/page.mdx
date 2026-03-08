@@ -1,35 +1,62 @@
-import { MdxLayout } from "@/components/mdx-layout";
+import { PageHero } from "@/components/PageHero";
 
-export const layoutMetadata = {
-  title: "Obchodní podmínky",
-  subtitle: "Pravidla a ujednání upravující poskytování našich služeb.",
-  updatedAt: "5. března 2026",
-  breadcrumbs: [{ label: "Obchodní podmínky" }],
-};
+<PageHero
+  title="Obchodní podmínky"
+  subtitle="Práva a povinnosti související s využíváním služeb ThinkHome."
+  updated="Aktualizováno: 6. března 2026"
+  breadcrumbs={["ThinkHome", "Obchodní podmínky"]}
+/>
 
-export default function Layout({ children }) {
-  return <MdxLayout metadata={layoutMetadata}>{children}</MdxLayout>;
-}
+<div className="mx-auto max-w-4xl px-6 py-12 md:px-12 md:py-20 font-manrope">
+  <div className="flex flex-col gap-10">
+    <section className="flex flex-col gap-6">
+      <h2 className="text-3xl font-extrabold text-[#0f172a] tracking-tight">1. Úvodní ustanovení a definice</h2>
+      
+      <div className="flex flex-col gap-4">
+        <h3 className="text-xl font-bold text-[#0f172a]">1.1 Identifikace Dodavatele</h3>
+        <p className="text-[#334155] leading-relaxed">
+          Tyto Všeobecné obchodní podmínky (dále jen „VOP“) obchodní společnosti ThinkHome s.r.o., se sídlem Rytířova 777/3, 143 00 Praha - Kamýk, IČO: 23893591, DIČ: CZ23893591, zapsané v obchodním rejstříku vedeném Městským soudem v Praze, oddíl C, vložka 434666 (dále jen „Dodavatel“), upravují v souladu s ustanovením § 1751 odst. 1 zákona č. 89/2012 Sb., občanský zákoník, ve znění pozdějších předpisů (dále jen „OZ“), vzájemná práva a povinnosti smluvních stran vzniklé v souvislosti nebo na základě smlouvy uzavírané mezi Dodavatelem a Zákazníkem.
+        </p>
+        
+        <div className="p-6 rounded-2xl bg-slate-50 border border-slate-100 flex flex-col gap-3">
+          <p className="font-bold text-[#334155]">Kontaktní údaje Dodavatele:</p>
+          <ul className="flex flex-col gap-1 text-[#334155] list-none pl-1">
+            <li>• E-mail: info@thinkhome.org</li>
+            <li>• Telefon: +420 222 160 782</li>
+            <li>• Webová stránka: https://thinkhome.org</li>
+          </ul>
+        </div>
+      </div>
 
-Tyto všeobecné obchodní podmínky (dále jen "Podmínky") upravují smluvní vztahy mezi námi (dále jen "Poskytovatel") a vámi (dále jen "Zákazník").
+      <div className="flex flex-col gap-4">
+        <h3 className="text-xl font-bold text-[#0f172a]">1.2 Definice pojmů</h3>
+        <p className="text-[#334155] leading-relaxed">
+          <strong>„Zákazník“</strong> – fyzická nebo právnická osoba, která uzavírá Smlouvu s Dodavatelem. Zákazníkem může být podnikatel i spotřebitel.
+        </p>
+        <p className="text-[#334155] leading-relaxed">
+          <strong>„Spotřebitel“</strong> – každý člověk, který mimo rámec své podnikatelské činnosti uzavírá smlouvu s Dodavatelem.
+        </p>
+        <p className="text-[#334155] leading-relaxed">
+          <strong>„Podnikatel“</strong> – osoba, která uzavírá Smlouvu v rámci své podnikatelské činnosti.
+        </p>
+        <p className="text-[#334155] leading-relaxed">
+          <strong>„Smlouva“</strong> – kupní smlouva, smlouva o dílo, smlouva o poskytování služeb nebo jiná smlouva uzavřená mezi Dodavatelem a Zákazníkem, jejíž nedílnou součástí jsou tyto VOP.
+        </p>
+      </div>
 
-## 1. Základní ustanovení
+      <div className="flex flex-col gap-4">
+        <h3 className="text-xl font-bold text-[#0f172a]">1.3 Působnost VOP</h3>
+        <p className="text-[#334155] leading-relaxed">
+          Tyto VOP tvoří nedílnou součást každé Smlouvy uzavřené mezi Dodavatelem a Zákazníkem a jsou absolutně závazné pro veškerý obchodní styk s Dodavatelem. Dodavatel je v souladu s § 1752 OZ oprávněn jednostranně měnit či doplňovat tyto VOP v přiměřeném rozsahu.
+        </p>
+      </div>
+    </section>
 
-Poskytovatel se zavazuje poskytovat Zákazníkovi služby v oblasti informačních technologií, vývoje softwaru a souvisejícího poradenství na základě dohodnutých specifikací.
+    <div className="h-px w-full bg-slate-200" />
 
-## 2. Předmět plnění
+    <p className="text-[#64748b] text-sm italic">
+      Poznámka: Toto je pouze úvodní část obchodních podmínek. Kompletní znění je k dispozici na vyžádání nebo v sídle společnosti.
+    </p>
 
-Předmětem plnění jsou služby definované ve smlouvě, objednávce nebo v přijaté nabídce. Poskytovatel služby provede s maximální odbornou péčí.
-
-## 3. Platební podmínky
-
-Cena za služby je stanovena dohodou nebo podle platného ceníku. Platby za služby probíhají na základě faktur vystavených Poskytovatelem se splatností 14 dní, není-li dohodnuto jinak.
-
-## 4. Práva a povinnosti stran
-
-Zákazník je povinen poskytnout Poskytovateli veškerou nezbytnou součinnost pro řádné plnění služeb.
-Poskytovatel se zavazuje zachovávat mlčenlivost o všech skutečnostech, které se dozví při poskytování služeb.
-
-## 5. Závěrečná ustanovení
-
-Tyto podmínky mohou být Poskytovatelem průběžně aktualizovány. O změnách bude Zákazník včas informován.
+  </div>
+</div>
