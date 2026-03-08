@@ -10,6 +10,7 @@ export interface FooterLink {
 }
 
 export interface ContactDetail {
+  icon: "bank" | "building" | "email" | "map-pin" | "phone";
   lines: string[];
   title: string;
 }
@@ -33,6 +34,7 @@ export interface ContentSection {
 
 export interface TermsSubsection {
   bullets?: string[];
+  bulletsLabel?: string;
   paragraphs: string[];
   title: string;
 }
@@ -52,6 +54,7 @@ export const FOOTER_LINKS: FooterLink[] = [
 
 export const CONTACT_DETAILS: ContactDetail[] = [
   {
+    icon: "building",
     lines: [
       "ThinkHome s.r.o.",
       "IČ: 23893591",
@@ -61,18 +64,22 @@ export const CONTACT_DETAILS: ContactDetail[] = [
     title: "Společnost",
   },
   {
+    icon: "email",
     lines: ["info@thinkhome.org"],
     title: "E-mail",
   },
   {
+    icon: "phone",
     lines: ["+420 222 160 782"],
     title: "Telefon",
   },
   {
+    icon: "bank",
     lines: ["Účet: 363677109/0300"],
     title: "Bankovní spojení",
   },
   {
+    icon: "map-pin",
     lines: ["Rytířova 777/3, 143 00 Praha 12"],
     title: "Sídlo",
   },
@@ -100,7 +107,7 @@ export const PRICE_SECTIONS: PriceSection[] = [
         service: "Měsíční paušály",
       },
     ],
-    title: "Weby, CMS a online řešení",
+    title: "Servis, podpora a školení",
   },
   {
     items: [
@@ -120,7 +127,7 @@ export const PRICE_SECTIONS: PriceSection[] = [
         service: "Správa a aktualizace webu",
       },
     ],
-    title: "Servis, podpora a školení",
+    title: "Weby, CMS a online řešení",
   },
   {
     items: [
@@ -246,6 +253,7 @@ export const PRICE_SECTIONS: PriceSection[] = [
 
 export const TERMS_SECTIONS: TermsSubsection[] = [
   {
+    bulletsLabel: "Kontaktní údaje Dodavatele:",
     paragraphs: [
       "Tyto Všeobecné obchodní podmínky (dále jen „VOP“) obchodní společnosti ThinkHome s.r.o., se sídlem Rytířova 777/3, 143 00 Praha - Kamýk, IČO: 23893591, DIČ: CZ23893591, zapsané v obchodním rejstříku vedeném Městským soudem v Praze, oddíl C, vložka 434666 (dále jen „Dodavatel“), upravují v souladu s ustanovením § 1751 odst. 1 zákona č. 89/2012 Sb., občanský zákoník, ve znění pozdějších předpisů (dále jen „OZ“), vzájemná práva a povinnosti smluvních stran vzniklé v souvislosti nebo na základě smlouvy uzavírané mezi Dodavatelem a Zákazníkem.",
     ],

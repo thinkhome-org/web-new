@@ -7,7 +7,7 @@ import { useEffect, useMemo, useRef, useState } from "react";
 
 import { NAV_ITEMS, type NavItem } from "@/lib/site-content";
 
-const ICONS: Record<string, LucideIcon> = {
+const ICONS: Partial<Record<string, LucideIcon>> = {
   Domů: Home,
   Kontakt: Mail,
   "O nás": Users,
@@ -24,12 +24,7 @@ function isNavItemActive(item: NavItem, pathname: string): boolean {
   }
 
   if (item.href === "/") {
-    return (
-      pathname === "/" ||
-      pathname === "/cenik-sluzeb" ||
-      pathname === "/obchodni-podminky" ||
-      pathname === "/ochrana-osobnich-udaju"
-    );
+    return pathname === "/";
   }
 
   return false;
@@ -86,7 +81,9 @@ function MobileNavItem({
         href={item.href}
         onClick={onNavigate}
       >
-        <Icon className={isActive ? "h-5 w-5 text-white" : "h-5 w-5 text-white/50"} />
+        {Icon ? (
+          <Icon className={isActive ? "h-5 w-5 text-white" : "h-5 w-5 text-white/50"} />
+        ) : null}
         <span className={isActive ? "grow text-base font-bold" : "grow text-base font-semibold"}>
           {item.label}
         </span>
@@ -104,7 +101,7 @@ function MobileNavItem({
       aria-disabled="true"
       className={`flex items-center gap-4 rounded-xl px-4 py-[14px] ${rowClassName}`}
     >
-      <Icon className="h-5 w-5 text-white/50" />
+      {Icon ? <Icon className="h-5 w-5 text-white/50" /> : null}
       <span className="grow text-base font-semibold">{item.label}</span>
       <ChevronRight className="h-[18px] w-[18px] text-white/25" />
     </div>

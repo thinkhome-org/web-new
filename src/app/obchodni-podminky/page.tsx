@@ -35,9 +35,11 @@ export default function TermsPage(): React.JSX.Element {
               ))}
               {section.bullets ? (
                 <div className="flex flex-col gap-2">
-                  <p className="text-sm leading-7 font-semibold text-slate-900 md:text-base">
-                    Kontaktní údaje Dodavatele:
-                  </p>
+                  {section.bulletsLabel ? (
+                    <p className="text-sm leading-7 font-semibold text-slate-900 md:text-base">
+                      {section.bulletsLabel}
+                    </p>
+                  ) : null}
                   <ul className="flex list-disc flex-col gap-2 pl-5 text-sm leading-7 text-slate-600 md:text-base">
                     {section.bullets.map((bullet) => (
                       <li key={bullet}>{bullet}</li>

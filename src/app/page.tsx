@@ -11,7 +11,7 @@ export default function Home(): React.JSX.Element {
       <section className="bg-primary relative z-10 flex min-h-screen w-full flex-col items-center justify-between overflow-hidden px-6 pt-(--navbar-height) pb-6 text-white md:px-12 md:pb-12">
         <div className="flex w-full max-w-[1440px] grow flex-col items-center justify-center gap-8 text-center md:gap-10">
           <div className="flex max-w-[360px] flex-col items-center gap-8 md:max-w-[920px] md:gap-10">
-            <p className="text-sm font-semibold text-white/40">Vše okolo it bez starostí</p>
+            <p className="text-sm font-semibold text-white/40">Vše okolo IT bez starostí</p>
             <h1 className="text-[48px] leading-[1.05] font-extrabold md:max-w-[920px] md:text-[72px]">
               Kompletní IT
               <br />

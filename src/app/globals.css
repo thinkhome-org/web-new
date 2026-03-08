@@ -22,14 +22,11 @@ body {
   font-family: var(--font-manrope);
   background-color: white;
   color: #0f172a;
+  min-height: 100vh;
 }
 
 html {
   scroll-behavior: smooth;
-}
-
-body {
-  min-height: 100vh;
 }
 
 ::selection {
