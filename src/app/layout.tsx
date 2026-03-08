@@ -3,9 +3,10 @@ import { Manrope } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import Script from "next/script";
-import "./globals.css";
-import { Navbar } from "@/components/Navbar";
+
 import { Footer } from "@/components/Footer";
+
+import "./globals.css";
 
 const manrope = Manrope({
   variable: "--font-manrope",
@@ -22,17 +23,17 @@ export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
-}>) {
+}>): React.JSX.Element {
   return (
     <html lang="cs">
       <body className={`${manrope.variable} antialiased`}>
-        {process.env.NODE_ENV === "development" && (
+        {process.env.NODE_ENV === "development" ? (
           <Script
-            src="//unpkg.com/react-grab/dist/index.global.js"
             crossOrigin="anonymous"
+            src="//unpkg.com/react-grab/dist/index.global.js"
             strategy="beforeInteractive"
           />
-        )}
+        ) : null}
         <div className="flex min-h-screen flex-col">
           <main className="grow">{children}</main>
           <Footer />
