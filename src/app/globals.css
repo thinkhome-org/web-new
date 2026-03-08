@@ -2,12 +2,12 @@
 @plugin "@tailwindcss/typography";
 
 :root {
-  --navbar-height: 100px;
+  --navbar-height: 88px;
 }
 
 @media (min-width: 768px) {
   :root {
-    --navbar-height: 150px;
+    --navbar-height: 104px;
   }
 }
 
@@ -21,5 +21,15 @@
 body {
   font-family: var(--font-manrope);
   background-color: white;
-  color: black;
+  color: #0f172a;
+  min-height: 100vh;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+::selection {
+  background-color: #002bff;
+  color: white;
 }

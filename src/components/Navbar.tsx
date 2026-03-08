@@ -2,259 +2,285 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Menu, X, Home, Users, Settings, Mail, ChevronRight } from "lucide-react";
-import { useState, useEffect, useRef } from "react";
+import { ChevronRight, Home, Mail, Menu, Settings, Users, X, type LucideIcon } from "lucide-react";
+import { useEffect, useMemo, useRef, useState } from "react";
 
-const NAV_LINKS = [
-  { href: "/", label: "Domů", icon: Home },
-  { href: "/o-nas", label: "O nás", icon: Users },
-  { href: "/sluzby", label: "Služby", icon: Settings },
-  { href: "/kontakt", label: "Kontakt", icon: Mail },
-];
+import { NAV_ITEMS, type NavItem } from "@/lib/site-content";
+
+const ICONS: Partial<Record<string, LucideIcon>> = {
+  Domů: Home,
+  Kontakt: Mail,
+  "O nás": Users,
+  Služby: Settings,
+};
 
 export interface NavbarProps {
   position?: "fixed" | "static";
 }
 
-export function Navbar({ position }: NavbarProps = {}) {
+function isNavItemActive(item: NavItem, pathname: string): boolean {
+  if (item.href === "/kontakt") {
+    return pathname === "/kontakt";
+  }
+
+  if (item.href === "/") {
+    return pathname === "/";
+  }
+
+  return false;
+}
+
+function DesktopNavItem({
+  item,
+  pathname,
+}: {
+  item: NavItem;
+  pathname: string;
+}): React.JSX.Element {
+  const isActive = isNavItemActive(item, pathname);
+  const className = isActive
+    ? "text-base font-semibold text-white"
+    : "text-base font-medium text-white/70 transition-colors hover:text-white";
+
+  if (item.href) {
+    return (
+      <Link className={className} href={item.href}>
+        {item.label}
+      </Link>
+    );
+  }
+
+  return (
+    <span aria-disabled="true" className={`${className} cursor-default`}>
+      {item.label}
+    </span>
+  );
+}
+
+function MobileNavItem({
+  item,
+  pathname,
+  onNavigate,
+}: {
+  item: NavItem;
+  onNavigate: () => void;
+  pathname: string;
+}): React.JSX.Element {
+  const Icon = ICONS[item.label];
+  const isActive = isNavItemActive(item, pathname);
+  const rowClassName = isActive
+    ? "bg-slate-800 text-white"
+    : item.href
+      ? "text-white/70 transition-colors hover:bg-white/5"
+      : "text-white/70";
+
+  if (item.href) {
+    return (
+      <Link
+        className={`flex items-center gap-4 rounded-xl px-4 py-[14px] ${rowClassName}`}
+        href={item.href}
+        onClick={onNavigate}
+      >
+        {Icon ? (
+          <Icon className={isActive ? "h-5 w-5 text-white" : "h-5 w-5 text-white/50"} />
+        ) : null}
+        <span className={isActive ? "grow text-base font-bold" : "grow text-base font-semibold"}>
+          {item.label}
+        </span>
+        <ChevronRight
+          className={
+            isActive ? "h-[18px] w-[18px] text-white/40" : "h-[18px] w-[18px] text-white/25"
+          }
+        />
+      </Link>
+    );
+  }
+
+  return (
+    <div
+      aria-disabled="true"
+      className={`flex items-center gap-4 rounded-xl px-4 py-[14px] ${rowClassName}`}
+    >
+      {Icon ? <Icon className="h-5 w-5 text-white/50" /> : null}
+      <span className="grow text-base font-semibold">{item.label}</span>
+      <ChevronRight className="h-[18px] w-[18px] text-white/25" />
+    </div>
+  );
+}
+
+export function Navbar({ position }: NavbarProps = {}): React.JSX.Element {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const pathname = usePathname();
   const menuRef = useRef<HTMLDivElement>(null);
-  const isMenuOpenRef = useRef(isMenuOpen);
-
-  const effectivePosition = position || (pathname === "/" ? "fixed" : "static");
-
-  useEffect(() => {
-    isMenuOpenRef.current = isMenuOpen;
-  }, [isMenuOpen]);
-
-  // Esc klávesa a Focus trap
-  useEffect(() => {
-    if (!isMenuOpen) return;
-
-    const menuNode = menuRef.current;
-    if (!menuNode) return;
-
-    const focusableElements = menuNode.querySelectorAll<HTMLElement>(
-      'a[href], button, textarea, input[type="text"], input[type="radio"], input[type="checkbox"], select, [tabindex]:not([tabindex="-1"])',
-    );
-    if (focusableElements.length === 0) return;
-
-    const firstElement = focusableElements[0];
-    const lastElement = focusableElements[focusableElements.length - 1];
-
-    const handleKeyDown = (e: KeyboardEvent) => {
-      if (e.key === "Escape") {
-        setIsMenuOpen(false);
-        return;
-      }
-      if (e.key === "Tab") {
-        if (e.shiftKey) {
-          if (document.activeElement === firstElement) {
-            lastElement.focus();
-            e.preventDefault();
-          }
-        } else {
-          if (document.activeElement === lastElement) {
-            firstElement.focus();
-            e.preventDefault();
-          }
-        }
-      }
-    };
-
-    firstElement.focus();
-    document.addEventListener("keydown", handleKeyDown);
-    return () => document.removeEventListener("keydown", handleKeyDown);
-  }, [isMenuOpen]);
-
-  // Optimalizovaný scroll listener pomocí requestAnimationFrame
-  useEffect(() => {
-    let ticking = false;
-
-    const handleScroll = () => {
-      if (!ticking) {
-        window.requestAnimationFrame(() => {
-          setIsScrolled(window.scrollY > 20);
-          ticking = false;
-        });
-        ticking = true;
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll, { passive: true });
-    // Dle specifikace není nutné předávat { passive: true } do removeEventListener, ale dodržujeme konvenci
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
-  // Správa scrollování body
-  useEffect(() => {
-    if (isMenuOpen) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "";
+  const effectivePosition = position ?? (pathname === "/" ? "fixed" : "static");
+  const navClassName = useMemo(() => {
+    if (effectivePosition === "static") {
+      return "bg-primary sticky top-0 z-50 -mb-px w-full px-6 py-6 transition-colors duration-300 md:px-12 md:py-6";
     }
+
+    return `fixed inset-x-0 top-0 z-50 w-full px-6 py-6 transition-colors duration-300 md:px-12 md:py-6 ${
+      isScrolled ? "bg-primary/96 backdrop-blur-sm" : "bg-transparent"
+    }`;
+  }, [effectivePosition, isScrolled]);
+
+  useEffect(() => {
+    if (!isMenuOpen) {
+      document.body.style.overflow = "";
+      return;
+    }
+
+    document.body.style.overflow = "hidden";
+
     return () => {
       document.body.style.overflow = "";
     };
   }, [isMenuOpen]);
 
-  // Listener na resize okna
   useEffect(() => {
-    let resizeTimeout: ReturnType<typeof setTimeout>;
-    const handleResize = () => {
-      clearTimeout(resizeTimeout);
-      resizeTimeout = setTimeout(() => {
-        // Zavřít mobilní menu, pokud se okno zvětší na desktopovou velikost (md: 768px)
-        if (window.innerWidth >= 768 && isMenuOpenRef.current) {
-          setIsMenuOpen(false);
-        }
-      }, 150);
+    if (effectivePosition !== "fixed") {
+      return;
+    }
+
+    const handleScroll = (): void => {
+      setIsScrolled(window.scrollY > 16);
+    };
+
+    handleScroll();
+    window.addEventListener("scroll", handleScroll, { passive: true });
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [effectivePosition]);
+
+  useEffect(() => {
+    if (!isMenuOpen) {
+      return;
+    }
+
+    const menuNode = menuRef.current;
+    if (!menuNode) {
+      return;
+    }
+
+    const focusableElements = menuNode.querySelectorAll<HTMLElement>("a[href], button");
+    const firstElement = focusableElements[0];
+    const lastElement = focusableElements[focusableElements.length - 1];
+
+    firstElement?.focus();
+
+    const handleKeyDown = (event: KeyboardEvent): void => {
+      if (event.key === "Escape") {
+        setIsMenuOpen(false);
+        return;
+      }
+
+      if (event.key !== "Tab" || !firstElement || !lastElement) {
+        return;
+      }
+
+      if (event.shiftKey && document.activeElement === firstElement) {
+        lastElement.focus();
+        event.preventDefault();
+      }
+
+      if (!event.shiftKey && document.activeElement === lastElement) {
+        firstElement.focus();
+        event.preventDefault();
+      }
+    };
+
+    document.addEventListener("keydown", handleKeyDown);
+
+    return () => {
+      document.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [isMenuOpen]);
+
+  useEffect(() => {
+    const handleResize = (): void => {
+      if (window.innerWidth >= 768) {
+        setIsMenuOpen(false);
+      }
     };
 
     window.addEventListener("resize", handleResize);
 
     return () => {
-      clearTimeout(resizeTimeout);
       window.removeEventListener("resize", handleResize);
     };
   }, []);
 
   return (
     <>
-      <header
-        className={
-          effectivePosition === "fixed"
-            ? `fixed top-0 right-0 left-0 z-50 w-full transition-all duration-300 ${isScrolled ? "bg-primary py-4 shadow-lg md:py-6" : "bg-transparent py-6 md:py-12"} px-6 md:px-12`
-            : "bg-primary relative z-50 w-full px-6 py-6 md:px-12 md:py-8"
-        }
-      >
-        <nav className="flex w-full items-center justify-between">
-          <div className="text-xl font-extrabold text-white md:text-2xl">&lt;thinkhome&gt;</div>
+      <header className={navClassName}>
+        <nav className="mx-auto flex w-full max-w-[1440px] items-center justify-between">
+          <Link
+            className="text-[20px] font-extrabold text-white transition-colors hover:text-white/80 md:text-2xl"
+            href="/"
+          >
+            &lt;thinkhome&gt;
+          </Link>
 
-          {/* Desktop Links */}
           <div className="hidden items-center gap-10 md:flex">
-            {NAV_LINKS.map((link) => {
-              const isActive = pathname === link.href;
-              return (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  className={`text-base text-white transition-opacity ${
-                    isActive
-                      ? "font-semibold opacity-100"
-                      : "font-medium opacity-70 hover:opacity-100"
-                  }`}
-                >
-                  {link.label}
-                </Link>
-              );
-            })}
+            {NAV_ITEMS.map((item) => (
+              <DesktopNavItem item={item} key={item.label} pathname={pathname} />
+            ))}
           </div>
 
-          {/* Mobile Hamburger */}
           <button
-            className="md:hidden"
-            onClick={() => setIsMenuOpen(true)}
             aria-label="Otevřít menu"
+            className="transition-opacity hover:opacity-80 md:hidden"
+            onClick={() => setIsMenuOpen(true)}
+            type="button"
           >
-            <Menu className="h-7 w-7 text-white" />
+            <Menu className="h-6 w-6 text-white" />
           </button>
         </nav>
       </header>
 
-      {/* Mobile Menu Overlay */}
-      {isMenuOpen && (
-        <div
-          className="bg-dark fixed inset-0 z-50 flex flex-col"
-          onClick={() => setIsMenuOpen(false)}
-        >
+      {isMenuOpen ? (
+        <div className="bg-dark fixed inset-0 z-[60]" onClick={() => setIsMenuOpen(false)}>
           <div
+            aria-label="Mobilní menu"
+            aria-modal="true"
+            className="flex h-full w-full flex-col px-6 py-6"
+            onClick={(event) => event.stopPropagation()}
             ref={menuRef}
             role="dialog"
-            aria-modal="true"
-            aria-label="Mobilní menu"
-            className="flex h-full w-full flex-col"
-            onClick={(e) => e.stopPropagation()}
           >
-            {/* Header Copy */}
-            <div
-              className={
-                effectivePosition === "fixed"
-                  ? `w-full transition-all duration-300 ${isScrolled ? "py-4 md:py-6" : "py-6 md:py-12"} px-6 md:px-12`
-                  : "w-full px-6 py-6 md:px-12 md:py-8"
-              }
-            >
-              <nav className="flex w-full items-center justify-between">
-                <div className="text-xl font-extrabold text-white md:text-2xl">
-                  &lt;thinkhome&gt;
-                </div>
-
-                {/* Desktop Links (dummy to match exactly 3 flex items) */}
-                <div className="hidden items-center gap-10 md:flex">
-                  {NAV_LINKS.map((link) => {
-                    const isActive = pathname === link.href;
-                    return (
-                      <div
-                        key={link.href}
-                        className={`text-base text-white transition-opacity ${
-                          isActive
-                            ? "font-semibold opacity-100"
-                            : "font-medium opacity-70 hover:opacity-100"
-                        }`}
-                      >
-                        {link.label}
-                      </div>
-                    );
-                  })}
-                </div>
-
-                <button
-                  className="md:hidden"
-                  onClick={() => setIsMenuOpen(false)}
-                  aria-label="Zavřít menu"
-                >
-                  <X className="h-7 w-7 text-white" />
-                </button>
-              </nav>
+            <div className="flex items-center justify-between">
+              <Link
+                className="text-[20px] font-extrabold text-white"
+                href="/"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                &lt;thinkhome&gt;
+              </Link>
+              <button
+                aria-label="Zavřít menu"
+                className="transition-opacity hover:opacity-80"
+                onClick={() => setIsMenuOpen(false)}
+                type="button"
+              >
+                <X className="h-5 w-5 text-white" />
+              </button>
             </div>
 
-            {/* Links */}
-            <div className="flex w-full flex-col gap-2 px-6 pt-4 pb-8 md:px-12">
-              {NAV_LINKS.map((link) => {
-                const isActive = pathname === link.href;
-                const Icon = link.icon;
-                return (
-                  <Link
-                    key={link.href}
-                    href={link.href}
-                    className={`flex w-full items-center gap-4 rounded-xl p-[14px] transition-colors ${
-                      isActive ? "bg-slate-800" : "bg-transparent"
-                    }`}
-                    onClick={() => setIsMenuOpen(false)}
-                  >
-                    <Icon
-                      className={`h-5 w-5 ${isActive ? "text-white" : "text-white/50"}`}
-                      strokeWidth={isActive ? 2.5 : 2}
-                    />
-                    <span
-                      className={`grow text-base ${
-                        isActive ? "font-bold text-white" : "font-semibold text-white/70"
-                      }`}
-                    >
-                      {link.label}
-                    </span>
-                    <ChevronRight
-                      className={`h-[18px] w-[18px] ${isActive ? "text-white/50" : "text-white/25"}`}
-                    />
-                  </Link>
-                );
-              })}
+            <div className="mt-10 flex flex-col gap-2">
+              {NAV_ITEMS.map((item) => (
+                <MobileNavItem
+                  item={item}
+                  key={item.label}
+                  onNavigate={() => setIsMenuOpen(false)}
+                  pathname={pathname}
+                />
+              ))}
             </div>
           </div>
         </div>
-      )}
+      ) : null}
     </>
   );
 }
