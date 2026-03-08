@@ -738,7 +738,7 @@
       "type": "frame",
       "id": "O6hFC",
       "x": 0,
-      "y": 7572,
+      "y": 10757,
       "name": "Ochrana osobních údajů PC",
       "width": 1440,
       "fill": "#ffffff",
@@ -2140,7 +2140,7 @@
       "type": "frame",
       "id": "xrHTa",
       "x": 1540,
-      "y": 7572,
+      "y": 10757,
       "name": "Obchodní podmínky Mobile",
       "width": 628,
       "fill": "#ffffff",
@@ -2764,7 +2764,7 @@
       "type": "frame",
       "id": "ImYmM",
       "x": 0,
-      "y": 2000,
+      "y": 5185,
       "name": "Ceník služeb PC",
       "width": 1440,
       "fill": "#ffffff",
@@ -5457,7 +5457,7 @@
       "type": "frame",
       "id": "HiqXb",
       "x": 1540,
-      "y": 2000,
+      "y": 5185,
       "name": "Ceník služeb Mobile",
       "width": 628,
       "fill": "#ffffff",
@@ -7587,7 +7587,7 @@
       "type": "frame",
       "id": "BIGz7",
       "x": 0,
-      "y": 5300,
+      "y": 8485,
       "name": "Obchodní podmínky PC",
       "width": 1440,
       "fill": "#ffffff",
@@ -8081,7 +8081,7 @@
       "type": "frame",
       "id": "MAiHs",
       "x": 1540,
-      "y": 5300,
+      "y": 8485,
       "name": "Ochrana osobních údajů Mobile",
       "width": 628,
       "height": 655,
@@ -15316,6 +15316,907 @@
             {
               "type": "text",
               "id": "wS2Do",
+              "name": "copy",
+              "fill": "#FFFFFF80",
+              "content": "© 2026 ThinkHome s.r.o. Všechna práva vyhrazena.",
+              "fontFamily": "Manrope",
+              "fontSize": 12,
+              "fontWeight": "normal"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "EdISB",
+      "x": 0,
+      "y": 3789,
+      "name": "Legal rozcestník PC",
+      "width": 1440,
+      "fill": "#ffffff",
+      "layout": "vertical",
+      "children": [
+        {
+          "type": "frame",
+          "id": "DCTc9",
+          "name": "header",
+          "width": "fill_container",
+          "fill": "#002bffff",
+          "padding": [
+            24,
+            48
+          ],
+          "justifyContent": "space_between",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "3i0jo",
+              "name": "pcLogo",
+              "fill": "#ffffff",
+              "content": "<thinkhome>",
+              "fontFamily": "Manrope",
+              "fontSize": 24,
+              "fontWeight": "800"
+            },
+            {
+              "type": "frame",
+              "id": "epglG",
+              "name": "navLinks",
+              "gap": 40,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "QbJt1",
+                  "name": "pcL1",
+                  "fill": "#ffffff",
+                  "content": "Domů",
+                  "fontFamily": "Manrope",
+                  "fontSize": 16,
+                  "fontWeight": "600"
+                },
+                {
+                  "type": "text",
+                  "id": "evpQ5",
+                  "name": "pcL2",
+                  "opacity": 0.7,
+                  "fill": "#ffffff",
+                  "content": "O nás",
+                  "fontFamily": "Manrope",
+                  "fontSize": 16,
+                  "fontWeight": "500"
+                },
+                {
+                  "type": "text",
+                  "id": "jOz0F",
+                  "name": "pcL3",
+                  "opacity": 0.7,
+                  "fill": "#ffffff",
+                  "content": "Služby",
+                  "fontFamily": "Manrope",
+                  "fontSize": 16,
+                  "fontWeight": "500"
+                },
+                {
+                  "type": "text",
+                  "id": "qfEbu",
+                  "name": "pcL4",
+                  "opacity": 0.7,
+                  "fill": "#ffffff",
+                  "content": "Kontakt",
+                  "fontFamily": "Manrope",
+                  "fontSize": 16,
+                  "fontWeight": "500"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "q7EUQ",
+          "name": "titleHero",
+          "width": "fill_container",
+          "fill": "#002bff",
+          "layout": "vertical",
+          "gap": 16,
+          "padding": [
+            48,
+            0,
+            0,
+            0
+          ],
+          "justifyContent": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "zpldU",
+              "name": "heroInner",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 16,
+              "padding": [
+                0,
+                48
+              ],
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "J2rvj",
+                  "name": "breadcrumb",
+                  "gap": 8,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "WRrBY",
+                      "name": "bcHome",
+                      "opacity": 0.6,
+                      "fill": "#ffffff",
+                      "content": "Legal",
+                      "fontFamily": "Manrope",
+                      "fontSize": 14,
+                      "fontWeight": "500"
+                    },
+                    {
+                      "type": "text",
+                      "id": "hcJxS",
+                      "name": "bcSep",
+                      "opacity": 0,
+                      "fill": "#ffffff",
+                      "content": "/",
+                      "fontFamily": "Manrope",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "EWFCp",
+                      "name": "bcCurrent",
+                      "opacity": 0,
+                      "fill": "#ffffff",
+                      "content": "Rozcestník",
+                      "fontFamily": "Manrope",
+                      "fontSize": 14,
+                      "fontWeight": "500"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "id": "SJukx",
+                  "name": "pageTitle",
+                  "fill": "#ffffff",
+                  "content": "Legal",
+                  "fontFamily": "Manrope",
+                  "fontSize": 48,
+                  "fontWeight": "800"
+                },
+                {
+                  "type": "text",
+                  "id": "7ccm6",
+                  "name": "pageSubtitle",
+                  "opacity": 0.72,
+                  "fill": "#ffffff",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "Přehled právních dokumentů ThinkHome na jednom místě. Najdete zde ceník služeb, obchodní podmínky i informace o ochraně osobních údajů.",
+                  "fontFamily": "Manrope",
+                  "fontSize": 18,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "MMjFl",
+                  "name": "heroUpdated",
+                  "opacity": 0.72,
+                  "fill": "#ffffff",
+                  "content": "Aktualizováno 8. března 2026",
+                  "fontFamily": "Manrope",
+                  "fontSize": 14,
+                  "fontWeight": "600"
+                }
+              ]
+            },
+            {
+              "type": "path",
+              "id": "Orvi6",
+              "name": "heroDiagonalCut",
+              "geometry": "M0 40l1440-40 0 96-1440 0z",
+              "fill": "#ffffff",
+              "width": "fill_container",
+              "height": 96
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "CtVyl",
+          "name": "contentWrapper",
+          "width": "fill_container",
+          "fill": "#ffffff",
+          "layout": "vertical",
+          "padding": [
+            0,
+            48
+          ],
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "c2NtO",
+              "name": "legalMdxPc",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 32,
+              "padding": [
+                0,
+                0,
+                40,
+                0
+              ],
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "nQ1mZ",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 24,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "5CSeC",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 8,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "iSf6Q",
+                          "fill": "#0f172a",
+                          "content": "Ceník služeb",
+                          "fontFamily": "Manrope",
+                          "fontSize": 22,
+                          "fontWeight": "800"
+                        },
+                        {
+                          "type": "text",
+                          "id": "TNQ9R",
+                          "fill": "#334155",
+                          "content": "Orientační přehled balíčků, rozsahu prací a cenových úrovní jednotlivých služeb.",
+                          "lineHeight": 1.7,
+                          "fontFamily": "Manrope",
+                          "fontSize": 16,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "LiDCH",
+                          "fill": "#1d4ed8",
+                          "content": "Otevřít dokument →",
+                          "fontFamily": "Manrope",
+                          "fontSize": 15,
+                          "fontWeight": "700"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "9BBNL",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 8,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "SFJfI",
+                          "fill": "#0f172a",
+                          "content": "Obchodní podmínky",
+                          "fontFamily": "Manrope",
+                          "fontSize": 22,
+                          "fontWeight": "800"
+                        },
+                        {
+                          "type": "text",
+                          "id": "xL5bF",
+                          "fill": "#334155",
+                          "content": "Podmínky poskytování služeb, práva a povinnosti klienta i poskytovatele.",
+                          "lineHeight": 1.7,
+                          "fontFamily": "Manrope",
+                          "fontSize": 16,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "LAwTz",
+                          "fill": "#1d4ed8",
+                          "content": "Otevřít dokument →",
+                          "fontFamily": "Manrope",
+                          "fontSize": 15,
+                          "fontWeight": "700"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "KrFJm",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 8,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "36thS",
+                          "fill": "#0f172a",
+                          "content": "Ochrana osobních údajů",
+                          "fontFamily": "Manrope",
+                          "fontSize": 22,
+                          "fontWeight": "800"
+                        },
+                        {
+                          "type": "text",
+                          "id": "oHTZ1",
+                          "fill": "#334155",
+                          "content": "Informace o zpracování osobních údajů, účelech použití a právech subjektů údajů.",
+                          "lineHeight": 1.7,
+                          "fontFamily": "Manrope",
+                          "fontSize": 16,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "TT2wR",
+                          "fill": "#1d4ed8",
+                          "content": "Otevřít dokument →",
+                          "fontFamily": "Manrope",
+                          "fontSize": 15,
+                          "fontWeight": "700"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "rhuQF",
+          "name": "pcFooter",
+          "width": "fill_container",
+          "fill": "#0f172a",
+          "layout": "vertical",
+          "gap": 20,
+          "padding": 48,
+          "children": [
+            {
+              "type": "frame",
+              "id": "2isTu",
+              "name": "fTop",
+              "width": "fill_container",
+              "justifyContent": "space_between",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "FFRVp",
+                  "fill": "#ffffff",
+                  "content": "<thinkhome>",
+                  "fontFamily": "Manrope",
+                  "fontSize": 24,
+                  "fontWeight": "800"
+                },
+                {
+                  "type": "frame",
+                  "id": "gMvZC",
+                  "name": "contacts",
+                  "gap": 8,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "3THvW",
+                      "fill": "#FFFFFFCC",
+                      "content": "info@thinkhome.org",
+                      "fontFamily": "Manrope",
+                      "fontSize": 16,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "PIlUD",
+                      "fill": "#FFFFFFCC",
+                      "content": "+420 222 160 782",
+                      "fontFamily": "Manrope",
+                      "fontSize": 16,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "rectangle",
+              "id": "LDvm7",
+              "name": "footerDivider",
+              "fill": "#FFFFFF12",
+              "width": "fill_container",
+              "height": 1
+            },
+            {
+              "type": "frame",
+              "id": "DBfey",
+              "name": "fBot",
+              "width": "fill_container",
+              "justifyContent": "space_between",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "fBZzr",
+                  "fill": "#FFFFFF80",
+                  "content": "© 2026 ThinkHome s.r.o. Všechna práva vyhrazena.",
+                  "fontFamily": "Manrope",
+                  "fontSize": 12,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "frame",
+                  "id": "E7uWp",
+                  "name": "links",
+                  "gap": 24,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "WyJD8",
+                      "name": "link1",
+                      "fill": "#FFFFFF80",
+                      "content": "Ceník služeb",
+                      "fontFamily": "Manrope",
+                      "fontSize": 12,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "r1uAj",
+                      "name": "link2",
+                      "fill": "#FFFFFF80",
+                      "content": "Obchodní podmínky",
+                      "fontFamily": "Manrope",
+                      "fontSize": 12,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "c46SM",
+                      "name": "link3",
+                      "fill": "#FFFFFF80",
+                      "content": "Ochrana osobních údajů",
+                      "fontFamily": "Manrope",
+                      "fontSize": 12,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "D5Upj",
+      "x": 1540,
+      "y": 3789,
+      "name": "Legal rozcestník Mobile",
+      "width": 628,
+      "fill": "#ffffff",
+      "layout": "vertical",
+      "children": [
+        {
+          "type": "frame",
+          "id": "pWtFz",
+          "name": "header",
+          "width": "fill_container",
+          "fill": "#002bffff",
+          "padding": 24,
+          "justifyContent": "space_between",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "XY2r9",
+              "name": "mobLogo",
+              "fill": "#ffffff",
+              "content": "<thinkhome>",
+              "fontFamily": "Manrope",
+              "fontSize": 18,
+              "fontWeight": "800"
+            },
+            {
+              "type": "icon_font",
+              "id": "7FSjo",
+              "name": "mobHamburger",
+              "width": 24,
+              "height": 24,
+              "iconFontName": "menu",
+              "iconFontFamily": "lucide",
+              "fill": "#ffffff"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "iHitw",
+          "name": "titleHero",
+          "width": "fill_container",
+          "fill": "#002bff",
+          "layout": "vertical",
+          "gap": 12,
+          "padding": [
+            32,
+            0,
+            0,
+            0
+          ],
+          "justifyContent": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "aga8C",
+              "name": "heroInner",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 12,
+              "padding": [
+                0,
+                24
+              ],
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "9C2uv",
+                  "name": "breadcrumb",
+                  "gap": 6,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "PdS6p",
+                      "name": "mbHome",
+                      "opacity": 0.6,
+                      "fill": "#ffffff",
+                      "content": "Legal",
+                      "fontFamily": "Manrope",
+                      "fontSize": 12,
+                      "fontWeight": "500"
+                    },
+                    {
+                      "type": "text",
+                      "id": "bX3Wk",
+                      "name": "mbSep",
+                      "opacity": 0,
+                      "fill": "#ffffff",
+                      "content": "/",
+                      "fontFamily": "Manrope",
+                      "fontSize": 12,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "lVBbe",
+                      "name": "mbCurrent",
+                      "opacity": 0,
+                      "fill": "#ffffff",
+                      "content": "Rozcestník",
+                      "fontFamily": "Manrope",
+                      "fontSize": 12,
+                      "fontWeight": "500"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "id": "BGAvc",
+                  "name": "pageTitle",
+                  "fill": "#ffffff",
+                  "content": "Legal",
+                  "fontFamily": "Manrope",
+                  "fontSize": 32,
+                  "fontWeight": "800"
+                },
+                {
+                  "type": "text",
+                  "id": "3064W",
+                  "name": "pageSubtitle",
+                  "opacity": 0.72,
+                  "fill": "#ffffff",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "Přehled právních dokumentů ThinkHome na jednom místě.",
+                  "fontFamily": "Manrope",
+                  "fontSize": 15,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "KneWV",
+                  "name": "heroUpdated",
+                  "opacity": 0.72,
+                  "fill": "#ffffff",
+                  "content": "Aktualizováno 8. března 2026",
+                  "fontFamily": "Manrope",
+                  "fontSize": 12,
+                  "fontWeight": "600"
+                }
+              ]
+            },
+            {
+              "type": "path",
+              "id": "yCvtr",
+              "name": "heroDiagonalCut",
+              "geometry": "M0 28l390-28 0 72-390 0z",
+              "fill": "#ffffff",
+              "width": "fill_container",
+              "height": 72
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "8cELT",
+          "name": "contentWrapperMob",
+          "width": "fill_container",
+          "fill": "#ffffff",
+          "layout": "vertical",
+          "padding": [
+            0,
+            24,
+            20,
+            24
+          ],
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "z9w05",
+              "name": "legalMdxMobile",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 24,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "PAB0s",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 20,
+                  "padding": [
+                    0,
+                    0,
+                    20,
+                    0
+                  ],
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "7hgGa",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 6,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "sk5gt",
+                          "fill": "#0f172a",
+                          "content": "Ceník služeb",
+                          "fontFamily": "Manrope",
+                          "fontSize": 18,
+                          "fontWeight": "800"
+                        },
+                        {
+                          "type": "text",
+                          "id": "gxf6G",
+                          "fill": "#334155",
+                          "content": "Balíčky, rozsah prací a orientační ceny.",
+                          "lineHeight": 1.7,
+                          "fontFamily": "Manrope",
+                          "fontSize": 14,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "56rmd",
+                          "fill": "#1d4ed8",
+                          "content": "Otevřít dokument →",
+                          "fontFamily": "Manrope",
+                          "fontSize": 14,
+                          "fontWeight": "700"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "ioMND",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 6,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "LO4mR",
+                          "fill": "#0f172a",
+                          "content": "Obchodní podmínky",
+                          "fontFamily": "Manrope",
+                          "fontSize": 18,
+                          "fontWeight": "800"
+                        },
+                        {
+                          "type": "text",
+                          "id": "6sQNE",
+                          "fill": "#334155",
+                          "content": "Práva a povinnosti při využívání služeb.",
+                          "lineHeight": 1.7,
+                          "fontFamily": "Manrope",
+                          "fontSize": 14,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "NDGqU",
+                          "fill": "#1d4ed8",
+                          "content": "Otevřít dokument →",
+                          "fontFamily": "Manrope",
+                          "fontSize": 14,
+                          "fontWeight": "700"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "mwAnt",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 6,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "16jjV",
+                          "fill": "#0f172a",
+                          "content": "Ochrana osobních údajů",
+                          "fontFamily": "Manrope",
+                          "fontSize": 18,
+                          "fontWeight": "800"
+                        },
+                        {
+                          "type": "text",
+                          "id": "SbPCG",
+                          "fill": "#334155",
+                          "content": "Zpracování dat, účely použití a práva subjektů údajů.",
+                          "lineHeight": 1.7,
+                          "fontFamily": "Manrope",
+                          "fontSize": 14,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "hD8W3",
+                          "fill": "#1d4ed8",
+                          "content": "Otevřít dokument →",
+                          "fontFamily": "Manrope",
+                          "fontSize": 14,
+                          "fontWeight": "700"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "gJtRA",
+          "name": "mobFooter",
+          "width": "fill_container",
+          "fill": "#0f172a",
+          "layout": "vertical",
+          "gap": 16,
+          "padding": 24,
+          "children": [
+            {
+              "type": "text",
+              "id": "wO6kz",
+              "name": "fLogo",
+              "fill": "#ffffff",
+              "content": "<thinkhome>",
+              "fontFamily": "Manrope",
+              "fontSize": 20,
+              "fontWeight": "800"
+            },
+            {
+              "type": "frame",
+              "id": "eMtd7",
+              "name": "contacts",
+              "layout": "vertical",
+              "gap": 8,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "2X9JB",
+                  "name": "email",
+                  "fill": "#FFFFFFCC",
+                  "content": "info@thinkhome.org",
+                  "fontFamily": "Manrope",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "i2N7N",
+                  "name": "phone",
+                  "fill": "#FFFFFFCC",
+                  "content": "+420 222 160 782",
+                  "fontFamily": "Manrope",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "rectangle",
+              "id": "0P97h",
+              "name": "divider",
+              "fill": "#FFFFFF1A",
+              "width": "fill_container",
+              "height": 1
+            },
+            {
+              "type": "frame",
+              "id": "6XvPi",
+              "name": "links",
+              "layout": "vertical",
+              "gap": 12,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "MlFe0",
+                  "name": "link1",
+                  "fill": "#FFFFFF80",
+                  "content": "Ceník služeb",
+                  "fontFamily": "Manrope",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "DhV6w",
+                  "name": "link2",
+                  "fill": "#FFFFFF80",
+                  "content": "Obchodní podmínky",
+                  "fontFamily": "Manrope",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "QYmvi",
+                  "name": "link3",
+                  "fill": "#FFFFFF80",
+                  "content": "Ochrana osobních údajů",
+                  "fontFamily": "Manrope",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "id": "xAmxt",
               "name": "copy",
               "fill": "#FFFFFF80",
               "content": "© 2026 ThinkHome s.r.o. Všechna práva vyhrazena.",

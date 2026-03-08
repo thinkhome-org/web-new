@@ -9,6 +9,12 @@ export interface FooterLink {
   label: string;
 }
 
+export interface LegalDocumentLink {
+  description: string;
+  href: string;
+  label: string;
+}
+
 export interface ContactDetail {
   icon: "bank" | "building" | "email" | "map-pin" | "phone";
   lines: string[];
@@ -50,6 +56,24 @@ export const FOOTER_LINKS: FooterLink[] = [
   { href: "/legal/cenik-sluzeb", label: "Ceník služeb" },
   { href: "/legal/obchodni-podminky", label: "Obchodní podmínky" },
   { href: "/legal/ochrana-osobnich-udaju", label: "Ochrana osobních údajů" },
+];
+
+export const LEGAL_DOCUMENT_LINKS: LegalDocumentLink[] = [
+  {
+    description: "Přehled balíčků, rozsahu prací a orientačních cen jednotlivých služeb.",
+    href: "/legal/cenik-sluzeb",
+    label: "Ceník služeb",
+  },
+  {
+    description: "Podmínky poskytování služeb, práva a povinnosti klienta i poskytovatele.",
+    href: "/legal/obchodni-podminky",
+    label: "Obchodní podmínky",
+  },
+  {
+    description: "Informace o zpracování osobních údajů, účelech použití a právech subjektů údajů.",
+    href: "/legal/ochrana-osobnich-udaju",
+    label: "Ochrana osobních údajů",
+  },
 ];
 
 export const CONTACT_DETAILS: ContactDetail[] = [

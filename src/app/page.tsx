@@ -31,7 +31,7 @@ export default function Home(): React.JSX.Element {
             </Link>
             <Link
               className="inline-flex min-h-14 items-center justify-center rounded-lg px-8 py-4 text-sm font-semibold text-white/70 transition-colors hover:text-white md:text-base"
-              href="/legal/cenik-sluzeb"
+              href="/legal"
             >
               Zjistit více
             </Link>
