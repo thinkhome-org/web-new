@@ -149,7 +149,7 @@ export function ContactSection(): React.JSX.Element {
       </div>
 
       <form
-        className="order-2 rounded-2xl bg-white py-0 md:order-1 md:rounded-2xl md:border md:border-slate-100 md:px-10 md:py-10"
+        className="order-2 rounded-2xl bg-white py-0 md:order-1 md:rounded-2xl md:px-10 md:py-10"
         onSubmit={handleSubmit}
       >
         <div className="flex flex-col gap-2">

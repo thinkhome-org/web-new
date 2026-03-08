@@ -11,6 +11,7 @@ export const metadata: Metadata = {
 export default function TermsPage(): React.JSX.Element {
   return (
     <PageShell
+      breadcrumbs={[{ label: "Legal" }, { label: "Obchodní podmínky" }]}
       subtitle="Práva a povinnosti související s využíváním služeb ThinkHome."
       title="Obchodní podmínky"
       updatedAt="6. března 2026"

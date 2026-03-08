@@ -3,7 +3,13 @@ import Link from "next/link";
 
 import { Navbar } from "@/components/Navbar";
 
+interface BreadcrumbItem {
+  href?: string;
+  label: string;
+}
+
 interface PageShellProps {
+  breadcrumbs?: BreadcrumbItem[];
   children: ReactNode;
   title: string;
   subtitle: string;
@@ -11,22 +17,32 @@ interface PageShellProps {
 }
 
 export function PageShell({
+  breadcrumbs,
   children,
   title,
   subtitle,
   updatedAt,
 }: PageShellProps): React.JSX.Element {
+  const resolvedBreadcrumbs = breadcrumbs ?? [{ label: title }];
+
   return (
     <>
       <Navbar position="static" />
       <section className="bg-primary relative flex w-full flex-col items-center overflow-hidden">
         <div className="flex w-full max-w-[1440px] flex-col gap-3 px-6 pt-8 pb-24 md:gap-4 md:px-12 md:pt-12 md:pb-32">
           <nav className="flex items-center gap-1.5 text-[12px] font-medium text-white/60 md:gap-2 md:px-12 md:text-sm">
-            <Link className="transition-colors hover:text-white" href="/">
-              Domů
-            </Link>
-            <span className="text-white/40">/</span>
-            <span>{title}</span>
+            {resolvedBreadcrumbs.map((item, index) => (
+              <div className="contents" key={`${item.label}-${index}`}>
+                {index > 0 ? <span className="text-white/40">/</span> : null}
+                {item.href ? (
+                  <Link className="transition-colors hover:text-white" href={item.href}>
+                    {item.label}
+                  </Link>
+                ) : (
+                  <span>{item.label}</span>
+                )}
+              </div>
+            ))}
           </nav>
           <div className="flex max-w-[900px] flex-col gap-3 md:gap-4 md:px-12">
             <h1 className="text-[32px] leading-[1.1] font-extrabold text-white md:text-6xl">

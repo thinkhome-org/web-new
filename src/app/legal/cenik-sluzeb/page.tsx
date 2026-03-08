@@ -12,6 +12,7 @@ export const metadata: Metadata = {
 export default function PriceListPage(): React.JSX.Element {
   return (
     <PageShell
+      breadcrumbs={[{ label: "Legal" }, { label: "Ceník služeb" }]}
       subtitle="Transparentní ceny a balíčky služeb bez skrytých poplatků."
       title="Ceník služeb"
       updatedAt="6. března 2026"

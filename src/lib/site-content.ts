@@ -47,9 +47,9 @@ export const NAV_ITEMS: NavItem[] = [
 ];
 
 export const FOOTER_LINKS: FooterLink[] = [
-  { href: "/cenik-sluzeb", label: "Ceník služeb" },
-  { href: "/obchodni-podminky", label: "Obchodní podmínky" },
-  { href: "/ochrana-osobnich-udaju", label: "Ochrana osobních údajů" },
+  { href: "/legal/cenik-sluzeb", label: "Ceník služeb" },
+  { href: "/legal/obchodni-podminky", label: "Obchodní podmínky" },
+  { href: "/legal/ochrana-osobnich-udaju", label: "Ochrana osobních údajů" },
 ];
 
 export const CONTACT_DETAILS: ContactDetail[] = [

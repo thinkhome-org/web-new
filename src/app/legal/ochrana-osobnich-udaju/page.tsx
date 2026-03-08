@@ -11,6 +11,7 @@ export const metadata: Metadata = {
 export default function PrivacyPage(): React.JSX.Element {
   return (
     <PageShell
+      breadcrumbs={[{ label: "Legal" }, { label: "Ochrana osobních údajů" }]}
       subtitle="Zásady nakládání s vašimi daty a zajištění maximální bezpečnosti."
       title="Ochrana osobních údajů"
       updatedAt="6. března 2026"
