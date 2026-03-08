@@ -17,6 +17,14 @@ export const metadata: Metadata = {
   title: "ThinkHome | Kompletní IT pod jednou střechou",
   description:
     "Zjednodušujeme IT tak, aby se firmy nenechaly nachytat a nemusely řešit několik dodavatelů zároveň.",
+  icons: {
+    apple: "/apple-icon.svg",
+    icon: [
+      { type: "image/svg+xml", url: "/icon.svg" },
+      { rel: "shortcut icon", type: "image/svg+xml", url: "/icon.svg" },
+    ],
+    shortcut: "/icon.svg",
+  },
 };
 
 export default function RootLayout({

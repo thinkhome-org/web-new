@@ -20,7 +20,7 @@ export function BrandLogo({
         className="h-auto w-[132px] md:w-[159px]"
         height={LOGO_HEIGHT}
         priority={priority}
-        src="/logo/thinkhome-primary-white.svg"
+        src="/logo/primary/SVG%20Transparent/primary_white-on-transparent.svg"
         width={LOGO_WIDTH}
       />
     </Link>
