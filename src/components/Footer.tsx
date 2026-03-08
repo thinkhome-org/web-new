@@ -1,5 +1,6 @@
 import Link from "next/link";
 
+import { BrandLogo } from "@/components/BrandLogo";
 import { FOOTER_LINKS } from "@/lib/site-content";
 
 export function Footer(): React.JSX.Element {
@@ -7,12 +8,7 @@ export function Footer(): React.JSX.Element {
     <footer className="bg-dark shadow-footer relative z-20 flex w-full justify-center">
       <div className="flex w-full max-w-[1440px] flex-col gap-4 px-6 py-6 md:gap-5 md:px-12 md:py-12">
         <div className="flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
-          <Link
-            className="text-[20px] font-extrabold text-white transition-colors hover:text-white/80 md:text-2xl"
-            href="/"
-          >
-            &lt;thinkhome&gt;
-          </Link>
+          <BrandLogo className="transition-opacity hover:opacity-80" />
           <div className="flex flex-col gap-1.5 md:flex-row md:items-center md:gap-8">
             <a
               className="text-sm text-white/80 transition-colors hover:text-white md:text-base"

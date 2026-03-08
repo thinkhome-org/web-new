@@ -5,6 +5,7 @@ import { usePathname } from "next/navigation";
 import { ChevronRight, Home, Mail, Menu, Settings, Users, X, type LucideIcon } from "lucide-react";
 import { useEffect, useMemo, useRef, useState } from "react";
 
+import { BrandLogo } from "@/components/BrandLogo";
 import { NAV_ITEMS, type NavItem } from "@/lib/site-content";
 
 const ICONS: Partial<Record<string, LucideIcon>> = {
@@ -216,12 +217,7 @@ export function Navbar({ position }: NavbarProps = {}): React.JSX.Element {
     <>
       <header className={navClassName}>
         <nav className="mx-auto flex w-full max-w-[1440px] items-center justify-between">
-          <Link
-            className="text-[20px] font-extrabold text-white transition-colors hover:text-white/80 md:text-2xl"
-            href="/"
-          >
-            &lt;thinkhome&gt;
-          </Link>
+          <BrandLogo className="transition-opacity hover:opacity-80" priority={pathname === "/"} />
 
           <div className="hidden items-center gap-10 md:flex">
             {NAV_ITEMS.map((item) => (
@@ -251,13 +247,10 @@ export function Navbar({ position }: NavbarProps = {}): React.JSX.Element {
             role="dialog"
           >
             <div className="flex items-center justify-between">
-              <Link
-                className="text-[20px] font-extrabold text-white"
-                href="/"
+              <BrandLogo
+                className="transition-opacity hover:opacity-80"
                 onClick={() => setIsMenuOpen(false)}
-              >
-                &lt;thinkhome&gt;
-              </Link>
+              />
               <button
                 aria-label="Zavřít menu"
                 className="transition-opacity hover:opacity-80"
