@@ -29,9 +29,14 @@ export default function PrivacyPage(): React.JSX.Element {
               {section.title}
             </h2>
             {section.paragraphs.map((paragraph, paragraphIndex) => {
+              const isClosingSection = index === PRIVACY_SECTIONS.length - 1;
+              const isBulletIntro = isClosingSection && paragraphIndex === 0;
               const isClosingSignature =
-                index === PRIVACY_SECTIONS.length - 1 &&
-                paragraphIndex === section.paragraphs.length - 1;
+                isClosingSection && paragraphIndex === section.paragraphs.length - 1;
+
+              if (isClosingSection && !isBulletIntro && !isClosingSignature) {
+                return null;
+              }
 
               return (
                 <p
@@ -53,6 +58,13 @@ export default function PrivacyPage(): React.JSX.Element {
                 ))}
               </ul>
             ) : null}
+            {index === PRIVACY_SECTIONS.length - 1
+              ? section.paragraphs.slice(1, -1).map((paragraph) => (
+                  <p className="text-sm leading-7 text-slate-600 md:text-base" key={paragraph}>
+                    {paragraph}
+                  </p>
+                ))
+              : null}
           </section>
         ))}
       </div>

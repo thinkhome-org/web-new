@@ -119,7 +119,7 @@ export function Navbar({ position }: NavbarProps = {}): React.JSX.Element {
   const effectivePosition = position ?? (pathname === "/" ? "fixed" : "static");
   const navClassName = useMemo(() => {
     if (effectivePosition === "static") {
-      return "bg-primary relative z-50 w-full px-6 py-6 md:px-12 md:py-6";
+      return "bg-primary sticky top-0 z-50 w-full px-6 py-6 transition-colors duration-300 md:px-12 md:py-6";
     }
 
     return `fixed inset-x-0 top-0 z-50 w-full px-6 py-6 transition-colors duration-300 md:px-12 md:py-6 ${
@@ -219,7 +219,10 @@ export function Navbar({ position }: NavbarProps = {}): React.JSX.Element {
     <>
       <header className={navClassName}>
         <nav className="mx-auto flex w-full max-w-[1440px] items-center justify-between">
-          <Link className="text-[20px] font-extrabold text-white md:text-2xl" href="/">
+          <Link
+            className="text-[20px] font-extrabold text-white transition-opacity hover:opacity-80 md:text-2xl"
+            href="/"
+          >
             &lt;thinkhome&gt;
           </Link>
 
@@ -231,7 +234,7 @@ export function Navbar({ position }: NavbarProps = {}): React.JSX.Element {
 
           <button
             aria-label="Otevřít menu"
-            className="md:hidden"
+            className="transition-opacity hover:opacity-80 md:hidden"
             onClick={() => setIsMenuOpen(true)}
             type="button"
           >
@@ -258,7 +261,12 @@ export function Navbar({ position }: NavbarProps = {}): React.JSX.Element {
               >
                 &lt;thinkhome&gt;
               </Link>
-              <button aria-label="Zavřít menu" onClick={() => setIsMenuOpen(false)} type="button">
+              <button
+                aria-label="Zavřít menu"
+                className="transition-opacity hover:opacity-80"
+                onClick={() => setIsMenuOpen(false)}
+                type="button"
+              >
                 <X className="h-5 w-5 text-white" />
               </button>
             </div>
