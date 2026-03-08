@@ -1,12 +1,14 @@
+import { Navbar } from "@/components/Navbar";
 import { ArrowDown } from "lucide-react";
 
 export default function Home() {
   return (
     <>
+      <Navbar position="fixed" />
       {/* Hero Section */}
-      <section className="bg-primary relative z-10 flex min-h-screen w-full flex-col items-center justify-between overflow-hidden p-6 pt-[var(--navbar-height)] text-white md:p-12 md:pt-[var(--navbar-height)]">
+      <section className="bg-primary relative z-10 flex min-h-screen w-full flex-col items-center justify-between overflow-hidden p-6 pt-(--navbar-height) text-white md:p-12 md:pt-(--navbar-height)">
         {/* Main Content Wrapper */}
-        <div className="flex w-full flex-grow flex-col items-center justify-center gap-6 md:gap-8">
+        <div className="flex w-full grow flex-col items-center justify-center gap-6 md:gap-8">
           {/* Badge */}
           <div className="flex items-center opacity-40">
             <span className="text-xs font-semibold md:text-sm">Vše okolo IT bez starostí</span>

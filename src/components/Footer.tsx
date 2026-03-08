@@ -30,13 +30,22 @@ export function Footer() {
           © 2026 ThinkHome s.r.o. Všechna práva vyhrazena.
         </div>
         <div className="flex flex-col gap-3 md:flex-row md:gap-6">
-          <Link href="#" className="text-sm font-normal text-white opacity-50">
+          <Link
+            href="/cenik-sluzeb"
+            className="text-sm font-normal text-white opacity-50 transition-opacity hover:opacity-100"
+          >
             Ceník služeb
           </Link>
-          <Link href="#" className="text-sm font-normal text-white opacity-50">
+          <Link
+            href="/obchodni-podminky"
+            className="text-sm font-normal text-white opacity-50 transition-opacity hover:opacity-100"
+          >
             Obchodní podmínky
           </Link>
-          <Link href="#" className="text-sm font-normal text-white opacity-50">
+          <Link
+            href="/ochrana-osobnich-udaju"
+            className="text-sm font-normal text-white opacity-50 transition-opacity hover:opacity-100"
+          >
             Ochrana osobních údajů
           </Link>
         </div>
