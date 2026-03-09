@@ -74,3 +74,8 @@ Maximize rich Markdown formatting in all responses. You have full support for:
 ## 📁 Repository Specifics
 
 This `AGENTS.md` is based on the global rules. Add any repository-specific rules, instructions, or architecture patterns below.
+
+### Design + Deploy Workflow
+- For UI, landing page, and page-creation tasks, **ALWAYS** start with `Pencil MCP` first when it is relevant.
+- After preparing the design direction in `Pencil MCP`, explicitly ask the user whether they agree before proceeding to deployment.
+- Do **NOT** deploy design-related changes until the user has confirmed approval.
