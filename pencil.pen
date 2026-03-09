@@ -1545,10 +1545,9 @@
       "type": "frame",
       "id": "rCAXc",
       "x": -3200,
-      "y": 0,
+      "y": -261,
       "name": "ThinkHome PC Generic Page",
       "width": 1440,
-      "height": 900,
       "fill": "#ffffff",
       "layout": "vertical",
       "children": [
@@ -1740,9 +1739,106 @@
           "id": "gwaBH",
           "name": "content",
           "width": "fill_container",
-          "height": "fill_container",
+          "height": 420,
           "layout": "vertical",
           "padding": 48
+        },
+        {
+          "type": "frame",
+          "id": "Ld4Ny",
+          "name": "pcTplCta",
+          "width": "fill_container",
+          "fill": "#002bff",
+          "layout": "vertical",
+          "children": [
+            {
+              "type": "path",
+              "id": "OvgLJ",
+              "name": "contactDiagonalTop",
+              "flipY": true,
+              "geometry": "M0 40l1440-40 0 96-1440 0z",
+              "fill": "#ffffff",
+              "width": "fill_container",
+              "height": 96
+            },
+            {
+              "type": "frame",
+              "id": "vVRAn",
+              "name": "pcTplInner",
+              "width": "fill_container",
+              "fill": "#002bff",
+              "gap": 32,
+              "padding": [
+                36,
+                40
+              ],
+              "justifyContent": "space_between",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "57l8P",
+                  "name": "contactText",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 12,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "JDMvF",
+                      "name": "ctaTitle",
+                      "fill": "#ffffff",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Máte otázky k vašemu projektu?",
+                      "fontFamily": "Manrope",
+                      "fontSize": 30,
+                      "fontWeight": "800"
+                    },
+                    {
+                      "type": "text",
+                      "id": "oUQwm",
+                      "name": "ctaBody",
+                      "fill": "#ffffffcc",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Ozvěte se nám. Pomůžeme vám s návrhem, koordinací i realizací chytré domácnosti.",
+                      "lineHeight": 1.6,
+                      "fontFamily": "Manrope",
+                      "fontSize": 16,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "pBl3S",
+                  "name": "contactButton",
+                  "height": 54,
+                  "fill": "#ffffff",
+                  "cornerRadius": 14,
+                  "padding": [
+                    0,
+                    28
+                  ],
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "Xbe9A",
+                      "name": "ctaButtonLabel",
+                      "fill": "#002bff",
+                      "content": "Kontaktovat nás",
+                      "fontFamily": "Manrope",
+                      "fontSize": 16,
+                      "fontWeight": "800"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
         },
         {
           "type": "frame",
@@ -1875,7 +1971,6 @@
       "y": 0,
       "name": "ThinkHome Mobile Generic Page",
       "width": 390,
-      "height": 900,
       "fill": "#ffffff",
       "layout": "vertical",
       "children": [
@@ -2022,9 +2117,95 @@
           "id": "4ozVN",
           "name": "content",
           "width": "fill_container",
-          "height": "fill_container",
+          "height": 320,
           "layout": "vertical",
           "padding": 24
+        },
+        {
+          "type": "frame",
+          "id": "2BB3p",
+          "name": "mobTplCta",
+          "width": "fill_container",
+          "fill": "#002bff",
+          "layout": "vertical",
+          "children": [
+            {
+              "type": "path",
+              "id": "3bE0L",
+              "name": "contactDiagonalTopMobile",
+              "flipY": true,
+              "geometry": "M0 40l1440-40 0 96-1440 0z",
+              "fill": "#ffffff",
+              "width": "fill_container",
+              "height": 72
+            },
+            {
+              "type": "frame",
+              "id": "rQxTk",
+              "name": "contactInnerMobile",
+              "width": "fill_container",
+              "fill": "#002bff",
+              "cornerRadius": [
+                0,
+                0,
+                20,
+                20
+              ],
+              "layout": "vertical",
+              "gap": 16,
+              "padding": 24,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "hxuaX",
+                  "name": "ctaMobTitle",
+                  "fill": "#ffffff",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "Máte otázky k vašemu projektu?",
+                  "fontFamily": "Manrope",
+                  "fontSize": 24,
+                  "fontWeight": "800"
+                },
+                {
+                  "type": "text",
+                  "id": "BAvJu",
+                  "name": "ctaMobBody",
+                  "fill": "#ffffffcc",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "Ozvěte se nám. Pomůžeme vám s návrhem i realizací chytré domácnosti.",
+                  "lineHeight": 1.6,
+                  "fontFamily": "Manrope",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "frame",
+                  "id": "jhKRw",
+                  "name": "contactButtonMobile",
+                  "width": "fill_container",
+                  "height": 50,
+                  "fill": "#ffffff",
+                  "cornerRadius": 14,
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "q3eno",
+                      "name": "ctaMobButtonLabel",
+                      "fill": "#002bff",
+                      "content": "Kontaktovat nás",
+                      "fontFamily": "Manrope",
+                      "fontSize": 15,
+                      "fontWeight": "800"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
         },
         {
           "type": "frame",
@@ -2691,8 +2872,8 @@
     {
       "type": "frame",
       "id": "l7nuw",
-      "x": -3200,
-      "y": -300,
+      "x": -3079,
+      "y": -764,
       "name": "Logo",
       "clip": true,
       "width": 411,
@@ -13490,29 +13671,10 @@
                   "type": "frame",
                   "id": "oNnjX",
                   "name": "breadcrumb",
+                  "enabled": false,
                   "gap": 8,
                   "alignItems": "center",
                   "children": [
-                    {
-                      "type": "text",
-                      "id": "iIKfp",
-                      "opacity": 0.7,
-                      "fill": "#ffffff",
-                      "content": "Domů",
-                      "fontFamily": "Manrope",
-                      "fontSize": 14,
-                      "fontWeight": "normal"
-                    },
-                    {
-                      "type": "icon_font",
-                      "id": "KS3Gl",
-                      "opacity": 0.7,
-                      "width": 14,
-                      "height": 14,
-                      "iconFontName": "chevron-right",
-                      "iconFontFamily": "lucide",
-                      "fill": "#ffffff"
-                    },
                     {
                       "type": "text",
                       "id": "qerJ6",
@@ -14451,29 +14613,10 @@
                   "type": "frame",
                   "id": "R0DFI",
                   "name": "breadcrumb",
+                  "enabled": false,
                   "gap": 6,
                   "alignItems": "center",
                   "children": [
-                    {
-                      "type": "text",
-                      "id": "MVkAw",
-                      "opacity": 0.7,
-                      "fill": "#ffffff",
-                      "content": "Domů",
-                      "fontFamily": "Manrope",
-                      "fontSize": 14,
-                      "fontWeight": "normal"
-                    },
-                    {
-                      "type": "icon_font",
-                      "id": "l1ZA9",
-                      "opacity": 0.7,
-                      "width": 14,
-                      "height": 14,
-                      "iconFontName": "chevron-right",
-                      "iconFontFamily": "lucide",
-                      "fill": "#ffffff"
-                    },
                     {
                       "type": "text",
                       "id": "SBP1L",
@@ -15446,6 +15589,7 @@
                   "type": "frame",
                   "id": "J2rvj",
                   "name": "breadcrumb",
+                  "enabled": false,
                   "gap": 8,
                   "alignItems": "center",
                   "children": [
@@ -15880,6 +16024,7 @@
                   "type": "frame",
                   "id": "9C2uv",
                   "name": "breadcrumb",
+                  "enabled": false,
                   "gap": 6,
                   "alignItems": "center",
                   "children": [
@@ -16217,6 +16362,1993 @@
             {
               "type": "text",
               "id": "xAmxt",
+              "name": "copy",
+              "fill": "#FFFFFF80",
+              "content": "© 2026 ThinkHome s.r.o. Všechna práva vyhrazena.",
+              "fontFamily": "Manrope",
+              "fontSize": 12,
+              "fontWeight": "normal"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "ov4yU",
+      "x": 4789,
+      "y": -300,
+      "name": "ThinkHome O nás PC",
+      "width": 1440,
+      "fill": "#ffffff",
+      "layout": "vertical",
+      "children": [
+        {
+          "type": "frame",
+          "id": "YFvpu",
+          "name": "header",
+          "width": "fill_container",
+          "fill": "#002bffff",
+          "padding": [
+            24,
+            48
+          ],
+          "justifyContent": "space_between",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "hgERV",
+              "name": "pcLogo",
+              "fill": "#ffffff",
+              "content": "<thinkhome>",
+              "fontFamily": "Manrope",
+              "fontSize": 24,
+              "fontWeight": "800"
+            },
+            {
+              "type": "frame",
+              "id": "PUUP3",
+              "name": "navLinks",
+              "gap": 40,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "5CQiT",
+                  "name": "pcL1",
+                  "opacity": 0.7,
+                  "fill": "#ffffff",
+                  "content": "Domů",
+                  "fontFamily": "Manrope",
+                  "fontSize": 16,
+                  "fontWeight": "500"
+                },
+                {
+                  "type": "text",
+                  "id": "hRZC2",
+                  "name": "pcL2",
+                  "fill": "#ffffff",
+                  "content": "O nás",
+                  "fontFamily": "Manrope",
+                  "fontSize": 16,
+                  "fontWeight": "600"
+                },
+                {
+                  "type": "text",
+                  "id": "g9J3P",
+                  "name": "pcL3",
+                  "opacity": 0.7,
+                  "fill": "#ffffff",
+                  "content": "Služby",
+                  "fontFamily": "Manrope",
+                  "fontSize": 16,
+                  "fontWeight": "500"
+                },
+                {
+                  "type": "text",
+                  "id": "ltqWK",
+                  "name": "pcL4",
+                  "opacity": 0.7,
+                  "fill": "#ffffff",
+                  "content": "Kontakt",
+                  "fontFamily": "Manrope",
+                  "fontSize": 16,
+                  "fontWeight": "500"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "JiGGi",
+          "name": "titleHero",
+          "width": "fill_container",
+          "fill": "#002bff",
+          "layout": "vertical",
+          "gap": 16,
+          "padding": [
+            48,
+            0,
+            0,
+            0
+          ],
+          "justifyContent": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "xYNxh",
+              "name": "heroInner",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 16,
+              "padding": [
+                0,
+                48
+              ],
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "ZFaw5",
+                  "name": "breadcrumb",
+                  "gap": 8,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "mh47g",
+                      "name": "bcCurrent",
+                      "opacity": 0.9,
+                      "fill": "#ffffff",
+                      "content": "O nás",
+                      "fontFamily": "Manrope",
+                      "fontSize": 14,
+                      "fontWeight": "600"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "id": "u6Prv",
+                  "name": "pageTitle",
+                  "fill": "#ffffff",
+                  "content": "O nás",
+                  "fontFamily": "Manrope",
+                  "fontSize": 48,
+                  "fontWeight": "800"
+                },
+                {
+                  "type": "text",
+                  "id": "NjEJs",
+                  "name": "pageSubtitle",
+                  "opacity": 0.7,
+                  "fill": "#ffffff",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "Navrhujeme chytré domácnosti, které dávají technologiím smysl a lidem klid. Spojujeme projekt, realizaci i dlouhodobou péči v jednom týmu.",
+                  "fontFamily": "Manrope",
+                  "fontSize": 18,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "path",
+              "id": "2ItPG",
+              "name": "heroDiagonalCut",
+              "geometry": "M0 40l1440-40 0 96-1440 0z",
+              "fill": "#ffffff",
+              "width": "fill_container",
+              "height": 96
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "Ni4Wa",
+          "name": "content",
+          "width": "fill_container",
+          "layout": "vertical",
+          "gap": 64,
+          "padding": [
+            48,
+            48,
+            64,
+            48
+          ],
+          "children": [
+            {
+              "type": "frame",
+              "id": "4rJKw",
+              "name": "companyIntro",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 20,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "dNom1",
+                  "name": "introLabel",
+                  "fill": "#002bff",
+                  "content": "Kdo jsme",
+                  "fontFamily": "Manrope",
+                  "fontSize": 14,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "7QrSI",
+                  "name": "introTitle",
+                  "fill": "#0f172a",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "Technologie má doma fungovat tiše, spolehlivě a bez kompromisů.",
+                  "fontFamily": "Manrope",
+                  "fontSize": 40,
+                  "fontWeight": "800"
+                },
+                {
+                  "type": "text",
+                  "id": "LUpRF",
+                  "name": "introBody1",
+                  "fill": "#334155",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "ThinkHome vznikl jako tým projektantů, integrátorů a servisních specialistů, kteří chtěli změnit způsob, jak se u nás navrhují chytré domácnosti. Místo složitých systémů bez návaznosti stavíme řešení, která dávají smysl investorům, architektům i firmám na stavbě.",
+                  "lineHeight": 1.6,
+                  "fontFamily": "Manrope",
+                  "fontSize": 18,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "8udYG",
+                  "name": "introBody2",
+                  "fill": "#334155",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "Od prvního workshopu přes elektroprojekt až po finální nastavení scén a vzdálenou správu držíme celý proces v jednom týmu. Díky tomu víme, co jsme slíbili, co jsme instalovali a kdo se o dům stará i po předání.",
+                  "lineHeight": 1.6,
+                  "fontFamily": "Manrope",
+                  "fontSize": 18,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "eqa9f",
+              "name": "statsRow",
+              "width": "fill_container",
+              "gap": 16,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "hiv9j",
+                  "name": "stat1",
+                  "width": "fill_container",
+                  "fill": "#f8fafc",
+                  "cornerRadius": 20,
+                  "stroke": {
+                    "thickness": 1,
+                    "fill": "#e2e8f0"
+                  },
+                  "layout": "vertical",
+                  "gap": 8,
+                  "padding": 24,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "d95WG",
+                      "name": "stat1Num",
+                      "fill": "#0f172a",
+                      "content": "8+ let",
+                      "fontFamily": "Manrope",
+                      "fontSize": 28,
+                      "fontWeight": "800"
+                    },
+                    {
+                      "type": "text",
+                      "id": "tKOsJ",
+                      "name": "stat1Label",
+                      "fill": "#475569",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "zkušeností s rezidenční automatizací",
+                      "fontFamily": "Manrope",
+                      "fontSize": 14,
+                      "fontWeight": "500"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "bezqK",
+                  "name": "stat2",
+                  "width": "fill_container",
+                  "fill": "#f8fafc",
+                  "cornerRadius": 20,
+                  "stroke": {
+                    "thickness": 1,
+                    "fill": "#e2e8f0"
+                  },
+                  "layout": "vertical",
+                  "gap": 8,
+                  "padding": 24,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "hYJcO",
+                      "name": "stat2Num",
+                      "fill": "#0f172a",
+                      "content": "320+",
+                      "fontFamily": "Manrope",
+                      "fontSize": 28,
+                      "fontWeight": "800"
+                    },
+                    {
+                      "type": "text",
+                      "id": "dQKEJ",
+                      "name": "stat2Label",
+                      "fill": "#475569",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "realizovaných projektů po celé ČR",
+                      "fontFamily": "Manrope",
+                      "fontSize": 14,
+                      "fontWeight": "500"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "A9Mi1",
+                  "name": "stat3",
+                  "width": "fill_container",
+                  "fill": "#f8fafc",
+                  "cornerRadius": 20,
+                  "stroke": {
+                    "thickness": 1,
+                    "fill": "#e2e8f0"
+                  },
+                  "layout": "vertical",
+                  "gap": 8,
+                  "padding": 24,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "GwIaQ",
+                      "name": "stat3Num",
+                      "fill": "#0f172a",
+                      "content": "14",
+                      "fontFamily": "Manrope",
+                      "fontSize": 28,
+                      "fontWeight": "800"
+                    },
+                    {
+                      "type": "text",
+                      "id": "Wv3DD",
+                      "name": "stat3Label",
+                      "fill": "#475569",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "specialistů v projektování, integraci a servisu",
+                      "fontFamily": "Manrope",
+                      "fontSize": 14,
+                      "fontWeight": "500"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "MSbZD",
+                  "name": "stat4",
+                  "width": "fill_container",
+                  "fill": "#f8fafc",
+                  "cornerRadius": 20,
+                  "stroke": {
+                    "thickness": 1,
+                    "fill": "#e2e8f0"
+                  },
+                  "layout": "vertical",
+                  "gap": 8,
+                  "padding": 24,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "yI6IH",
+                      "name": "stat4Num",
+                      "fill": "#0f172a",
+                      "content": "96 %",
+                      "fontFamily": "Manrope",
+                      "fontSize": 28,
+                      "fontWeight": "800"
+                    },
+                    {
+                      "type": "text",
+                      "id": "H1bTv",
+                      "name": "stat4Label",
+                      "fill": "#475569",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "projektů spravujeme i po předání klientovi",
+                      "fontFamily": "Manrope",
+                      "fontSize": 14,
+                      "fontWeight": "500"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "wD0cQ",
+              "name": "valuesSection",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 24,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "oOrPN",
+                  "name": "valuesLabel",
+                  "fill": "#002bff",
+                  "content": "Jak pracujeme",
+                  "fontFamily": "Manrope",
+                  "fontSize": 14,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "Nw3cM",
+                  "name": "valuesTitle",
+                  "fill": "#0f172a",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "Každé řešení navrhujeme tak, aby dávalo smysl architektuře domu i lidem, kteří v něm budou každý den fungovat.",
+                  "fontFamily": "Manrope",
+                  "fontSize": 32,
+                  "fontWeight": "800"
+                },
+                {
+                  "type": "frame",
+                  "id": "L7Dya",
+                  "name": "valuesRow",
+                  "width": "fill_container",
+                  "gap": 16,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "8lW95",
+                      "name": "value1",
+                      "width": "fill_container",
+                      "fill": "#ffffff",
+                      "cornerRadius": 20,
+                      "stroke": {
+                        "thickness": 1,
+                        "fill": "#dbeafe"
+                      },
+                      "layout": "vertical",
+                      "gap": 12,
+                      "padding": 24,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "1O6b2",
+                          "name": "value1Title",
+                          "fill": "#0f172a",
+                          "content": "Projekt od prvního dne",
+                          "fontFamily": "Manrope",
+                          "fontSize": 20,
+                          "fontWeight": "800"
+                        },
+                        {
+                          "type": "text",
+                          "id": "JZkio",
+                          "name": "value1Body",
+                          "fill": "#475569",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "Nečekáme na stavbě, až něco dopadne. Vstupujeme do projektu včas, abychom sladili elektro, interiér i technologie do jednoho celku.",
+                          "lineHeight": 1.6,
+                          "fontFamily": "Manrope",
+                          "fontSize": 15,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "Izr3r",
+                      "name": "value2",
+                      "width": "fill_container",
+                      "fill": "#ffffff",
+                      "cornerRadius": 20,
+                      "stroke": {
+                        "thickness": 1,
+                        "fill": "#dbeafe"
+                      },
+                      "layout": "vertical",
+                      "gap": 12,
+                      "padding": 24,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "sSEjT",
+                          "name": "value2Title",
+                          "fill": "#0f172a",
+                          "content": "Jedno kontaktní místo",
+                          "fontFamily": "Manrope",
+                          "fontSize": 20,
+                          "fontWeight": "800"
+                        },
+                        {
+                          "type": "text",
+                          "id": "jMIo3",
+                          "name": "value2Body",
+                          "fill": "#475569",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "Investor ví, komu volat. Náš tým zajišťuje návrh, integraci, spuštění i podporu bez přehazování odpovědnosti mezi dodavateli.",
+                          "lineHeight": 1.6,
+                          "fontFamily": "Manrope",
+                          "fontSize": 15,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "oNzmM",
+                      "name": "value3",
+                      "width": "fill_container",
+                      "fill": "#ffffff",
+                      "cornerRadius": 20,
+                      "stroke": {
+                        "thickness": 1,
+                        "fill": "#dbeafe"
+                      },
+                      "layout": "vertical",
+                      "gap": 12,
+                      "padding": 24,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "zwTwB",
+                          "name": "value3Title",
+                          "fill": "#0f172a",
+                          "content": "Servis, který nekončí předáním",
+                          "fontFamily": "Manrope",
+                          "fontSize": 20,
+                          "fontWeight": "800"
+                        },
+                        {
+                          "type": "text",
+                          "id": "MeOBE",
+                          "name": "value3Body",
+                          "fill": "#475569",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "Po spuštění zůstáváme po ruce. Řešíme úpravy scén, vzdálenou správu, školení klientů i další rozvoj systému podle toho, jak se domácnost mění.",
+                          "lineHeight": 1.6,
+                          "fontFamily": "Manrope",
+                          "fontSize": 15,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "2WnP2",
+              "name": "teamSection",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 24,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "g0nCm",
+                  "name": "teamLabel",
+                  "fill": "#002bff",
+                  "content": "Náš tým",
+                  "fontFamily": "Manrope",
+                  "fontSize": 14,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "iXDqK",
+                  "name": "teamTitle",
+                  "fill": "#0f172a",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "Každý projekt vede kombinace projektového myšlení, technické přesnosti a schopnosti dotáhnout detail až do každodenního používání.",
+                  "fontFamily": "Manrope",
+                  "fontSize": 32,
+                  "fontWeight": "800"
+                },
+                {
+                  "type": "text",
+                  "id": "mt6k8",
+                  "name": "teamSubtitle",
+                  "fill": "#475569",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "Spolupracujeme napříč profesemi, ale odpovědnost držíme uvnitř jednoho týmu. Díky tomu se investor neztrácí v komunikaci a dům funguje jako celek.",
+                  "lineHeight": 1.6,
+                  "fontFamily": "Manrope",
+                  "fontSize": 16,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "frame",
+                  "id": "cH2ZE",
+                  "name": "teamRow1",
+                  "width": "fill_container",
+                  "gap": 16,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "u2geM",
+                      "name": "member1",
+                      "width": "fill_container",
+                      "fill": "#f8fafc",
+                      "cornerRadius": 20,
+                      "stroke": {
+                        "thickness": 1,
+                        "fill": "#e2e8f0"
+                      },
+                      "layout": "vertical",
+                      "gap": 8,
+                      "padding": 24,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "l15WV",
+                          "name": "member1Name",
+                          "fill": "#0f172a",
+                          "content": "Jakub Novotný",
+                          "fontFamily": "Manrope",
+                          "fontSize": 20,
+                          "fontWeight": "800"
+                        },
+                        {
+                          "type": "text",
+                          "id": "o7tCl",
+                          "name": "member1Role",
+                          "fill": "#475569",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "CEO & strategie projektu. Odpovídá za zadání, koordinaci profesí a finální rozhodnutí s klientem.",
+                          "lineHeight": 1.6,
+                          "fontFamily": "Manrope",
+                          "fontSize": 15,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "KlY92",
+                      "name": "member2",
+                      "width": "fill_container",
+                      "fill": "#f8fafc",
+                      "cornerRadius": 20,
+                      "stroke": {
+                        "thickness": 1,
+                        "fill": "#e2e8f0"
+                      },
+                      "layout": "vertical",
+                      "gap": 8,
+                      "padding": 24,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "z3MnH",
+                          "name": "member2Name",
+                          "fill": "#0f172a",
+                          "content": "Petra Dvořáková",
+                          "fontFamily": "Manrope",
+                          "fontSize": 20,
+                          "fontWeight": "800"
+                        },
+                        {
+                          "type": "text",
+                          "id": "Y4UIN",
+                          "name": "member2Role",
+                          "fill": "#475569",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "Lead project manager. Hlídá harmonogram, návaznost instalací a komunikaci mezi architektem, stavbou a technologií.",
+                          "lineHeight": 1.6,
+                          "fontFamily": "Manrope",
+                          "fontSize": 15,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "uOhMt",
+                  "name": "teamRow2",
+                  "width": "fill_container",
+                  "gap": 16,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "AHKV2",
+                      "name": "member3",
+                      "width": "fill_container",
+                      "fill": "#f8fafc",
+                      "cornerRadius": 20,
+                      "stroke": {
+                        "thickness": 1,
+                        "fill": "#e2e8f0"
+                      },
+                      "layout": "vertical",
+                      "gap": 8,
+                      "padding": 24,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "TI259",
+                          "name": "member3Name",
+                          "fill": "#0f172a",
+                          "content": "Marek Jelínek",
+                          "fontFamily": "Manrope",
+                          "fontSize": 20,
+                          "fontWeight": "800"
+                        },
+                        {
+                          "type": "text",
+                          "id": "HctIS",
+                          "name": "member3Role",
+                          "fill": "#475569",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "Head of integration. Navrhuje technickou architekturu, konfiguraci systémů a dohled nad zprovozněním domu v ostrém provozu.",
+                          "lineHeight": 1.6,
+                          "fontFamily": "Manrope",
+                          "fontSize": 15,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "s2xD6",
+                      "name": "member4",
+                      "width": "fill_container",
+                      "fill": "#f8fafc",
+                      "cornerRadius": 20,
+                      "stroke": {
+                        "thickness": 1,
+                        "fill": "#e2e8f0"
+                      },
+                      "layout": "vertical",
+                      "gap": 8,
+                      "padding": 24,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "WVJ9e",
+                          "name": "member4Name",
+                          "fill": "#0f172a",
+                          "content": "Tereza Vlková",
+                          "fontFamily": "Manrope",
+                          "fontSize": 20,
+                          "fontWeight": "800"
+                        },
+                        {
+                          "type": "text",
+                          "id": "dbJiL",
+                          "name": "member4Role",
+                          "fill": "#475569",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "Customer care & servis. Stará se o předání, školení uživatelů, rozvoj scén a podporu klientů po spuštění projektu.",
+                          "lineHeight": 1.6,
+                          "fontFamily": "Manrope",
+                          "fontSize": 15,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "qcbkL",
+          "name": "contactCtaSection",
+          "width": "fill_container",
+          "fill": "#002bff",
+          "layout": "vertical",
+          "children": [
+            {
+              "type": "path",
+              "id": "Q2qPt",
+              "name": "contactDiagonalTop",
+              "flipY": true,
+              "geometry": "M0 40l1440-40 0 96-1440 0z",
+              "fill": "#ffffff",
+              "width": "fill_container",
+              "height": 96
+            },
+            {
+              "type": "frame",
+              "id": "KLz9v",
+              "name": "contactInner",
+              "width": "fill_container",
+              "fill": "#002bff",
+              "gap": 32,
+              "padding": [
+                36,
+                40
+              ],
+              "justifyContent": "space_between",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "P0hGT",
+                  "name": "contactText",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 12,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "eNKYI",
+                      "name": "ctaTitle",
+                      "fill": "#ffffff",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Chcete s námi probrat váš projekt?",
+                      "fontFamily": "Manrope",
+                      "fontSize": 30,
+                      "fontWeight": "800"
+                    },
+                    {
+                      "type": "text",
+                      "id": "dMQP3",
+                      "name": "ctaBody",
+                      "fill": "#ffffffcc",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Ozvěte se nám ještě před začátkem realizace. Pomůžeme vám sladit technologii, rozpočet i provoz domu tak, aby vše fungovalo od prvního dne.",
+                      "lineHeight": 1.6,
+                      "fontFamily": "Manrope",
+                      "fontSize": 16,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "3qPl9",
+                  "name": "contactButton",
+                  "height": 54,
+                  "fill": "#ffffff",
+                  "cornerRadius": 14,
+                  "padding": [
+                    0,
+                    28
+                  ],
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "fxln7",
+                      "name": "ctaButtonLabel",
+                      "fill": "#002bff",
+                      "content": "Kontaktovat tým",
+                      "fontFamily": "Manrope",
+                      "fontSize": 16,
+                      "fontWeight": "800"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "xBKqS",
+          "name": "pcFooter",
+          "width": "fill_container",
+          "fill": "#0f172a",
+          "layout": "vertical",
+          "gap": 20,
+          "padding": 48,
+          "children": [
+            {
+              "type": "frame",
+              "id": "BgEtw",
+              "name": "fTop",
+              "width": "fill_container",
+              "justifyContent": "space_between",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "d9ptA",
+                  "fill": "#ffffff",
+                  "content": "<thinkhome>",
+                  "fontFamily": "Manrope",
+                  "fontSize": 24,
+                  "fontWeight": "800"
+                },
+                {
+                  "type": "frame",
+                  "id": "dGBf5",
+                  "name": "contacts",
+                  "gap": 8,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "XfADn",
+                      "fill": "#FFFFFFCC",
+                      "content": "info@thinkhome.org",
+                      "fontFamily": "Manrope",
+                      "fontSize": 16,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "jw7CR",
+                      "fill": "#FFFFFFCC",
+                      "content": "+420 222 160 782",
+                      "fontFamily": "Manrope",
+                      "fontSize": 16,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "rectangle",
+              "id": "7Lu0H",
+              "name": "footerDivider",
+              "fill": "#FFFFFF12",
+              "width": "fill_container",
+              "height": 1
+            },
+            {
+              "type": "frame",
+              "id": "WHxBj",
+              "name": "fBot",
+              "width": "fill_container",
+              "justifyContent": "space_between",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "W1tQy",
+                  "fill": "#FFFFFF80",
+                  "content": "© 2026 ThinkHome s.r.o. Všechna práva vyhrazena.",
+                  "fontFamily": "Manrope",
+                  "fontSize": 12,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "frame",
+                  "id": "JDZq9",
+                  "name": "links",
+                  "gap": 24,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "BWLYS",
+                      "name": "link1",
+                      "fill": "#FFFFFF80",
+                      "content": "Ceník služeb",
+                      "fontFamily": "Manrope",
+                      "fontSize": 12,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "UNJ4v",
+                      "name": "link2",
+                      "fill": "#FFFFFF80",
+                      "content": "Obchodní podmínky",
+                      "fontFamily": "Manrope",
+                      "fontSize": 12,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "WOQyS",
+                      "name": "link3",
+                      "fill": "#FFFFFF80",
+                      "content": "Ochrana osobních údajů",
+                      "fontFamily": "Manrope",
+                      "fontSize": 12,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "QjmOk",
+      "x": 6380,
+      "y": -300,
+      "name": "ThinkHome O nás Mobile",
+      "width": 390,
+      "fill": "#ffffff",
+      "layout": "vertical",
+      "children": [
+        {
+          "type": "frame",
+          "id": "jyObq",
+          "name": "header",
+          "width": "fill_container",
+          "fill": "#002bffff",
+          "padding": 24,
+          "justifyContent": "space_between",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "9W744",
+              "name": "mobLogo",
+              "fill": "#ffffff",
+              "content": "<thinkhome>",
+              "fontFamily": "Manrope",
+              "fontSize": 18,
+              "fontWeight": "800"
+            },
+            {
+              "type": "icon_font",
+              "id": "S0sIb",
+              "name": "mobHamburger",
+              "width": 24,
+              "height": 24,
+              "iconFontName": "menu",
+              "iconFontFamily": "lucide",
+              "fill": "#ffffff"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "wMQZE",
+          "name": "titleHero",
+          "width": "fill_container",
+          "fill": "#002bff",
+          "layout": "vertical",
+          "gap": 12,
+          "padding": [
+            32,
+            0,
+            0,
+            0
+          ],
+          "justifyContent": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "qV6lp",
+              "name": "heroInner",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 12,
+              "padding": [
+                0,
+                24
+              ],
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "vBr8s",
+                  "name": "breadcrumb",
+                  "gap": 6,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "M9fdu",
+                      "name": "mbHome",
+                      "opacity": 0.6,
+                      "fill": "#ffffff",
+                      "content": "Domů",
+                      "fontFamily": "Manrope",
+                      "fontSize": 12,
+                      "fontWeight": "500"
+                    },
+                    {
+                      "type": "text",
+                      "id": "KHc6u",
+                      "name": "mbSep",
+                      "opacity": 0.4,
+                      "fill": "#ffffff",
+                      "content": "/",
+                      "fontFamily": "Manrope",
+                      "fontSize": 12,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "0RbCM",
+                      "name": "mbCurrent",
+                      "opacity": 0.9,
+                      "fill": "#ffffff",
+                      "content": "O nás",
+                      "fontFamily": "Manrope",
+                      "fontSize": 12,
+                      "fontWeight": "600"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "id": "IoYij",
+                  "name": "pageTitle",
+                  "fill": "#ffffff",
+                  "content": "O nás",
+                  "fontFamily": "Manrope",
+                  "fontSize": 32,
+                  "fontWeight": "800"
+                },
+                {
+                  "type": "text",
+                  "id": "iYUHU",
+                  "name": "pageSubtitle",
+                  "opacity": 0.7,
+                  "fill": "#ffffff",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "Navrhujeme chytré domácnosti, které dávají technologiím smysl a lidem klid. Spojujeme projekt, realizaci i dlouhodobou péči v jednom týmu.",
+                  "fontFamily": "Manrope",
+                  "fontSize": 15,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "path",
+              "id": "M2JWX",
+              "name": "heroDiagonalCut",
+              "geometry": "M0 28l390-28 0 72-390 0z",
+              "fill": "#ffffff",
+              "width": "fill_container",
+              "height": 72
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "pjbKj",
+          "name": "content",
+          "width": "fill_container",
+          "layout": "vertical",
+          "gap": 48,
+          "padding": [
+            24,
+            24,
+            32,
+            24
+          ],
+          "children": [
+            {
+              "type": "frame",
+              "id": "Cb5eJ",
+              "name": "companyIntroMobile",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 16,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "OD66d",
+                  "name": "introMobLabel",
+                  "fill": "#002bff",
+                  "content": "Kdo jsme",
+                  "fontFamily": "Manrope",
+                  "fontSize": 13,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "tJqSC",
+                  "name": "introMobTitle",
+                  "fill": "#0f172a",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "Technologie má doma fungovat tiše, spolehlivě a bez kompromisů.",
+                  "fontFamily": "Manrope",
+                  "fontSize": 28,
+                  "fontWeight": "800"
+                },
+                {
+                  "type": "text",
+                  "id": "dnhpP",
+                  "name": "introMobBody1",
+                  "fill": "#334155",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "ThinkHome propojuje projekt, integraci a servis chytré domácnosti v jednom týmu. Díky tomu navrhujeme systémy, které nejsou jen efektní, ale opravdu fungují v každodenním provozu.",
+                  "lineHeight": 1.6,
+                  "fontFamily": "Manrope",
+                  "fontSize": 15,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "gaR3m",
+                  "name": "introMobBody2",
+                  "fill": "#334155",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "Od prvního workshopu přes elektroprojekt až po finální nastavení scén držíme celý proces pohromadě. Klient tak ví, kdo co řeší a na koho se obrátit i po předání domu.",
+                  "lineHeight": 1.6,
+                  "fontFamily": "Manrope",
+                  "fontSize": 15,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "9Sz2G",
+              "name": "statsMobile",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 12,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "zCCXN",
+                  "name": "statsMobRow1",
+                  "width": "fill_container",
+                  "gap": 12,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "Rkax2",
+                      "name": "statMob1",
+                      "width": "fill_container",
+                      "fill": "#f8fafc",
+                      "cornerRadius": 18,
+                      "stroke": {
+                        "thickness": 1,
+                        "fill": "#e2e8f0"
+                      },
+                      "layout": "vertical",
+                      "gap": 6,
+                      "padding": 16,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "OvNvF",
+                          "name": "statMob1Num",
+                          "fill": "#0f172a",
+                          "content": "8+ let",
+                          "fontFamily": "Manrope",
+                          "fontSize": 22,
+                          "fontWeight": "800"
+                        },
+                        {
+                          "type": "text",
+                          "id": "8IHsf",
+                          "name": "statMob1Label",
+                          "fill": "#475569",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "rezidenční automatizace",
+                          "fontFamily": "Manrope",
+                          "fontSize": 13,
+                          "fontWeight": "500"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "ajypf",
+                      "name": "statMob2",
+                      "width": "fill_container",
+                      "fill": "#f8fafc",
+                      "cornerRadius": 18,
+                      "stroke": {
+                        "thickness": 1,
+                        "fill": "#e2e8f0"
+                      },
+                      "layout": "vertical",
+                      "gap": 6,
+                      "padding": 16,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "NPAZw",
+                          "name": "statMob2Num",
+                          "fill": "#0f172a",
+                          "content": "320+",
+                          "fontFamily": "Manrope",
+                          "fontSize": 22,
+                          "fontWeight": "800"
+                        },
+                        {
+                          "type": "text",
+                          "id": "YhGO3",
+                          "name": "statMob2Label",
+                          "fill": "#475569",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "realizovaných projektů",
+                          "fontFamily": "Manrope",
+                          "fontSize": 13,
+                          "fontWeight": "500"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "OaXnQ",
+                  "name": "statsMobRow2",
+                  "width": "fill_container",
+                  "gap": 12,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "XE61A",
+                      "name": "statMob3",
+                      "width": "fill_container",
+                      "fill": "#f8fafc",
+                      "cornerRadius": 18,
+                      "stroke": {
+                        "thickness": 1,
+                        "fill": "#e2e8f0"
+                      },
+                      "layout": "vertical",
+                      "gap": 6,
+                      "padding": 16,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "5Oz2G",
+                          "name": "statMob3Num",
+                          "fill": "#0f172a",
+                          "content": "14",
+                          "fontFamily": "Manrope",
+                          "fontSize": 22,
+                          "fontWeight": "800"
+                        },
+                        {
+                          "type": "text",
+                          "id": "rLmsJ",
+                          "name": "statMob3Label",
+                          "fill": "#475569",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "členů specialistického týmu",
+                          "fontFamily": "Manrope",
+                          "fontSize": 13,
+                          "fontWeight": "500"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "E9bfX",
+                      "name": "statMob4",
+                      "width": "fill_container",
+                      "fill": "#f8fafc",
+                      "cornerRadius": 18,
+                      "stroke": {
+                        "thickness": 1,
+                        "fill": "#e2e8f0"
+                      },
+                      "layout": "vertical",
+                      "gap": 6,
+                      "padding": 16,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "wvvln",
+                          "name": "statMob4Num",
+                          "fill": "#0f172a",
+                          "content": "96 %",
+                          "fontFamily": "Manrope",
+                          "fontSize": 22,
+                          "fontWeight": "800"
+                        },
+                        {
+                          "type": "text",
+                          "id": "PU6hm",
+                          "name": "statMob4Label",
+                          "fill": "#475569",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "projektů dále servisujeme",
+                          "fontFamily": "Manrope",
+                          "fontSize": 13,
+                          "fontWeight": "500"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "dGXir",
+              "name": "valuesMobile",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 16,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "RAj82",
+                  "name": "valuesMobLabel",
+                  "fill": "#002bff",
+                  "content": "Jak pracujeme",
+                  "fontFamily": "Manrope",
+                  "fontSize": 13,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "MkFRK",
+                  "name": "valuesMobTitle",
+                  "fill": "#0f172a",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "Navrhujeme řešení, která dávají smysl architektuře domu i lidem, kteří v něm budou každý den fungovat.",
+                  "fontFamily": "Manrope",
+                  "fontSize": 24,
+                  "fontWeight": "800"
+                },
+                {
+                  "type": "text",
+                  "id": "NNftf",
+                  "name": "valuesMobSubtitle",
+                  "fill": "#475569",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "Každý blok vzniká tak, aby zjednodušil rozhodování investora a zároveň usnadnil práci všem profesím na projektu.",
+                  "lineHeight": 1.6,
+                  "fontFamily": "Manrope",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "frame",
+                  "id": "Nd1Y9",
+                  "name": "valueMob1",
+                  "width": "fill_container",
+                  "fill": "#ffffff",
+                  "cornerRadius": 18,
+                  "stroke": {
+                    "thickness": 1,
+                    "fill": "#dbeafe"
+                  },
+                  "layout": "vertical",
+                  "gap": 10,
+                  "padding": 20,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "dDWf9",
+                      "name": "valueMob1Title",
+                      "fill": "#0f172a",
+                      "content": "Projekt od prvního dne",
+                      "fontFamily": "Manrope",
+                      "fontSize": 18,
+                      "fontWeight": "800"
+                    },
+                    {
+                      "type": "text",
+                      "id": "QyXAb",
+                      "name": "valueMob1Body",
+                      "fill": "#475569",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Do projektu vstupujeme včas, abychom sladili elektro, interiér i technologie do jednoho funkčního celku.",
+                      "lineHeight": 1.6,
+                      "fontFamily": "Manrope",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "OnVxR",
+                  "name": "valueMob2",
+                  "width": "fill_container",
+                  "fill": "#ffffff",
+                  "cornerRadius": 18,
+                  "stroke": {
+                    "thickness": 1,
+                    "fill": "#dbeafe"
+                  },
+                  "layout": "vertical",
+                  "gap": 10,
+                  "padding": 20,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "GUNke",
+                      "name": "valueMob2Title",
+                      "fill": "#0f172a",
+                      "content": "Jedno kontaktní místo",
+                      "fontFamily": "Manrope",
+                      "fontSize": 18,
+                      "fontWeight": "800"
+                    },
+                    {
+                      "type": "text",
+                      "id": "mHxjz",
+                      "name": "valueMob2Body",
+                      "fill": "#475569",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Investor komunikuje s jedním týmem, který zajišťuje návrh, integraci, spuštění i dlouhodobou podporu.",
+                      "lineHeight": 1.6,
+                      "fontFamily": "Manrope",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "LdyZq",
+                  "name": "valueMob3",
+                  "width": "fill_container",
+                  "fill": "#ffffff",
+                  "cornerRadius": 18,
+                  "stroke": {
+                    "thickness": 1,
+                    "fill": "#dbeafe"
+                  },
+                  "layout": "vertical",
+                  "gap": 10,
+                  "padding": 20,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "UqihK",
+                      "name": "valueMob3Title",
+                      "fill": "#0f172a",
+                      "content": "Servis po předání",
+                      "fontFamily": "Manrope",
+                      "fontSize": 18,
+                      "fontWeight": "800"
+                    },
+                    {
+                      "type": "text",
+                      "id": "DOFsr",
+                      "name": "valueMob3Body",
+                      "fill": "#475569",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Po spuštění zůstáváme po ruce. Řešíme úpravy scén, vzdálenou správu i další rozvoj domácnosti v čase.",
+                      "lineHeight": 1.6,
+                      "fontFamily": "Manrope",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "DLRhV",
+              "name": "teamMobile",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 16,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "yiSLR",
+                  "name": "teamMobLabel",
+                  "fill": "#002bff",
+                  "content": "Náš tým",
+                  "fontFamily": "Manrope",
+                  "fontSize": 13,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "I4YPR",
+                  "name": "teamMobTitle",
+                  "fill": "#0f172a",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "Každý projekt držíme uvnitř jednoho týmu, aby investor neztrácel čas koordinací mezi dodavateli.",
+                  "fontFamily": "Manrope",
+                  "fontSize": 24,
+                  "fontWeight": "800"
+                },
+                {
+                  "type": "text",
+                  "id": "a8e9G",
+                  "name": "teamMobSubtitle",
+                  "fill": "#475569",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "Projekt, integrace i servis spolu mluví od prvního dne. Díky tomu dům funguje jako celek a ne jako součet jednotlivých technologií.",
+                  "lineHeight": 1.6,
+                  "fontFamily": "Manrope",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "frame",
+                  "id": "r05KM",
+                  "name": "memberMob1",
+                  "width": "fill_container",
+                  "fill": "#f8fafc",
+                  "cornerRadius": 18,
+                  "stroke": {
+                    "thickness": 1,
+                    "fill": "#e2e8f0"
+                  },
+                  "layout": "vertical",
+                  "gap": 8,
+                  "padding": 20,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "vA0vx",
+                      "name": "memberMob1Name",
+                      "fill": "#0f172a",
+                      "content": "Jakub Novotný",
+                      "fontFamily": "Manrope",
+                      "fontSize": 18,
+                      "fontWeight": "800"
+                    },
+                    {
+                      "type": "text",
+                      "id": "dlgl2",
+                      "name": "memberMob1Role",
+                      "fill": "#475569",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "CEO & strategie projektu. Vede zadání a finální rozhodnutí s klientem.",
+                      "lineHeight": 1.6,
+                      "fontFamily": "Manrope",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "KFO5A",
+                  "name": "memberMob2",
+                  "width": "fill_container",
+                  "fill": "#f8fafc",
+                  "cornerRadius": 18,
+                  "stroke": {
+                    "thickness": 1,
+                    "fill": "#e2e8f0"
+                  },
+                  "layout": "vertical",
+                  "gap": 8,
+                  "padding": 20,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "LGwjI",
+                      "name": "memberMob2Name",
+                      "fill": "#0f172a",
+                      "content": "Petra Dvořáková",
+                      "fontFamily": "Manrope",
+                      "fontSize": 18,
+                      "fontWeight": "800"
+                    },
+                    {
+                      "type": "text",
+                      "id": "Edzcu",
+                      "name": "memberMob2Role",
+                      "fill": "#475569",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Lead project manager. Hlídá harmonogram, návaznost profesí a komunikaci na stavbě.",
+                      "lineHeight": 1.6,
+                      "fontFamily": "Manrope",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "BHKIu",
+                  "name": "memberMob3",
+                  "width": "fill_container",
+                  "fill": "#f8fafc",
+                  "cornerRadius": 18,
+                  "stroke": {
+                    "thickness": 1,
+                    "fill": "#e2e8f0"
+                  },
+                  "layout": "vertical",
+                  "gap": 8,
+                  "padding": 20,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "J4ozz",
+                      "name": "memberMob3Name",
+                      "fill": "#0f172a",
+                      "content": "Marek Jelínek",
+                      "fontFamily": "Manrope",
+                      "fontSize": 18,
+                      "fontWeight": "800"
+                    },
+                    {
+                      "type": "text",
+                      "id": "fIMcT",
+                      "name": "memberMob3Role",
+                      "fill": "#475569",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Head of integration. Navrhuje technickou architekturu a dohled nad zprovozněním domu.",
+                      "lineHeight": 1.6,
+                      "fontFamily": "Manrope",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "VoNNd",
+                  "name": "memberMob4",
+                  "width": "fill_container",
+                  "fill": "#f8fafc",
+                  "cornerRadius": 18,
+                  "stroke": {
+                    "thickness": 1,
+                    "fill": "#e2e8f0"
+                  },
+                  "layout": "vertical",
+                  "gap": 8,
+                  "padding": 20,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "DzM4q",
+                      "name": "memberMob4Name",
+                      "fill": "#0f172a",
+                      "content": "Tereza Vlková",
+                      "fontFamily": "Manrope",
+                      "fontSize": 18,
+                      "fontWeight": "800"
+                    },
+                    {
+                      "type": "text",
+                      "id": "DCsnJ",
+                      "name": "memberMob4Role",
+                      "fill": "#475569",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Customer care & servis. Zajišťuje předání, školení i rozvoj scén po spuštění projektu.",
+                      "lineHeight": 1.6,
+                      "fontFamily": "Manrope",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "PW83o",
+          "name": "contactCtaMobile",
+          "width": "fill_container",
+          "fill": "#002bff",
+          "layout": "vertical",
+          "children": [
+            {
+              "type": "path",
+              "id": "a9vCj",
+              "name": "contactDiagonalTopMobile",
+              "flipY": true,
+              "geometry": "M0 40l1440-40 0 96-1440 0z",
+              "fill": "#ffffff",
+              "width": "fill_container",
+              "height": 72
+            },
+            {
+              "type": "frame",
+              "id": "bzrji",
+              "name": "contactInnerMobile",
+              "width": "fill_container",
+              "fill": "#002bff",
+              "cornerRadius": [
+                0,
+                0,
+                20,
+                20
+              ],
+              "layout": "vertical",
+              "gap": 16,
+              "padding": 24,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "ZPof3",
+                  "name": "ctaMobTitle",
+                  "fill": "#ffffff",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "Chcete s námi probrat váš projekt?",
+                  "fontFamily": "Manrope",
+                  "fontSize": 24,
+                  "fontWeight": "800"
+                },
+                {
+                  "type": "text",
+                  "id": "vV2qg",
+                  "name": "ctaMobBody",
+                  "fill": "#ffffffcc",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "Ozvěte se nám ještě před začátkem realizace. Pomůžeme vám sladit technologii, rozpočet i provoz domu od prvního dne.",
+                  "lineHeight": 1.6,
+                  "fontFamily": "Manrope",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "frame",
+                  "id": "jPDlM",
+                  "name": "contactButtonMobile",
+                  "width": "fill_container",
+                  "height": 50,
+                  "fill": "#ffffff",
+                  "cornerRadius": 14,
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "z6WxT",
+                      "name": "ctaMobButtonLabel",
+                      "fill": "#002bff",
+                      "content": "Kontaktovat tým",
+                      "fontFamily": "Manrope",
+                      "fontSize": 15,
+                      "fontWeight": "800"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "3huGF",
+          "name": "mobFooter",
+          "width": "fill_container",
+          "fill": "#0f172a",
+          "layout": "vertical",
+          "gap": 16,
+          "padding": 24,
+          "children": [
+            {
+              "type": "text",
+              "id": "hV3aH",
+              "name": "fLogo",
+              "fill": "#ffffff",
+              "content": "<thinkhome>",
+              "fontFamily": "Manrope",
+              "fontSize": 20,
+              "fontWeight": "800"
+            },
+            {
+              "type": "frame",
+              "id": "ftW9H",
+              "name": "contacts",
+              "layout": "vertical",
+              "gap": 8,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "3FThD",
+                  "name": "email",
+                  "fill": "#FFFFFFCC",
+                  "content": "info@thinkhome.org",
+                  "fontFamily": "Manrope",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "5Gf5e",
+                  "name": "phone",
+                  "fill": "#FFFFFFCC",
+                  "content": "+420 222 160 782",
+                  "fontFamily": "Manrope",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "rectangle",
+              "id": "Fztc1",
+              "name": "divider",
+              "fill": "#FFFFFF1A",
+              "width": "fill_container",
+              "height": 1
+            },
+            {
+              "type": "frame",
+              "id": "OiQzg",
+              "name": "links",
+              "layout": "vertical",
+              "gap": 12,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "PMTTC",
+                  "name": "link1",
+                  "fill": "#FFFFFF80",
+                  "content": "Ceník služeb",
+                  "fontFamily": "Manrope",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "vc7Un",
+                  "name": "link2",
+                  "fill": "#FFFFFF80",
+                  "content": "Obchodní podmínky",
+                  "fontFamily": "Manrope",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "uJs8g",
+                  "name": "link3",
+                  "fill": "#FFFFFF80",
+                  "content": "Ochrana osobních údajů",
+                  "fontFamily": "Manrope",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "id": "BUm0m",
               "name": "copy",
               "fill": "#FFFFFF80",
               "content": "© 2026 ThinkHome s.r.o. Všechna práva vyhrazena.",
